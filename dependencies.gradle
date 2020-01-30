@@ -15,6 +15,10 @@ ext {
     recyclerview_version = '1.0.0'
     time_date_version = '4.2.3'
     stetho_version = '1.5.1'
+    mockitoVersion = '3.2.4'
+    junitVersion = '4.12'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
 
 
     androidDependencies = [
@@ -25,7 +29,8 @@ ext {
 
 
     testDependencies = [
-            junit_dep: "junit:junit:4.12"
+            junit_dep: "junit:junit:${junitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}"
     ]
 
 
@@ -74,4 +79,19 @@ ext {
     devToolsDependencies = [
             stetho_dep: "com.facebook.stetho:stetho:$stetho_version"
     ]
+
+
+    //javaxAnnotation, javaxInject, rxKotlin, kotlin
+    domainDependencies = [
+            rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+    ]
+
+    //junit, mockito
+    domainTestDependencies = [
+            testDep: testDependencies
+    ]
+
+
 }

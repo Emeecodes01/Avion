@@ -9,13 +9,18 @@ apply from: '../dependencies.gradle'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
+
     defaultConfig {
         applicationId "com.mobigod.avin"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
+        manifestPlaceholders = [app_name: 'Avion']
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", 'LUFTHANSA_KEY', '"4z5yvrujv9eeks475pafb2ww"')
+        buildConfigField("String", 'LUFTHANSA_SECRET', '"3rK3YH43BF"')
     }
 
 
@@ -49,6 +54,7 @@ android {
             versionNameSuffix = '-guard'
             debuggable = true
             minifyEnabled = true
+            manifestPlaceholders = [app_name: 'Avion Guard']
             signingConfig signingConfigs.debug
         }
 
