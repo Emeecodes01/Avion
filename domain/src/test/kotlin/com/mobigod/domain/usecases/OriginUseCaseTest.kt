@@ -6,6 +6,8 @@ import org.junit.Assert.*
 
 class OriginUseCaseTest {
 
+
+
     @Before
     fun setUp() {
 

@@ -12,12 +12,11 @@ import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.schedulers.Schedulers
 
 abstract class SingleUseCase<R, in Params> protected constructor(private val threadExecutor: ThreadExecutor,
-                                                      private val postExecutionThread: PostExecutionThread
-) {
+                                                      private val postExecutionThread: PostExecutionThread) {
 
     private val subcriptions = CompositeDisposable()
-    protected abstract fun buildUseCaseObservable(param: Params): Single<R>
 
+    abstract fun buildUseCaseObservable(param: Params?): Single<R>
 
     fun execute(observableObserver: DisposableSingleObserver<R>, params: Params) {
         val observer =  buildUseCaseObservable(params)
@@ -25,7 +24,6 @@ abstract class SingleUseCase<R, in Params> protected constructor(private val thr
             .observeOn(postExecutionThread.scheduler)
         subcriptions += observer.subscribeWith(observableObserver)
     }
-
 
     fun unsubscribe() {
         if (!subcriptions.isDisposed) {

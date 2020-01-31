@@ -32,10 +32,10 @@ compileTestKotlin {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //Test dependencies
-    testImplementation domainTestDependencies.testDep.values()
+    testImplementation domainTestDependencies.values()
 
 
     implementation domainDependencies.values()

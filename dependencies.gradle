@@ -15,10 +15,12 @@ ext {
     recyclerview_version = '1.0.0'
     time_date_version = '4.2.3'
     stetho_version = '1.5.1'
-    mockitoVersion = '3.2.4'
+    mockitoVersion = '2.2.0'
     junitVersion = '4.12'
     javaxAnnotationVersion = '1.0'
     javaxInjectVersion = '1'
+    gsonVersion = '2.8.6'
+    konveyor_version = '1.0.3'
 
 
     androidDependencies = [
@@ -86,11 +88,14 @@ ext {
             rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            gson:               "com.google.code.gson:gson:${gsonVersion}"
     ]
 
     //junit, mockito
     domainTestDependencies = [
-            testDep: testDependencies
+            mockito: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoVersion}",
+            junit_dep: "junit:junit:${junitVersion}",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}"
     ]
 
 
