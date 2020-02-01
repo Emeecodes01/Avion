@@ -13,5 +13,5 @@ import io.reactivex.Single
 interface IAirportsRepository {
     fun searchAirport(params: SearchAirportUseCase.Params?): Single<Airport>
     fun getAirports(): Single<List<Airport>>
-    fun saveAirport(airport: SaveAirportUseCase.Param): Completable
+    fun saveAirport(airport: SaveAirportUseCase.Param?): Completable
 }
