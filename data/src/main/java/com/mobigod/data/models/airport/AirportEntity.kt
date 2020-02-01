@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**Created by: Emmanuel Ozibo
 //on: 01, 2020-02-01
 //at: 00:29*/
+
 data class AirportEntity(
     var carriers: String,
     var city: String,

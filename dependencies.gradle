@@ -2,7 +2,7 @@ ext {
     rx_kotlin = '2.4.0'
     rx_android = '2.1.1'
     dagger_version = '2.25.2'
-    room_version = '2.2.1'
+    room_version = '2.2.3'
     lifecycle_version = '2.1.0'
     gson_version = '2.8.6'
     joda_time_version = '2.10.3'
@@ -133,7 +133,7 @@ ext {
             google_gson_dep: "com.google.code.gson:gson:${gson_version}",
             javaxAnnotation:  "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
-            dagger_dep: "com.google.dagger:dagger:${dagger_version}",
+            dagger_dep: "com.google.dagger:dagger:${dagger_version}"
     ]
 
     remoteProcessors = [
@@ -149,5 +149,30 @@ ext {
             androidx_test: "androidx.test:core:${androidxTestVersion}"
     ]
 
+
+    cacheDependencies = [
+            rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
+            google_gson_dep: "com.google.code.gson:gson:${gson_version}",
+            javaxAnnotation:  "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
+            dagger_dep: "com.google.dagger:dagger:${dagger_version}",
+            room_dep: "androidx.room:room-runtime:$room_version",
+            room_rx_java:  "androidx.room:room-rxjava2:$room_version"
+    ]
+
+    cacheProcessors = [
+            room_compiler: "androidx.room:room-compiler:$room_version"
+    ]
+
+    cacheTestDependencies = [
+            junit:         "junit:junit:${junitVersion}",
+            kotlinJUnit:    "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
+            mockito:        "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
+            roboelectric:   "org.robolectric:robolectric:${roboelectricVersion}",
+            androidx_test: "androidx.test:core:${androidxTestVersion}",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
+            room_test_helper: "androidx.room:room-testing:$room_version"
+
+    ]
 
 }
