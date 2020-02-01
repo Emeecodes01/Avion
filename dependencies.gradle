@@ -21,6 +21,9 @@ ext {
     javaxInjectVersion = '1'
     gsonVersion = '2.8.6'
     konveyor_version = '1.0.3'
+    timberVersion = '4.7.1'
+    kotlinMockito = '2.2.0'
+    kotlinTestVersion = '1.3.50'
 
 
     androidDependencies = [
@@ -96,6 +99,23 @@ ext {
             mockito: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoVersion}",
             junit_dep: "junit:junit:${junitVersion}",
             konveyor: "com.github.vacxe:konveyor:${konveyor_version}"
+    ]
+
+
+    dataDependencies = [
+        gson:  "com.google.code.gson:gson:${gsonVersion}",
+        rxKotlin:  "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
+        javaxAnnotation:  "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+        javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
+        timber:        "com.jakewharton.timber:timber:${timberVersion}"
+    ]
+
+
+
+    dataTestDependencies = [
+            junit:                  "junit:junit:${junitVersion}",
+            kotlinJUnit:            "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
+            mockito:                "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
     ]
 
 

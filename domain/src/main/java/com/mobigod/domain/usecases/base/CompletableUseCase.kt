@@ -13,7 +13,7 @@ abstract class CompletableUseCase<in Params> constructor(
 
     private val subcriptions = CompositeDisposable()
 
-    protected abstract fun buildUseCaseObservable(param: Params): Completable
+    protected abstract fun buildUseCaseObservable(param: Params?): Completable
 
 
 

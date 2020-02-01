@@ -5,19 +5,16 @@ import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
 import com.mobigod.domain.repository.IFlightSchedules
 import com.mobigod.domain.stubs.StubsGenerator
+import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import com.nhaarman.mockitokotlin2.any
 import io.reactivex.Single
-import konveyor.base.randomBuild
 import org.junit.Before
 
-import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito
 import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
-import org.mockito.junit.MockitoJUnit
 import org.mockito.junit.MockitoJUnitRunner
 
 /**
@@ -47,7 +44,11 @@ class FlightScheduleUseCaseTest {
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        SUT = FlightScheduleUseCase(flightsRepository, threadExecutor, postExecutionThread)
+        SUT = FlightScheduleUseCase(
+            flightsRepository,
+            threadExecutor,
+            postExecutionThread
+        )
     }
 
 

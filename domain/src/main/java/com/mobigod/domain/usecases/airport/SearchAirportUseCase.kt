@@ -1,9 +1,9 @@
-package com.mobigod.domain.usecases
+package com.mobigod.domain.usecases.airport
 
 import com.mobigod.domain.entities.airport.Airport
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
-import com.mobigod.domain.repository.ISearchAirports
+import com.mobigod.domain.repository.IAirportsRepository
 import com.mobigod.domain.usecases.base.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
@@ -13,10 +13,10 @@ import javax.inject.Inject
 //at: 01:46*/
 
 
-class AirportUseCase @Inject constructor(private val airportRepository: ISearchAirports,
-                                         threadExecutor: ThreadExecutor,
-                                         postExecutionThread: PostExecutionThread):
-    SingleUseCase<Airport, AirportUseCase.Params>(threadExecutor, postExecutionThread) {
+class SearchAirportUseCase @Inject constructor(private val airportRepository: IAirportsRepository,
+                                               threadExecutor: ThreadExecutor,
+                                               postExecutionThread: PostExecutionThread):
+    SingleUseCase<Airport, SearchAirportUseCase.Params>(threadExecutor, postExecutionThread) {
 
 
     override fun buildUseCaseObservable(param: Params?): Single<Airport> {

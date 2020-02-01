@@ -1,4 +1,4 @@
-package com.mobigod.domain.usecases
+package com.mobigod.domain.usecases.schedule
 
 import com.google.gson.annotations.SerializedName
 import com.mobigod.domain.executors.PostExecutionThread

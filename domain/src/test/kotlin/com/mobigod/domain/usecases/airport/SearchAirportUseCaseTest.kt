@@ -1,23 +1,21 @@
-package com.mobigod.domain.usecases
+package com.mobigod.domain.usecases.airport
 
 import com.mobigod.domain.entities.airport.Airport
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
-import com.mobigod.domain.repository.ISearchAirports
+import com.mobigod.domain.repository.IAirportsRepository
 import com.mobigod.domain.stubs.StubsGenerator
+import com.mobigod.domain.usecases.airport.SearchAirportUseCase
 import com.nhaarman.mockitokotlin2.any
 import io.reactivex.Single
 import org.junit.Before
 
-import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito
 import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
-import java.lang.NullPointerException
 
 /**
  * Created by: Emmanuel Ozibo
@@ -26,9 +24,9 @@ import java.lang.NullPointerException
  */
 
 @RunWith(MockitoJUnitRunner::class)
-class AirportUseCaseTest {
+class SearchAirportUseCaseTest {
 
-    lateinit var SUT: AirportUseCase
+    lateinit var SUT: SearchAirportUseCase
 
     @Mock
     lateinit var threadExecutor: ThreadExecutor
@@ -37,13 +35,17 @@ class AirportUseCaseTest {
     lateinit var postExecutionThread: PostExecutionThread
 
     @Mock
-    lateinit var repository: ISearchAirports
+    lateinit var repository: IAirportsRepository
 
 
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        SUT = AirportUseCase(repository, threadExecutor, postExecutionThread)
+        SUT = SearchAirportUseCase(
+            repository,
+            threadExecutor,
+            postExecutionThread
+        )
     }
 
 
@@ -83,7 +85,7 @@ class AirportUseCaseTest {
     @Test(expected = AssertionError::class)
     fun `searchAirport throws error when called with an empty query`() {
         //Arrange
-        val param = AirportUseCase.Params("")
+        val param = SearchAirportUseCase.Params("")
         val response = StubsGenerator.createAirport()
         setUpStub(Single.just(response))
 
