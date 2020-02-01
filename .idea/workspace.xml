@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8346cdce-4d8b-4959-92fa-40c436af20b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_16_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_test_1_3_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_test_annotations_common_1_3_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_test_common_1_3_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_test_junit_1_3_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__timber_4_7_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/data.iml" afterDir="false" />
@@ -18,25 +12,14 @@
       <change afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/ICacheSource.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/IRemoteSource.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/AirportsRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IFlightSchedules.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IFlightSchedules.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/ISearchAirports.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/AirportUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SearchAirportUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/FlightScheduleUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/schedule/FlightScheduleUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/AirportUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/SearchAirportUseCaseTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/FlightScheduleUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/FlightScheduleUseCaseTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,58 +46,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/schedule/FlightScheduleUseCase.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SearchAirportUseCase.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/airport/Airport.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+              <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="107" />
-              <folding>
-                <element signature="e#45#340#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -122,17 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="218">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/airport/AirportEntity.kt">
+        <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SearchAirportUseCaseTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="738">
+              <caret line="101" column="25" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -146,11 +90,38 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/ObservableUseCase.kt">
+        <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="39" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -164,10 +135,10 @@
         <option value="Kotlin Script" />
         <option value="Gradle Kotlin DSL Build Script" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -207,7 +178,6 @@
         <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/ISearchAirports.kt" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/AirportUseCase.kt" />
         <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/AirportUseCaseTest.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt" />
         <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/AirportUseCaseTest.kt" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/executors/JobExecutor.kt" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/mapper/Mapper.kt" />
@@ -218,10 +188,15 @@
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/mapper/AirportMapper.kt" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/ICacheSource.kt" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/AirportsRepository.kt" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.java" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.kt" />
       </list>
     </option>
   </component>
@@ -389,7 +364,22 @@
               <item name="domain" type="e9137016:NonAndroidModuleNode" />
               <item name="tests" type="f7eae187:NonAndroidSourceTypeNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="stubs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="tests" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="usecases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="tests" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="usecases" type="462c0819:PsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
@@ -436,11 +426,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mobigod.domain.usecases.airport" />
       <recent name="com.mobigod.domain.usecases" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.mobigod.domain.usecases.schedule" />
       <recent name="com.mobigod.domain.usecases.airport" />
+      <recent name="com.mobigod.domain.usecases.schedule" />
       <recent name="com.mobigod.domain.model.flight" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -462,51 +453,85 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
-    <configuration name="FlightScheduleUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Android JUnit.GetAirportsUseCaseTest">
+    <configuration name="GetAirportsUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mobigod.domain.usecases.*" />
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.FlightScheduleUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.GetAirportsUseCaseTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightScheduleUseCaseTest.getFlightSchedules returns data when valid input is passed" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetAirportsUseCaseTest.getAirport returns a list of airports when called" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mobigod.domain.usecases.*" />
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.FlightScheduleUseCaseTest" />
-      <option name="METHOD_NAME" value="getFlightSchedules returns data when valid input is passed" />
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.GetAirportsUseCaseTest" />
+      <option name="METHOD_NAME" value="getAirport returns a list of airports when called" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchAirportUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SaveAirportUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mobigod.domain.usecases.*" />
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.SearchAirportUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.SaveAirportUseCaseTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveAirportUseCaseTest.saveAirport throws an exception when called with null params" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.SaveAirportUseCaseTest" />
+      <option name="METHOD_NAME" value="saveAirport throws an exception when called with null params" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.SaveAirportUseCaseTest" />
+      <option name="METHOD_NAME" value="saveAirport throws an excption when called with null params" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -574,9 +599,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.SearchAirportUseCaseTest" />
-        <item itemvalue="Android JUnit.FlightScheduleUseCaseTest" />
-        <item itemvalue="Android JUnit.FlightScheduleUseCaseTest.getFlightSchedules returns data when valid input is passed" />
+        <item itemvalue="Android JUnit.GetAirportsUseCaseTest" />
+        <item itemvalue="Android JUnit.GetAirportsUseCaseTest.getAirport returns a list of airports when called" />
+        <item itemvalue="Android JUnit.SaveAirportUseCaseTest" />
+        <item itemvalue="Android JUnit.SaveAirportUseCaseTest.saveAirport throws an exception when called with null params" />
+        <item itemvalue="Android JUnit.SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" />
       </list>
     </recent_temporary>
   </component>
@@ -612,24 +639,53 @@
       <option name="project" value="LOCAL" />
       <updated>1580433574997</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. Added some more use cases in domain layer">
+      <created>1580535720160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580535720160</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1. Wrote tests for saveAirport domain">
+      <created>1580538032976</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580538032976</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FlightScheduleUseCaseTest_getFlightSchedules_returns_data_when_valid_input_is_passed - 2020.01.31 at 01h 24m 18s.xml">
-      <configuration name="FlightScheduleUseCaseTest.getFlightSchedules returns data when valid input is passed" configurationId="AndroidJUnit" />
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_completes_when_valid_params_are_passed - 2020.02.01 at 07h 09m 13s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport completes when valid params are passed" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="FlightScheduleUseCaseTest - 2020.01.31 at 01h 43m 45s.xml">
-      <configuration name="FlightScheduleUseCaseTest" configurationId="AndroidJUnit" />
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_excption_when_called_with_null_params - 2020.02.01 at 07h 15m 02s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="FlightScheduleUseCaseTest - 2020.01.31 at 01h 45m 27s.xml">
-      <configuration name="FlightScheduleUseCaseTest" configurationId="AndroidJUnit" />
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_excption_when_called_with_null_params - 2020.02.01 at 07h 16m 00s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="AirportUseCaseTest - 2020.01.31 at 02h 18m 41s.xml">
-      <configuration name="AirportUseCaseTest" configurationId="AndroidJUnit" />
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_excption_when_called_with_null_params - 2020.02.01 at 07h 16m 21s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="AirportUseCaseTest - 2020.01.31 at 02h 18m 59s.xml">
-      <configuration name="AirportUseCaseTest" configurationId="AndroidJUnit" />
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_excption_when_called_with_null_params - 2020.02.01 at 07h 16m 57s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an excption when called with null params" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_exception_when_called_with_null_params - 2020.02.01 at 07h 19m 12s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an exception when called with null params" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="SaveAirportUseCaseTest_saveAirport_throws_an_exception_when_called_with_null_params - 2020.02.01 at 07h 19m 36s.xml">
+      <configuration name="SaveAirportUseCaseTest.saveAirport throws an exception when called with null params" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="SaveAirportUseCaseTest - 2020.02.01 at 07h 19m 55s.xml">
+      <configuration name="SaveAirportUseCaseTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="GetAirportsUseCaseTest_getAirport_returns_a_list_of_airports_when_called - 2020.02.01 at 07h 31m 56s.xml">
+      <configuration name="GetAirportsUseCaseTest.getAirport returns a list of airports when called" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="GetAirportsUseCaseTest - 2020.02.01 at 07h 32m 04s.xml">
+      <configuration name="GetAirportsUseCaseTest" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -637,7 +693,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15814696" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15814696" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -651,7 +707,7 @@
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.39274612" />
+      <window_info anchor="bottom" x="383" y="-936" width="1494" height="638" id="Terminal" order="5" type="WINDOWED" visible="true" weight="0.39274612" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32953367" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.3284974" />
@@ -670,13 +726,11 @@
     <MESSAGE value="1. Added the domain module(Java/Kotlin)&#10;2. Build out the base usecases" />
     <MESSAGE value="1. Build out the flight schedule in domain&#10;2. Write unit tests for it" />
     <MESSAGE value="1. Build out the airport usecase&#10;2. Wrote tests for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Build out the airport usecase&#10;2. Wrote tests for it" />
+    <MESSAGE value="1. Added some more use cases in domain layer" />
+    <MESSAGE value="1. Wrote tests for saveAirport domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Wrote tests for saveAirport domain" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dependencies.kts" />
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/presentation/proguard-rules.pro">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -760,27 +814,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/OriginUseCaseTest.kt" />
-    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#34#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/8ac406cf33e942265c4abb33ee0acdee79292dd6/kotlin-stdlib-common-1.3.50-sources.jar!/kotlin/comparisons/Comparisons.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4392">
           <caret line="247" column="38" selection-start-line="247" selection-start-column="38" selection-end-line="247" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/FlightScheduleUseCaseTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -895,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/SearchAirportUseCaseTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="101" column="25" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IFlightSchedules.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -909,24 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/schedule/FlightScheduleUseCase.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="32" column="30" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -951,17 +967,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/ObservableUseCase.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/FlightScheduleUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SearchAirportUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="101" column="25" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -972,13 +1002,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="39" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/stubs/StubsGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.10/9d22e03b9f0a300edff23ccf219d406d12c3378f/rxjava-2.2.10-sources.jar!/io/reactivex/observers/BaseTestConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="350" column="19" selection-start-line="350" selection-start-column="19" selection-end-line="350" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="107" />
-          <folding>
-            <element signature="e#45#340#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/GetAirportsUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
         </state>
       </provider>
     </entry>

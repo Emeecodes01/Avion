@@ -15,5 +15,12 @@ object StubsGenerator {
     fun createAirport(): Airport = randomBuild()
     fun createSaveAirportParam(): SaveAirportUseCase.Param = randomBuild()
 
+    fun generateListOfAirports(number: Int): List<Airport> {
+        val listOfAirport = mutableListOf<Airport>()
+        for (index in 0..number) {
+            listOfAirport.add(index, createAirport())
+        }
+        return listOfAirport
+    }
 
 }
