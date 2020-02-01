@@ -24,6 +24,11 @@ ext {
     timberVersion = '4.7.1'
     kotlinMockito = '2.2.0'
     kotlinTestVersion = '1.3.50'
+    retrofitAdapterVersion = '2.7.0'
+    retrofit_version = '2.7.1'
+    okhttp_logginterceptor = '4.2.1'
+    roboelectricVersion = '4.2.1'
+    androidxTestVersion = '1.0.0'
 
 
     androidDependencies = [
@@ -115,7 +120,33 @@ ext {
     dataTestDependencies = [
             junit:                  "junit:junit:${junitVersion}",
             kotlinJUnit:            "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
-            mockito:                "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
+            mockito:                "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}"
+    ]
+
+
+    remoteDependencies = [
+            rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
+            retrofitRxAdapterDep: "com.squareup.retrofit2:adapter-rxjava2:${retrofitAdapterVersion}",
+            retrofit_dep: "com.squareup.retrofit2:retrofit:${retrofit_version}",
+            retrofit_gson_conv: "com.squareup.retrofit2:converter-gson:${retrofit_version}",
+            okhttp_logger_dep: "com.squareup.okhttp3:logging-interceptor:${okhttp_logginterceptor}",
+            google_gson_dep: "com.google.code.gson:gson:${gson_version}",
+            javaxAnnotation:  "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
+            dagger_dep: "com.google.dagger:dagger:${dagger_version}",
+    ]
+
+    remoteProcessors = [
+            dagger_complier: "com.google.dagger:dagger-compiler:${dagger_version}"
+    ]
+
+
+    remoteTestDependencies = [
+            junit:         "junit:junit:${junitVersion}",
+            kotlinJUnit:    "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
+            mockito:        "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
+            roboelectric:   "org.robolectric:robolectric:${roboelectricVersion}",
+            androidx_test: "androidx.test:core:${androidxTestVersion}"
     ]
 
 
