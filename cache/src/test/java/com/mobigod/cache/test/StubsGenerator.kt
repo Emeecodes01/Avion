@@ -11,4 +11,13 @@ object StubsGenerator {
 
     fun stubAirportEntity(): AirportEntity = randomBuild()
     fun stubAirportDbEntity(): AirportDBEntity = randomBuild()
+
+    fun<T>stubListOfSameObjectNthTimes(nth: Int, entity: T): List<T> {
+        val list = mutableListOf<T>()
+        repeat(nth){
+            list.add(entity)
+        }
+        return list
+    }
+
 }

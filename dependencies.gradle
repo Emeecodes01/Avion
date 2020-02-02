@@ -29,12 +29,14 @@ ext {
     okhttp_logginterceptor = '4.2.1'
     roboelectricVersion = '4.2.1'
     androidxTestVersion = '1.0.0'
+    archTestingVersion = '2.1.0'
 
 
     androidDependencies = [
             app_compact: "androidx.appcompat:appcompat:$appcompact_version",
             android_ktx: "androidx.core:core-ktx:$appcompact_version",
             constriant_layout: "androidx.constraintlayout:constraintlayout:$constriant_layout_version",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
     ]
 
 
@@ -171,8 +173,8 @@ ext {
             roboelectric:   "org.robolectric:robolectric:${roboelectricVersion}",
             androidx_test: "androidx.test:core:${androidxTestVersion}",
             konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
-            room_test_helper: "androidx.room:room-testing:$room_version"
-
+            room_test_helper: "androidx.room:room-testing:$room_version",
+            arch_test: "android.arch.core:core-testing:${archTestingVersion}"
     ]
 
 }

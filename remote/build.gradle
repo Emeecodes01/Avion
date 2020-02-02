@@ -48,7 +48,6 @@ dependencies {
     implementation remoteDependencies.values()
     implementation remoteTestDependencies.values()
     kapt remoteProcessors.values()
-    kapt 'com.google.auto.value:auto-value:1.5.2'
 
 
 }
