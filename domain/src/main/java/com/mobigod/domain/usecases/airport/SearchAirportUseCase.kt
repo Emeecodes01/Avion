@@ -16,10 +16,10 @@ import javax.inject.Inject
 class SearchAirportUseCase @Inject constructor(private val airportRepository: IAirportsRepository,
                                                threadExecutor: ThreadExecutor,
                                                postExecutionThread: PostExecutionThread):
-    SingleUseCase<Airport, SearchAirportUseCase.Params>(threadExecutor, postExecutionThread) {
+    SingleUseCase<List<Airport>, SearchAirportUseCase.Params>(threadExecutor, postExecutionThread) {
 
 
-    override fun buildUseCaseObservable(param: Params?): Single<Airport> {
+    override fun buildUseCaseObservable(param: Params?): Single<List<Airport>> {
         checkNotNull(param){"Params cannot be null"}
         assert(param.query.isNotEmpty()){"Query String cannot be empty"}
         return airportRepository.searchAirport(param)

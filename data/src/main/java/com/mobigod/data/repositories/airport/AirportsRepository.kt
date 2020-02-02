@@ -35,9 +35,12 @@ class AirportsRepository @Inject constructor(val remote: IAirportRemote, val cac
     }
 
 
-    override fun searchAirport(params: SearchAirportUseCase.Params?): Single<Airport> {
-        return Single.just(Airport("", ",", ",", "", "",
-            "", "", "", "", "", "", "", "", "", "", "", "", ""))
+    override fun searchAirport(params: SearchAirportUseCase.Params?): Single<List<Airport>> {
+        checkNotNull(params){"Query can't be null"}
+        assert(params.query.isEmpty()){"To search you must enter a value"}
+
+        return cache.searchForAirportWith(params.query)
+            .map { airports -> airports.map { mapper.mapFromEntity(it) } }
     }
 
 }
