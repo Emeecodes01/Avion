@@ -49,14 +49,14 @@ android {
         }
 
 
-        debugard {
-            applicationIdSuffix = '.guard'
-            versionNameSuffix = '-guard'
-            debuggable = true
-            minifyEnabled = true
-            manifestPlaceholders = [app_name: 'Avion Guard']
-            signingConfig signingConfigs.debug
-        }
+//        debugard {
+//            applicationIdSuffix = '.guard'
+//            versionNameSuffix = '-guard'
+//            debuggable = true
+//            minifyEnabled = true
+//            manifestPlaceholders = [app_name: 'Avion Guard']
+//            signingConfig signingConfigs.debug
+//        }
 
 
     }
@@ -66,32 +66,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation project(':domain')
+    implementation project(':data')
+    implementation project(':remote')
+    implementation project(':cache')
 
-    //Android dependencies
-    implementation androidDependencies.values()
-    testImplementation testDependencies.values()
-    androidTestImplementation androidTestDependencies.values()
-
-    //Rx
-    implementation rxDependancies.values()
-
-    //Arch. Components
-    implementation archComponentsDependancies.values()
-
-    //Annotation processors
-    kapt annotation_processors.values()
-
-    //Dagger
-    implementation daggerDependancies.values()
-
-    //Utils
-    implementation utilsDependencies.values()
-
-    //UI
-    implementation uiDependencies.values()
-
-    //DEV
-    implementation devToolsDependencies.values()
+    implementation presenterDependencies.values()
+    testImplementation presenterTestDependencies.values()
+    androidTestImplementation presenterAndroidTestDependencies.values()
+    kapt presenterAnotationprocesors.values()
 
 
 }

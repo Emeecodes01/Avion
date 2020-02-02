@@ -30,70 +30,11 @@ ext {
     roboelectricVersion = '4.2.1'
     androidxTestVersion = '1.0.0'
     archTestingVersion = '2.1.0'
+    androidJunit = '1.1.1'
 
 
-    androidDependencies = [
-            app_compact: "androidx.appcompat:appcompat:$appcompact_version",
-            android_ktx: "androidx.core:core-ktx:$appcompact_version",
-            constriant_layout: "androidx.constraintlayout:constraintlayout:$constriant_layout_version",
-            konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
-    ]
 
-
-    testDependencies = [
-            junit_dep: "junit:junit:${junitVersion}",
-            mockito: "org.mockito:mockito-core:${mockitoVersion}"
-    ]
-
-
-    androidTestDependencies = [
-            test_runner_dep: "androidx.test:runner:$test_runner_version",
-            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version"
-    ]
-
-
-    rxDependancies = [
-            rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
-            rx_android_dep: "io.reactivex.rxjava2:rxandroid:${rx_android}"
-    ]
-
-    archComponentsDependancies = [
-            room_dep: "androidx.room:room-runtime:${room_version}",
-            room_rx_java: "androidx.room:room-rxjava2:$room_version",
-            lifecycle_dep: "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
-            work_manager_dep: "androidx.work:work-rxjava2:$work_version"
-    ]
-
-
-    annotation_processors = [
-            room_complier: "androidx.room:room-compiler:${room_version}",
-            lifecycle_complier: "androidx.lifecycle:lifecycle-compiler:${lifecycle_version}",
-            dagger_complier: "com.google.dagger:dagger-compiler:${dagger_version}",
-            dagger_android_support: "com.google.dagger:dagger-android-processor:${dagger_version}",
-    ]
-
-    daggerDependancies = [
-            dagger_dep: "com.google.dagger:dagger:${dagger_version}",
-            dagger_android_dep: "com.google.dagger:dagger-android:${dagger_version}",
-            dagger_andriod_support_dep: "com.google.dagger:dagger-android-support:${dagger_version}"
-    ]
-
-    utilsDependencies = [
-            utils_dep: "net.danlew:android.joda:${joda_time_version}"
-    ]
-
-    uiDependencies = [
-            google_material_dep: "com.google.android.material:material:$material_app",
-            rv_dep: "androidx.recyclerview:recyclerview:$recyclerview_version",
-            date_time_picker: "com.wdullaer:materialdatetimepicker:$time_date_version"
-    ]
-
-    devToolsDependencies = [
-            stetho_dep: "com.facebook.stetho:stetho:$stetho_version"
-    ]
-
-
-    //javaxAnnotation, javaxInject, rxKotlin, kotlin
+    //--------------------------------------------- DOMAIN DEPENDENCY ---------------------------------------------//
     domainDependencies = [
             rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
@@ -107,8 +48,11 @@ ext {
             junit_dep: "junit:junit:${junitVersion}",
             konveyor: "com.github.vacxe:konveyor:${konveyor_version}"
     ]
+    //--------------------------------------------------------------------------------------------------------------//
 
 
+
+    //--------------------------------------------- DATA MODULE DEP -----------------------------------------------//
     dataDependencies = [
         gson:  "com.google.code.gson:gson:${gsonVersion}",
         rxKotlin:  "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
@@ -117,15 +61,17 @@ ext {
         timber:        "com.jakewharton.timber:timber:${timberVersion}"
     ]
 
-
-
     dataTestDependencies = [
             junit:                  "junit:junit:${junitVersion}",
             kotlinJUnit:            "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
             mockito:                "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}"
     ]
 
+    //-------------------------------------------------------------------------------------------------------------//
 
+
+
+    //--------------------------------------------- REMOTE MODULE DEP ---------------------------------------------//
     remoteDependencies = [
             rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
             retrofitRxAdapterDep: "com.squareup.retrofit2:adapter-rxjava2:${retrofitAdapterVersion}",
@@ -151,7 +97,11 @@ ext {
             androidx_test: "androidx.test:core:${androidxTestVersion}"
     ]
 
+    //----------------------------------------------------------------------------------------------------------------//
 
+
+
+    //-------------------------------------------- CACHE DEP ---------------------------------------------------------//
     cacheDependencies = [
             rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
             google_gson_dep: "com.google.code.gson:gson:${gson_version}",
@@ -159,12 +109,14 @@ ext {
             javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
             dagger_dep: "com.google.dagger:dagger:${dagger_version}",
             room_dep: "androidx.room:room-runtime:$room_version",
-            room_rx_java:  "androidx.room:room-rxjava2:$room_version"
+            room_rx_java:  "androidx.room:room-rxjava2:$room_version",
+
     ]
 
     cacheProcessors = [
             room_compiler: "androidx.room:room-compiler:$room_version"
     ]
+
 
     cacheTestDependencies = [
             junit:         "junit:junit:${junitVersion}",
@@ -176,5 +128,49 @@ ext {
             room_test_helper: "androidx.room:room-testing:$room_version",
             arch_test: "android.arch.core:core-testing:${archTestingVersion}"
     ]
+    //---------------------------------------------------------------------------------------------------------------//
+
+
+
+    //----------------------------------------- PRESENTATION DEP ----------------------------------------------------//
+    presenterDependencies = [
+            stetho_dep: "com.facebook.stetho:stetho:$stetho_version",
+            dagger_dep: "com.google.dagger:dagger:${dagger_version}",
+            dagger_android_dep: "com.google.dagger:dagger-android:${dagger_version}",
+            dagger_andriod_support_dep: "com.google.dagger:dagger-android-support:${dagger_version}",
+            lifecycle_dep: "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
+            lifecycle_complier: "androidx.lifecycle:lifecycle-compiler:${lifecycle_version}",
+            rx_kotlin_dep: "io.reactivex.rxjava2:rxkotlin:${rx_kotlin}",
+            rx_android_dep: "io.reactivex.rxjava2:rxandroid:${rx_android}",
+            google_material_dep: "com.google.android.material:material:$material_app",
+            rv_dep: "androidx.recyclerview:recyclerview:$recyclerview_version",
+            date_time_picker: "com.wdullaer:materialdatetimepicker:$time_date_version",
+            app_compact: "androidx.appcompat:appcompat:$appcompact_version",
+            android_ktx: "androidx.core:core-ktx:$appcompact_version",
+            constriant_layout: "androidx.constraintlayout:constraintlayout:$constriant_layout_version",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
+    ]
+
+
+
+    presenterTestDependencies = [
+            junit_dep: "junit:junit:${junitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}",
+            test_runner_dep: "androidx.test:runner:$test_runner_version",
+            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version"
+    ]
+
+
+    presenterAndroidTestDependencies = [
+            android_junit: "androidx.test.ext:junit:$androidJunit",
+            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version"
+    ]
+
+
+    presenterAnotationprocesors = [
+            dagger_complier: "com.google.dagger:dagger-compiler:${dagger_version}",
+            dagger_android_support: "com.google.dagger:dagger-android-processor:${dagger_version}"
+    ]
+    //----------------------------------------------------------------------------------------------------------------//
 
 }
