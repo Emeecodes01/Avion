@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply from: '../dependencies.gradle'
 
 
 
@@ -31,6 +30,22 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/main.kotlin_module'
+        exclude 'licenses/javolution.license.TXT'
+        exclude 'licenses/thoughtworks.TXT'
+        exclude 'META-INF/plexus/components.xml'
+        exclude 'org/apache/http/version.properties'
+        exclude 'org/apache/http/client/version.properties'
+        exclude 'org/cyberneko/html/res/HTMLspecial.properties'
     }
 
 
@@ -66,15 +81,60 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    def presentationDependencies = rootProject.ext.presenterDependencies
+    def presentationProcessors = rootProject.ext.presenterAnotationprocesors
+    def presentationAndroidTest = rootProject.ext.presenterAndroidTestDependencies
+    def presentationTest = rootProject.ext.presenterTestDependencies
+
     implementation project(':domain')
     implementation project(':data')
     implementation project(':remote')
     implementation project(':cache')
 
-    implementation presenterDependencies.values()
-    testImplementation presenterTestDependencies.values()
-    androidTestImplementation presenterAndroidTestDependencies.values()
-    kapt presenterAnotationprocesors.values()
+    implementation(
+            presentationDependencies.stetho_dep,
+            presentationDependencies.dagger_dep,
+            presentationDependencies.dagger_android_dep,
+            presentationDependencies.dagger_andriod_support_dep,
+            presentationDependencies.lifecycle_dep,
+            presentationDependencies.rx_kotlin_dep,
+            presentationDependencies.rx_android_dep,
+            presentationDependencies.google_material_dep,
+            presentationDependencies.rv_dep,
+            presentationDependencies.date_time_picker,
+            presentationDependencies.app_compact,
+            presentationDependencies.android_ktx,
+            presentationDependencies.constriant_layout,
+            presentationDependencies.konveyor
+    )
 
+//    javaxAnnotation:  "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+//    javaxInject:  "javax.inject:javax.inject:${javaxInjectVersion}",
+
+//    implementation(presentationDependencies.javaxAnnotation) {
+//        exclude module: 'javax.annotation'
+//    }
+//
+//    implementation(presentationDependencies.javaxInject) {
+//        exclude module: 'javax.annotation'
+//    }
+
+
+    testImplementation(
+            presentationTest.junit_dep,
+            presentationTest.mockito,
+            presentationTest.test_runner_dep,
+            presentationTest.expresso_test_dep
+    )
+
+
+    androidTestImplementation(
+            presentationAndroidTest.android_junit,
+            presentationAndroidTest.expresso_test_dep
+    )
+
+
+    kapt presentationProcessors.dagger_complier
+    kapt presentationProcessors.dagger_android_support
 
 }

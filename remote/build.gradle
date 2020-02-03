@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply from: '../dependencies.gradle'
+//apply from: '../dependencies.gradle'
 apply plugin: 'kotlin-kapt'
 
 
@@ -33,6 +33,13 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
 
 }
 
@@ -42,14 +49,34 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    def remoteDependencies = rootProject.ext.remoteDependencies
+    def remoteProcessor = rootProject.ext.remoteProcessors
+    def reomteTestDep = rootProject.ext.remoteTestDependencies
+
     implementation project(':data')
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
 
-    implementation remoteDependencies.values()
-    implementation remoteTestDependencies.values()
-    kapt remoteProcessors.values()
+    implementation(
+            remoteDependencies.rx_kotlin_dep,
+            remoteDependencies.retrofitRxAdapterDep,
+            remoteDependencies.retrofit_dep,
+            remoteDependencies.retrofit_gson_conv,
+            remoteDependencies.okhttp_logger_dep,
+            remoteDependencies.google_gson_dep,
+            remoteDependencies.dagger_dep
+    )
+
+    kapt remoteProcessor.dagger_complier
+
+    testImplementation (
+            reomteTestDep.junit,
+            reomteTestDep.kotlinJUnit,
+            reomteTestDep.mockito,
+            reomteTestDep.roboelectric,
+            reomteTestDep.androidx_test
+    )
 
 
 }

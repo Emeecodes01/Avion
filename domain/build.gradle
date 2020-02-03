@@ -1,5 +1,5 @@
 apply plugin: 'kotlin'
-apply from: '../dependencies.gradle'
+//apply from: '../dependencies.gradle'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -34,9 +34,23 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    def domainDeps = rootProject.ext.domainDependencies
+    def domainTestDeps = rootProject.ext.domainTestDependencies
+
+
     //Test dependencies
     testImplementation domainTestDependencies.values()
 
+    implementation(
+            domainDeps.rx_kotlin_dep,
+            domainDeps.gson
+    )
+
+    implementation(domainDeps.javaxAnnotation) {
+        //exclude: group 'javax.annotation', module: ''
+    }
+
+    implementation(domainDeps.javaxInject)
 
     implementation domainDependencies.values()
 
