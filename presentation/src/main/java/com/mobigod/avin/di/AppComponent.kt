@@ -1,7 +1,8 @@
 package com.mobigod.avin.di
 
-import android.content.Context
 import com.mobigod.avin.AvionApplication
+import com.mobigod.avin.di.modules.ActivityBuilder
+import com.mobigod.avin.di.modules.AppModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

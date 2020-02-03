@@ -19,11 +19,17 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
     @Named("base_url")
     lateinit var appSecret: String
 
+
+    @Inject
+    @Named("base_url2")
+    lateinit var appKey: String
+
     override fun layoutRes() = R.layout.activity_auth_layout
 
     override fun initComponents() {
         binding = getBinding()
         binding.textView.text = appSecret
+        binding.textView2.text = appKey
 
     }
 
