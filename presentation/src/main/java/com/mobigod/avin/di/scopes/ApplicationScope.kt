@@ -6,7 +6,10 @@ import javax.inject.Scope
 //on: 03, 2020-02-03
 //at: 13:46*/
 
-
+/**
+ * Components and methods annotated with this are
+ * Expected to last through out the lifecycle of the Application
+ */
 @Scope
 @Retention(AnnotationRetention.RUNTIME)
 annotation class ApplicationScope

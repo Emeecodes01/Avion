@@ -16,22 +16,22 @@ abstract class AvionDatabase: RoomDatabase() {
 
     abstract fun airportDao(): AirportDao
 
-    private var instance: AvionDatabase? = null
+    companion object {
+        private var instance: AvionDatabase? = null
 
-    private val lock = Any()
-
-    fun getInstance(context: Context): AvionDatabase {
-        if (instance == null) {
-            synchronized(lock) {
+        fun getInstance(context: Context): AvionDatabase {
+            if (instance == null) {
                 if (instance == null) {
                     instance = Room.databaseBuilder(context.applicationContext,
-                        AvionDatabase::class.java, "avion.db")
+                        AvionDatabase::class.java, "avion_cache.db")
                         .build()
                 }
                 return instance!!
+
             }
+            return instance!!
         }
-        return instance!!
     }
+
 
 }

@@ -1,6 +1,8 @@
 package com.mobigod.avin
 
-import com.mobigod.avin.di.DaggerAppComponent
+
+import com.facebook.stetho.Stetho
+import com.mobigod.avin.di.components.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 
@@ -17,9 +19,11 @@ class AvionApplication: DaggerApplication() {
             .build()
     }
 
+
+
     override fun onCreate() {
         super.onCreate()
-
+        Stetho.initializeWithDefaults(this)
     }
 
 
