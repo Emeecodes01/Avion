@@ -36,7 +36,7 @@ class AirportServiceImplTest {
     lateinit var SUT: AirportServiceImpl
 
     private val SAMPLE_TEST_JSON_STRING = """
-        [
+[
   {
     "code": "BNI",
     "lat": "6.3161",
@@ -77,6 +77,27 @@ class AirportServiceImplTest {
     "icao": "DNMM",
     "direct_flights": "42",
     "carriers": "37"
+  },
+
+  {
+    "code": "ABV",
+    "lat": "9.0056",
+    "lon": "7.2661",
+    "name": "Abuja International Airport",
+    "city": "Gwagwa",
+    "state": "Abuja Capital Territory",
+    "country": "Nigeria",
+    "woeid": "12515056",
+    "tz": "Africa\/Lagos",
+    "phone": "",
+    "type": "Airports",
+    "email": "",
+    "url": "",
+    "runway_length": "11808",
+    "elev": "1122",
+    "icao": "DNAA",
+    "direct_flights": "9",
+    "carriers": "12"
   }
 ]
     """.trim()

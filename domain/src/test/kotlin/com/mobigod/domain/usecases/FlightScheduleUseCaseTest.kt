@@ -103,8 +103,4 @@ class FlightScheduleUseCaseTest {
         `when`(flightsRepository.getFlightSchedules(any()))
             .thenReturn(schedulesResponse)
     }
-
-
-
-
 }
