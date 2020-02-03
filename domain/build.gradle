@@ -39,11 +39,17 @@ dependencies {
 
 
     //Test dependencies
-    testImplementation domainTestDependencies.values()
+    //testImplementation domainTestDependencies.values()
 
     implementation(
             domainDeps.rx_kotlin_dep,
             domainDeps.gson
+    )
+
+    testImplementation(
+            domainTestDeps.konveyor,
+            domainTestDeps.mockito,
+            domainTestDeps.junit_dep
     )
 
     implementation(domainDeps.javaxAnnotation) {

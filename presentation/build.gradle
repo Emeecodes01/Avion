@@ -39,13 +39,6 @@ android {
         exclude 'META-INF/ASL2.0'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
-        exclude 'META-INF/main.kotlin_module'
-        exclude 'licenses/javolution.license.TXT'
-        exclude 'licenses/thoughtworks.TXT'
-        exclude 'META-INF/plexus/components.xml'
-        exclude 'org/apache/http/version.properties'
-        exclude 'org/apache/http/client/version.properties'
-        exclude 'org/cyberneko/html/res/HTMLspecial.properties'
     }
 
 

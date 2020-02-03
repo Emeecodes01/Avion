@@ -21,7 +21,7 @@
         </compilerSettings>
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/build/classes/kotlin/main" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/b529d1738c7e98bbfa36a4134039528f2ce78ebf/kotlin-stdlib-1.3.50.jar:/Users/emmanuelmac/Desktop/Soft/testproject/Avion/domain/build/libs/domain.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/9180733b7df8542621dc12e21e87557e8c99b8cb/gson-2.8.6.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxkotlin/2.4.0/2f4a35d683b4851a036b8828d4a7c6888adf75c7/rxkotlin-2.4.0.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.1/ff342425e5704d9f970b16e122b8f607a5937ba2/timber-4.7.1.aar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/3d9cd3e1bc7b92e95f43d45be3bfbcf38e36ab87/kotlin-stdlib-common-1.3.50.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.1/c1a6655cebcac68e63e4c24d23f573035032eb2a/annotations-16.0.1.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.10/18e9edc67e0abaa03713eeb9ca2cb0e30c859de4/rxjava-2.2.10.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.2/323964c36556eb0e6209f65c1cef72b53b461ab8/reactive-streams-1.0.2.jar" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/b529d1738c7e98bbfa36a4134039528f2ce78ebf/kotlin-stdlib-1.3.50.jar:/Users/emmanuelmac/Desktop/Soft/testproject/Avion/domain/build/libs/domain.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/9180733b7df8542621dc12e21e87557e8c99b8cb/gson-2.8.6.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxkotlin/2.4.0/2f4a35d683b4851a036b8828d4a7c6888adf75c7/rxkotlin-2.4.0.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.1/ff342425e5704d9f970b16e122b8f607a5937ba2/timber-4.7.1.aar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/javax.annotation/jsr250-api/1.0/5025422767732a1ab45d93abfea846513d742dcf/jsr250-api-1.0.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/3d9cd3e1bc7b92e95f43d45be3bfbcf38e36ab87/kotlin-stdlib-common-1.3.50.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.1/c1a6655cebcac68e63e4c24d23f573035032eb2a/annotations-16.0.1.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.10/18e9edc67e0abaa03713eeb9ca2cb0e30c859de4/rxjava-2.2.10.jar:/Users/emmanuelmac/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.2/323964c36556eb0e6209f65c1cef72b53b461ab8/reactive-streams-1.0.2.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="data" />
@@ -70,13 +70,14 @@
     <orderEntry type="library" exported="" name="Gradle: gson-2.8.6" level="project" />
     <orderEntry type="library" exported="" name="Gradle: rxkotlin-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: timber-4.7.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jsr250-api-1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javax.inject-1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-common-1.3.50" level="project" />
     <orderEntry type="library" exported="" name="Gradle: annotations-16.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: rxjava-2.2.10" level="project" />
     <orderEntry type="library" exported="" name="Gradle: reactive-streams-1.0.2" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-stdlib-jdk7-1.3.50" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: jsr250-api-1.0" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: konveyor-1.0.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-test-junit-1.3.50" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-test-1.3.50" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.12" level="project" />
@@ -89,7 +90,5 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: byte-buddy-agent-1.9.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: objenesis-2.6" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-stdlib-jdk7-1.3.50" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: jsr250-api-1.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.inject-1" level="project" />
   </component>
 </module>

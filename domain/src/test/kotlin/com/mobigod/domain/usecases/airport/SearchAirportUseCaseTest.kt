@@ -53,7 +53,7 @@ class SearchAirportUseCaseTest {
     fun `searchAirport returns data when called with correct params`() {
         //Arrange
         val param = StubsGenerator.createAirportParam()
-        val response = StubsGenerator.createAirport()
+        val response = StubsGenerator.generateListOfAirports(5)
         setUpStub(Single.just(response))
 
 
@@ -70,7 +70,7 @@ class SearchAirportUseCaseTest {
     fun `searchAirport throws error when called with a null params`() {
         //Arrange
         val param = null
-        val response = StubsGenerator.createAirport()
+        val response = StubsGenerator.generateListOfAirports(5)
         setUpStub(Single.just(response))
 
         //Act
@@ -78,6 +78,7 @@ class SearchAirportUseCaseTest {
 
         //Assert
         testObserver.assertValue(response)
+
     }
 
 
@@ -86,7 +87,7 @@ class SearchAirportUseCaseTest {
     fun `searchAirport throws error when called with an empty query`() {
         //Arrange
         val param = SearchAirportUseCase.Params("")
-        val response = StubsGenerator.createAirport()
+        val response = StubsGenerator.generateListOfAirports(5)
         setUpStub(Single.just(response))
 
         //Act
@@ -98,7 +99,7 @@ class SearchAirportUseCaseTest {
 
 
 
-    private fun setUpStub(value: Single<Airport>){
+    private fun setUpStub(value: Single<List<Airport>>){
         `when`(repository.searchAirport(any()))
             .thenReturn(value)
     }

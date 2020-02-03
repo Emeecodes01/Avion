@@ -6,11 +6,23 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
+    def dataDep = rootProject.ext.dataDependencies
+    def dataTestDep = rootProject.ext.dataTestDependencies
+
     implementation project(':domain')
 
-    implementation dataDependencies.values()
-    testImplementation dataTestDependencies.values()
+    implementation(dataDep.gson,
+            dataDep.rxKotlin,
+            dataDep.timber, dataDep.javaxAnnotation,
+            dataDep.javaxInject
+    )
 
+
+    testImplementation (
+            dataTestDep.junit,
+            dataTestDep.kotlinJUnit,
+            dataTestDep.mockito,
+            dataTestDep.konveyor)
 }
 
 
