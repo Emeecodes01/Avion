@@ -106,7 +106,7 @@ ext {
             google_gson_dep: "com.google.code.gson:gson:${gson_version}",
             dagger_dep: "com.google.dagger:dagger:${dagger_version}",
             room_dep: "androidx.room:room-runtime:$room_version",
-            room_rx_java:  "androidx.room:room-rxjava2:$room_version",
+            room_rx_java:  "androidx.room:room-rxjava2:$room_version"
 
     ]
 
@@ -145,6 +145,12 @@ ext {
             android_ktx: "androidx.core:core-ktx:$appcompact_version",
             constriant_layout: "androidx.constraintlayout:constraintlayout:$constriant_layout_version",
             konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
+            room_rx_java:  "androidx.room:room-rxjava2:$room_version",
+            retrofitRxAdapterDep: "com.squareup.retrofit2:adapter-rxjava2:${retrofitAdapterVersion}",
+            retrofit_dep: "com.squareup.retrofit2:retrofit:${retrofit_version}",
+            retrofit_gson_conv: "com.squareup.retrofit2:converter-gson:${retrofit_version}",
+            okhttp_logger_dep: "com.squareup.okhttp3:logging-interceptor:${okhttp_logginterceptor}",
+            google_gson_dep: "com.google.code.gson:gson:${gson_version}"
     ]
 
 

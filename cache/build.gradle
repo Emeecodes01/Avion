@@ -48,10 +48,30 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    def cacheDependencies = rootProject.ext.cacheDependencies
+    def cacheTestDependencies = rootProject.ext.cacheTestDependencies
+    def cacheProcessor= rootProject.ext.cacheProcessors
+
 
     implementation project(':data')
 
-    implementation cacheDependencies.values()
-    kapt cacheProcessors.values()
-    testImplementation cacheTestDependencies.values()
+
+    implementation(
+            cacheDependencies.rx_kotlin_dep,
+            cacheDependencies.google_gson_dep,
+            cacheDependencies.dagger_dep,
+            cacheDependencies.room_rx_java)
+
+
+    kapt "androidx.room:room-compiler:$room_version"
+
+    api cacheDependencies.room_dep
+
+
+    testImplementation(
+            cacheTestDependencies.junit, cacheTestDependencies.kotlinJUnit,
+            cacheTestDependencies.mockito, cacheTestDependencies.roboelectric,
+            cacheTestDependencies.androidx_test, cacheTestDependencies.konveyor,
+            cacheTestDependencies.room_test_helper, cacheTestDependencies.arch_test
+    )
 }
