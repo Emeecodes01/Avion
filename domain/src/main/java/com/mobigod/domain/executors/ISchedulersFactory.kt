@@ -7,7 +7,5 @@ interface ISchedulersFactory {
 
     fun computation(): Scheduler
 
-    fun main(): Scheduler
-
-    fun trampoline(): Scheduler
+    fun ui(): Scheduler
 }
