@@ -4,6 +4,7 @@ package com.mobigod.remote
 import com.mobigod.data.models.auth.TokenEntity
 import com.mobigod.domain.entities.token.Token
 import io.reactivex.Single
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
@@ -22,4 +23,10 @@ interface ApiService {
     @POST("oauth/token")
     fun loginUser(@Query("client_id") userKey: String, @Query("client_secret") userSecret: String,
                   @Query("grant_type") grantType: String): Single<TokenEntity>
+
+
+
+    @POST("oauth/token")
+    fun loginUserSync(@Query("client_id") userKey: String, @Query("client_secret") userSecret: String,
+                  @Query("grant_type") grantType: String): Call<TokenEntity>
 }

@@ -8,5 +8,8 @@ import com.mobigod.data.models.auth.TokenEntity
 interface IAuthCache {
     fun hasTokenExpired(): Boolean
     fun saveToken(tokenEntity: TokenEntity, loggedInTimeMillis: Long)
+    fun updateClientCredentials(clientId: String, clientSecret: String)
+    fun getClientId(): String
+    fun getClientSecret(): String
     fun getToken(): TokenEntity
 }

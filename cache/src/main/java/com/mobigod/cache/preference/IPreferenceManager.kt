@@ -7,4 +7,6 @@ interface IPreferenceManager {
     var isFirstRun: Boolean
     var hasBeenSetUp: Boolean
     var accessToken: String
+    var userClientId: String
+    var userClientSecret: String
 }

@@ -16,7 +16,7 @@ class TokenManager @Inject constructor(val preferenceManager: IPreferenceManager
         val currentTime = System.currentTimeMillis()
         val lastTokenSavedTime = currentToken.loggedInTime
 
-        val secs = (currentTime - lastTokenSavedTime) / 1000
+        val secs = (currentTime - lastTokenSavedTime)/1000
         return secs > currentToken.expiresIn
     }
 

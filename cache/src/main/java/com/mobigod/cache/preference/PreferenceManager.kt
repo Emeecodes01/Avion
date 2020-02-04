@@ -15,6 +15,8 @@ class PreferenceManager @Inject constructor(val context: Context): IPreferenceMa
         private val KEY_FIRST_RUN = "is_first_run"
         private val KEY_HAS_BEEN_SETUP = "has_been_setup"
         private val KEY_ACCESS_TOKEN = "_accessToken"
+        private val KEY_CLIENT_ID = "client_id"
+        private val KEY_CLIENT_SECRET = "client_secret"
     }
 
     private val avionPreference: SharedPreferences
@@ -40,4 +42,15 @@ class PreferenceManager @Inject constructor(val context: Context): IPreferenceMa
     override var accessToken: String
         get() = avionPreference.getString(KEY_ACCESS_TOKEN, "")!!
         set(value) {avionPreference.edit().putString(KEY_ACCESS_TOKEN, value).apply()}
+
+
+    override var userClientId: String
+        get() = avionPreference.getString(KEY_CLIENT_ID, "")!!
+        set(value) {avionPreference.edit().putString(KEY_CLIENT_ID, value).apply()}
+
+
+
+    override var userClientSecret: String
+        get() = avionPreference.getString(KEY_CLIENT_SECRET, "")!!
+        set(value) {avionPreference.edit().putString(KEY_CLIENT_SECRET, value).apply()}
 }

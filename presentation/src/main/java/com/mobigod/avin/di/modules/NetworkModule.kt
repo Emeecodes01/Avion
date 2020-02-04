@@ -5,6 +5,8 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.di.scopes.ApplicationScope
+import com.mobigod.avin.utils.network.AuthInterceptor
+import com.mobigod.data.repositories.auth.IAuthCache
 import com.mobigod.remote.airport.AirportServiceImpl
 import com.mobigod.remote.ApiService
 import dagger.Module
@@ -47,18 +49,18 @@ class NetworkModule {
     }
 
 
-//    @Provides
-//    @Singleton
-//    fun provideAuthInterceptor() = AuthInterceptor()
+    @Provides
+    @ApplicationScope
+    fun provideAuthInterceptor(authCache: IAuthCache) = AuthInterceptor(authCache)
 
 
     @Provides
     @ApplicationScope
-    fun provideOkhttp(gson: Gson, cache: Cache, logging: HttpLoggingInterceptor /*authInterceptor: AuthInterceptor*/):
+    fun provideOkhttp(authInterceptor: AuthInterceptor, cache: Cache, logging: HttpLoggingInterceptor /*authInterceptor: AuthInterceptor*/):
             OkHttpClient {
         val client = OkHttpClient.Builder()
             .addNetworkInterceptor(logging)
-            //.authenticator(AuthInterceptor())
+            .addInterceptor(authInterceptor)
             .cache(cache)
             .connectTimeout(1, TimeUnit.MINUTES)
             .readTimeout(1, TimeUnit.MINUTES)
@@ -88,11 +90,5 @@ class NetworkModule {
     @ApplicationScope
     fun provideApiService(retrofit: Retrofit)
             = retrofit.create(ApiService::class.java)
-
-
-    @Provides
-    @ApplicationScope
-    fun provideAirportService(context: Context) =
-        AirportServiceImpl(context)
 
 }
