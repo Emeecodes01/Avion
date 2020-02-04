@@ -2,8 +2,8 @@ package com.mobigod.avin.di.modules
 
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.data.mapper.AirportMapper
-import com.mobigod.remote.AirportRemoteImpl
-import com.mobigod.remote.AirportService
+import com.mobigod.remote.airport.AirportRemoteImpl
+import com.mobigod.remote.airport.AirportService
 import com.mobigod.remote.ApiService
 import dagger.Module
 import dagger.Provides

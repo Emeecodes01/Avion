@@ -1,9 +1,13 @@
 package com.mobigod.remote
 
 //import com.mobigod.domain.entities.flight.ScheduleResource
+import com.mobigod.data.models.auth.TokenEntity
+import com.mobigod.domain.entities.token.Token
 import io.reactivex.Single
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 /**Created by: Emmanuel Ozibo
 //on: 01, 2020-02-01
@@ -15,4 +19,7 @@ interface ApiService {
     fun getFlightSchedules(@Path("origin") origin: String, @Path("destination") destination: String,
                            @Path("fromDateTime") departureDate: String): Single<ScheduleResource>*/
 
+    @POST("oauth/token")
+    fun loginUser(@Query("client_id") userKey: String, @Query("client_secret") userSecret: String,
+                  @Query("grant_type") grantType: String): Single<TokenEntity>
 }

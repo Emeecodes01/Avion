@@ -6,4 +6,5 @@ package com.mobigod.cache.preference
 interface IPreferenceManager {
     var isFirstRun: Boolean
     var hasBeenSetUp: Boolean
+    var accessToken: String
 }

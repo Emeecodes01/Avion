@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.di.scopes.ApplicationScope
-import com.mobigod.remote.AirportServiceImpl
+import com.mobigod.remote.airport.AirportServiceImpl
 import com.mobigod.remote.ApiService
 import dagger.Module
 import dagger.Provides
@@ -16,7 +16,6 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Singleton
 
 /**Created by: Emmanuel Ozibo
 //on: 02, 2020-02-02
@@ -93,5 +92,7 @@ class NetworkModule {
 
     @Provides
     @ApplicationScope
-    fun provideAirportService(context: Context) = AirportServiceImpl(context)
+    fun provideAirportService(context: Context) =
+        AirportServiceImpl(context)
+
 }
