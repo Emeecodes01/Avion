@@ -1,6 +1,6 @@
 package com.mobigod.domain.usecases.auth
 
-import com.mobigod.domain.entities.token.Token
+import com.mobigod.domain.entities.auth.Token
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
 import com.mobigod.domain.repository.IAuthRepository
@@ -12,18 +12,18 @@ import javax.inject.Inject
 //on: 04, 2020-02-04
 //at: 08:29*/
 
-class LoginUseCase @Inject constructor(
-    val authRepository: IAuthRepository,
-    val executor: ThreadExecutor, val postExecutionThread: PostExecutionThread): SingleUseCase<Token, LoginUseCase.Params>(executor, postExecutionThread){
+class LoginUseCase @Inject constructor(internal val authRepository: IAuthRepository,
+    internal val executor: ThreadExecutor, internal val postExecutionThread: PostExecutionThread):
+    SingleUseCase<Token, LoginUseCase.Params>(executor, postExecutionThread) {
 
 
     override fun buildUseCaseObservable(param: Params?): Single<Token> {
         checkNotNull(param)
-        assert(param.userKey.isNotEmpty()){"You must provide User Key"}
-        assert(param.userSecret.isNotEmpty()){"You must provide User Secret"}
-        return authRepository.authenticate(param.userKey, param.userSecret)
+        assert(param.clientId.isNotEmpty()){"You must provide User Key"}
+        assert(param.clientSecret.isNotEmpty()){"You must provide User Secret"}
+        return authRepository.authenticate(param.clientId, param.clientSecret)
     }
 
 
-    data class Params(val userKey: String, val userSecret: String)
+    data class Params(val clientId: String, val clientSecret: String)
 }

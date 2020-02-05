@@ -1,6 +1,6 @@
 package com.mobigod.domain.usecases.auth
 
-import com.mobigod.domain.entities.token.Token
+import com.mobigod.domain.entities.auth.Token
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
 import com.mobigod.domain.repository.IAuthRepository
@@ -9,7 +9,6 @@ import com.nhaarman.mockitokotlin2.any
 import io.reactivex.Single
 import org.junit.Before
 
-import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock

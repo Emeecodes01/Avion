@@ -1,7 +1,6 @@
 package com.mobigod.domain.repository
 
-import com.mobigod.domain.entities.token.Token
-import com.sun.org.apache.xpath.internal.operations.Bool
+import com.mobigod.domain.entities.auth.Token
 import io.reactivex.Single
 
 /**Created by: Emmanuel Ozibo

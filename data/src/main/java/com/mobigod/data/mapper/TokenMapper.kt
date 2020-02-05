@@ -1,7 +1,7 @@
 package com.mobigod.data.mapper
 
 import com.mobigod.data.models.auth.TokenEntity
-import com.mobigod.domain.entities.token.Token
+import com.mobigod.domain.entities.auth.Token
 
 /**Created by: Emmanuel Ozibo
 //on: 04, 2020-02-04

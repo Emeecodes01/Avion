@@ -4,6 +4,8 @@ package com.mobigod.remote
 import com.mobigod.data.models.auth.TokenEntity
 import io.reactivex.Single
 import retrofit2.Call
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -17,9 +19,10 @@ interface ApiService {
     fun getFlightSchedules(@Path("origin") origin: String, @Path("destination") destination: String,
                            @Path("fromDateTime") departureDate: String): Single<ScheduleResource>*/
 
+    @FormUrlEncoded
     @POST("oauth/token")
-    fun loginUser(@Query("client_id") userKey: String, @Query("client_secret") userSecret: String,
-                  @Query("grant_type") grantType: String): Single<TokenEntity>
+    fun loginUser(@Field("client_id") userKey: String, @Field("client_secret") userSecret: String,
+                  @Field("grant_type") grantType: String): Single<TokenEntity>
 
 
 

@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.provider.DocumentsContract
 import androidx.room.Room
+import com.mobigod.avin.AvionApplication
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.avin.rx.AppSchedulers
@@ -27,7 +28,7 @@ class AppModule {
 
     @Provides
     @ApplicationScope
-    fun provideAppContext(context: Application): Context = context
+    fun provideAppContext(context: AvionApplication): Context = context
 
 
 

@@ -1,7 +1,7 @@
 package com.mobigod.data.repositories.auth
 
 import com.mobigod.data.mapper.TokenMapper
-import com.mobigod.domain.entities.token.Token
+import com.mobigod.domain.entities.auth.Token
 import com.mobigod.domain.repository.IAuthRepository
 import io.reactivex.Single
 import javax.inject.Inject
@@ -19,10 +19,12 @@ class AuthRepository @Inject constructor(val authCache: IAuthCache, val authRemo
 
     override fun authenticate(userKey: String, userSecret: String): Single<Token>{
         return authRemote.loginUser(userKey, userSecret)
-            .doAfterSuccess{
+            .doAfterSuccess {
                 authCache.saveToken(it, System.currentTimeMillis())
             }
-            .map { mapper.mapFromEntity(it) }
+            .map {
+                mapper.mapFromEntity(it)
+            }
     }
 
 }

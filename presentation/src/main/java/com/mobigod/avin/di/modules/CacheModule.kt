@@ -2,6 +2,7 @@ package com.mobigod.avin.di.modules
 
 import android.content.Context
 import com.mobigod.avin.di.scopes.ApplicationScope
+import com.mobigod.avin.mapper.TokenViewMapper
 import com.mobigod.cache.AirportCacheImpl
 import com.mobigod.cache.db.AvionDatabase
 import com.mobigod.cache.mapper.AirportEntityMapper
@@ -18,6 +19,7 @@ import com.mobigod.cache.user.IUserManager
 import com.mobigod.cache.user.UserManager
 import com.mobigod.data.models.airport.AirportEntity
 import com.mobigod.data.models.auth.TokenEntity
+import com.mobigod.data.repositories.auth.IAuthCache
 import dagger.Module
 import dagger.Provides
 
@@ -35,7 +37,11 @@ class CacheModule {
 
     @Provides
     @ApplicationScope
-    fun provideTokenEntityMapper(): CoreMapper<TokenPrefEntity, TokenEntity> = TokenEntityMapper()
+    fun provideTokenEntityMapper() = TokenEntityMapper()
+
+    @Provides
+    @ApplicationScope
+    fun provideTokenViewMapper() = TokenViewMapper()
 
 
     @Provides
@@ -54,7 +60,7 @@ class CacheModule {
 
     @Provides
     @ApplicationScope
-    fun provideAuthCache(tokenManager: TokenManager, userManager: UserManager, mapper: TokenEntityMapper)
+    fun provideAuthCache(tokenManager: TokenManager, userManager: UserManager, mapper: TokenEntityMapper): IAuthCache
      = AuthCacheImpl(tokenManager, userManager, mapper)
 
 

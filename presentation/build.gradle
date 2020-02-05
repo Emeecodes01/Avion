@@ -20,7 +20,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", 'LUFTHANSA_KEY', '"4z5yvrujv9eeks475pafb2ww"')
         buildConfigField("String", 'LUFTHANSA_SECRET', '"3rK3YH43BF"')
-        buildConfigField("String", 'BASE_URL', '"https://api.lufthansa.com/v1"')
+        buildConfigField("String", 'BASE_URL', '"https://api.lufthansa.com/v1/"')
     }
 
 
@@ -108,7 +108,8 @@ dependencies {
             presentationDependencies.retrofit_dep,
             presentationDependencies.retrofit_gson_conv,
             presentationDependencies.okhttp_logger_dep,
-            presentationDependencies.google_gson_dep
+            presentationDependencies.google_gson_dep,
+            presentationDependencies.material_rx_binding
     )
 
 

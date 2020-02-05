@@ -4,8 +4,13 @@ import android.content.Context
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.data.mapper.AirportMapper
 import com.mobigod.data.mapper.BaseMapper
+import com.mobigod.data.mapper.TokenMapper
 import com.mobigod.data.models.airport.AirportEntity
+import com.mobigod.data.repositories.auth.AuthRepository
+import com.mobigod.data.repositories.auth.IAuthCache
+import com.mobigod.data.repositories.auth.IAuthRemote
 import com.mobigod.domain.entities.airport.Airport
+import com.mobigod.domain.repository.IAuthRepository
 import com.mobigod.remote.airport.AirportRemoteImpl
 import com.mobigod.remote.airport.AirportService
 import com.mobigod.remote.ApiService
@@ -25,6 +30,9 @@ class RemoteModule {
     @ApplicationScope
     fun provideAirportRemoteMapper(): BaseMapper<AirportEntity, Airport> = AirportMapper()
 
+    @Provides
+    @ApplicationScope
+    fun provideTokenMapper() = TokenMapper()
 
     @Provides
     @ApplicationScope
@@ -40,7 +48,12 @@ class RemoteModule {
 
     @Provides
     @ApplicationScope
-    fun provideAuthRemote(apiService: ApiService)
+    fun provideAuthRemote(apiService: ApiService): IAuthRemote
     = AuthRemoteImpl(apiService)
+
+    @Provides
+    @ApplicationScope
+    fun provideAuthRepository(authCache: IAuthCache, authRemote: IAuthRemote, mapper: TokenMapper): IAuthRepository
+    = AuthRepository(authCache, authRemote, mapper)
 
 }
