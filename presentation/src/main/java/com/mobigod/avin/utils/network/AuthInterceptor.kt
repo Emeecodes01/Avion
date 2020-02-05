@@ -13,12 +13,19 @@ import okhttp3.logging.HttpLoggingInterceptor
 /**Created by: Emmanuel Ozibo
 //on: 03, 2020-02-03
 //at: 23:25*/
+//This is create in order to handle auth token refresh
 class AuthInterceptor @Inject constructor(val authCache: IAuthCache): Interceptor {
     private val TAG = ""
 
     override fun intercept(chain: Interceptor.Chain): Response {
 
-        if (authCache.hasTokenExpired()) {
+        if (!authCache.isUserAuthenticated()) {
+            return chain.proceed(chain.request())//sha, just proceed with the request
+        }
+
+        if (authCache.isUserAuthenticated() && authCache.hasTokenExpired()) {
+            //You have to refresh token
+
             val clientId = authCache.getClientId()
             val clientSecret = authCache.getClientSecret()
 
@@ -30,8 +37,7 @@ class AuthInterceptor @Inject constructor(val authCache: IAuthCache): Intercepto
                 mapOf(
                     "client_id" to clientId,
                     "client_secret" to clientSecret,
-                    "grant_type" to "client_credentials")
-            )
+                    "grant_type" to "client_credentials"))
 
             Log.i(TAG, "**** $httpUrl ****")
 
@@ -45,6 +51,8 @@ class AuthInterceptor @Inject constructor(val authCache: IAuthCache): Intercepto
             val token: TokenEntity = Gson().fromJson(jsonString, TokenEntity::class.java)
 
             authCache.saveToken(token, System.currentTimeMillis())
+        }else {
+
         }
 
         val token = authCache.getToken()

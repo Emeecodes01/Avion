@@ -21,6 +21,7 @@ class AuthRepository @Inject constructor(val authCache: IAuthCache, val authRemo
         return authRemote.loginUser(userKey, userSecret)
             .doAfterSuccess {
                 authCache.saveToken(it, System.currentTimeMillis())
+                authCache.setUserAuthenticated()
             }
             .map {
                 mapper.mapFromEntity(it)

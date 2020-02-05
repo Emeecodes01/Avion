@@ -9,7 +9,6 @@ import javax.inject.Inject
 //at: 10:55*/
 class UserManager @Inject constructor(val preferenceManager: IPreferenceManager): IUserManager {
 
-
     override fun saveUserClientId(clientId: String) {
         preferenceManager.userClientId = clientId
     }
@@ -22,4 +21,9 @@ class UserManager @Inject constructor(val preferenceManager: IPreferenceManager)
 
     override fun getUserClientSecret() = preferenceManager.userClientSecret
 
+    override fun isUserAuthenticated() = preferenceManager.userAuthenticated
+
+    override fun setUserAuthenticated() {
+        preferenceManager.userAuthenticated = true
+    }
 }

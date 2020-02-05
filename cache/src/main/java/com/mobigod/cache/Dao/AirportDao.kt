@@ -18,6 +18,7 @@ abstract class AirportDao {
     abstract fun saveAirport(airportDBEntity: AirportDBEntity): Completable
 
     @Query("SELECT * FROM airports WHERE name LIKE :query OR state LIKE :query OR city LIKE :query")
+    //@Query("SELECT * FROM airports WHERE airports MATCH :query")
     abstract fun searchForAirport(query: String): Single<List<AirportDBEntity>>
 
     @Query("SELECT * FROM airports WHERE code = :code")

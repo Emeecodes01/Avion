@@ -15,6 +15,13 @@ class AuthCacheImpl @Inject constructor(val tokenManager: ITokenManager,
                                         val userManager: IUserManager,
                                         val mapper: TokenEntityMapper): IAuthCache {
 
+    override fun isUserAuthenticated()
+        = userManager.isUserAuthenticated()
+
+
+    override fun setUserAuthenticated() {
+        userManager.setUserAuthenticated()
+    }
 
 
     override fun getClientId(): String = userManager.getUserClientId()

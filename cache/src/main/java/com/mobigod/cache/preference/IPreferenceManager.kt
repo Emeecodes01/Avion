@@ -9,4 +9,5 @@ interface IPreferenceManager {
     var accessToken: String
     var userClientId: String
     var userClientSecret: String
+    var userAuthenticated: Boolean
 }

@@ -19,7 +19,7 @@ object HttpUrlFactory {
         }
 
         for (entry in queryParams.entries) {
-            httpUrl.addQueryParameter(entry.key, entry.value)
+            httpUrl.addEncodedQueryParameter(entry.key, entry.value)
         }
 
         return httpUrl.build()

@@ -12,4 +12,6 @@ interface IAuthCache {
     fun getClientId(): String
     fun getClientSecret(): String
     fun getToken(): TokenEntity
+    fun setUserAuthenticated()
+    fun isUserAuthenticated(): Boolean
 }
