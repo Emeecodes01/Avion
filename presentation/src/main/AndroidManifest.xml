@@ -27,6 +27,10 @@
             android:theme="@style/NoActionBar"/>
 
 
+        <activity android:name=".ui.setup.SetUpActivity"
+            android:theme="@style/NoActionBar"/>
+
+
     </application>
 
 </manifest>

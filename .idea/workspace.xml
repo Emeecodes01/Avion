@@ -6,30 +6,42 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="percent" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8346cdce-4d8b-4959-92fa-40c436af20b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/AirportViewMapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/airport/AirportModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetUpActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetupViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/activity_setup_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/AirportCacheImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/AirportCacheImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/mapper/AirportEntityMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/mapper/AirportEntityMapper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/AirportDBEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/AirportDBEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/IPreferenceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/IPreferenceManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/PreferenceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/PreferenceManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/AuthCacheImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/AuthCacheImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/user/IUserManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/user/IUserManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/user/UserManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/user/UserManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/AuthRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/IAuthCache.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/IAuthCache.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/NetworkModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/AuthInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/AuthInterceptor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/HttpUrlFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/HttpUrlFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/airport/AirportEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/airport/AirportEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/airport/Airport.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/airport/Airport.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ActivityBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ActivityBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,30 +97,21 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/AuthCacheImpl.kt">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/AirportsRepository.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/AuthRepository.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/AuthInterceptor.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+              <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -116,8 +119,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+            <state relative-caret-position="342">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -125,53 +137,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="1242">
+              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetupViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1043">
+              <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/IAirportCache.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetUpActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/AirportDBEntity.kt">
+        <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/AirportCacheImpl.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/NetworkModule.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/HttpUrlFactory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/build/tmp/kapt3/stubs/debug/com/mobigod/cache/models/AirportDBEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/build/tmp/kapt3/stubs/debug/com/mobigod/cache/Dao/AirportDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="108">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -190,8 +193,9 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="valueResourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -208,6 +212,7 @@
       <find>javaxAnnotation</find>
       <find>rxbi</find>
       <find>Token</find>
+      <find>IAirportsRepository</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,42 +226,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/mapper/TokenEntityMapper.kt" />
-        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/TokenRepository.kt" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAuthRepository.kt" />
-        <option value="$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/airport/AirportRemoteImpl.kt" />
-        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/IAuthRemote.kt" />
-        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/mapper/TokenMapper.kt" />
-        <option value="$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/auth/AuthRemoteImpl.kt" />
-        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/TokenManager.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/rx.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/rx/AppSchedulers.kt" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/executors/ISchedulersFactory.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/rx/UiThread.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/components/AppComponent.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/auth/TokenView.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/auth/TokenModel.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/BaseViewMapper.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/TokenViewMapper.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/presentation/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/presentation/src/main/res/layout/activity_auth_layout.xml" />
         <option value="$PROJECT_DIR$/dependencies.gradle" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/states/Resource.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/states/Status.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/states/State.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/extensions.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/AppModule.kt" />
         <option value="$PROJECT_DIR$/presentation/build.gradle" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/widget/MaterialLoadingButton.kt" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/auth/LoginUseCase.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/auth/AuthViewModel.kt" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/SingleUseCase.kt" />
-        <option value="$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/auth/AuthActivity.kt" />
         <option value="$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/ApiService.kt" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/auth/TokenEntity.kt" />
@@ -270,8 +253,30 @@
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/AuthInterceptor.kt" />
         <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/network/HttpUrlFactory.kt" />
         <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/AuthCacheImpl.kt" />
-        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/airport/AirportModel.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/AirportViewMapper.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml" />
         <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/AirportDBEntity.kt" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/airport/AirportEntity.kt" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/airport/Airport.kt" />
+        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/mapper/AirportEntityMapper.kt" />
+        <option value="$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ActivityBuilder.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/SplashActivity.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/res/layout/activity_setup_layout.xml" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt" />
+        <option value="$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/AirportsRepository.kt" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/IAirportCache.kt" />
+        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetupViewModel.kt" />
+        <option value="$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetUpActivity.kt" />
+        <option value="$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/AirportCacheImpl.kt" />
       </list>
     </option>
   </component>
@@ -326,14 +331,14 @@
               <item name="cache" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="cache" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="token" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
               <item name="cache" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="cache" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="preference" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
@@ -349,6 +354,21 @@
               <item name="data" type="e9137016:NonAndroidModuleNode" />
               <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="data" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="data" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
@@ -363,7 +383,52 @@
               <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="usecases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="usecases" type="462c0819:PsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="domain" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="usecases" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
@@ -400,19 +465,83 @@
               <item name="presentation" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
               <item name="presentation" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="avin" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="presentation" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
               <item name="remote" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="remote" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="remote" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="remote" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="remote" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="remote" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="airport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
+              <item name="remote" type="feadf853:AndroidModuleNode" />
+              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
             </path>
           </expand>
           <select />
@@ -480,7 +609,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.AirportDaoTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="AirportDaoTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="cache" />
       <extension name="coverage">
@@ -514,33 +643,32 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AirportServiceImplTest.getAirports returns lists of airport entities data " type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="remote" />
+    <configuration name="AirportEntityMapperTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cache" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mobigod.remote.*" />
+          <option name="PATTERN" value="com.mobigod.cache.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mobigod.remote" />
-      <option name="MAIN_CLASS_NAME" value="com.mobigod.remote.AirportServiceImplTest" />
-      <option name="METHOD_NAME" value="getAirports returns lists of airport entities data " />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.mobigod.cache.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.cache.mapper.AirportEntityMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SaveAirportUseCaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mobigod.domain.usecases.auth.*" />
+          <option name="PATTERN" value="com.mobigod.domain.usecases.airport.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.auth" />
-      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.auth.LoginUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.mobigod.domain.usecases.airport" />
+      <option name="MAIN_CLASS_NAME" value="com.mobigod.domain.usecases.airport.SaveAirportUseCaseTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -628,19 +756,19 @@
     </configuration>
     <list>
       <item itemvalue="Android App.app" />
-      <item itemvalue="Android JUnit.AirportServiceImplTest.getAirports returns lists of airport entities data " />
-      <item itemvalue="Android JUnit.LoginUseCaseTest" />
-      <item itemvalue="Gradle.Avion:remote [clean]" />
       <item itemvalue="Android JUnit.AirportDaoTest" />
       <item itemvalue="Android JUnit.AirportDaoTest.saveAirport saves the correct value" />
+      <item itemvalue="Gradle.Avion:remote [clean]" />
+      <item itemvalue="Android JUnit.AirportEntityMapperTest" />
+      <item itemvalue="Android JUnit.SaveAirportUseCaseTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Android JUnit.AirportDaoTest" />
+        <item itemvalue="Android JUnit.SaveAirportUseCaseTest" />
+        <item itemvalue="Android JUnit.AirportEntityMapperTest" />
         <item itemvalue="Android JUnit.AirportDaoTest.saveAirport saves the correct value" />
         <item itemvalue="Gradle.Avion:remote [clean]" />
-        <item itemvalue="Android JUnit.LoginUseCaseTest" />
-        <item itemvalue="Android JUnit.AirportServiceImplTest.getAirports returns lists of airport entities data " />
       </list>
     </recent_temporary>
   </component>
@@ -806,34 +934,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AirportServiceImplTest_getAirports_returns_lists_of_airport_entities_data_ - 2020.02.03 at 13h 38m 50s.xml">
-      <configuration name="AirportServiceImplTest.getAirports returns lists of airport entities data " configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="LoginUseCaseTest - 2020.02.04 at 08h 49m 29s.xml">
-      <configuration name="LoginUseCaseTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="LoginUseCaseTest - 2020.02.04 at 08h 50m 08s.xml">
-      <configuration name="LoginUseCaseTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest - 2020.02.05 at 11h 35m 06s.xml">
-      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest_saveAirport_saves_the_correct_value - 2020.02.05 at 11h 37m 29s.xml">
-      <configuration name="AirportDaoTest.saveAirport saves the correct value" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest_saveAirport_saves_the_correct_value - 2020.02.05 at 11h 40m 20s.xml">
-      <configuration name="AirportDaoTest.saveAirport saves the correct value" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest - 2020.02.05 at 11h 42m 31s.xml">
-      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest - 2020.02.05 at 12h 02m 28s.xml">
-      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AirportDaoTest - 2020.02.05 at 12h 06m 43s.xml">
-      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="AirportDaoTest - 2020.02.05 at 12h 11m 37s.xml">
+      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportDaoTest - 2020.02.05 at 17h 15m 56s.xml">
+      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportEntityMapperTest - 2020.02.05 at 17h 16m 54s.xml">
+      <configuration name="AirportEntityMapperTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportEntityMapperTest - 2020.02.05 at 17h 18m 59s.xml">
+      <configuration name="AirportEntityMapperTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportDaoTest - 2020.02.05 at 17h 19m 39s.xml">
+      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportDaoTest - 2020.02.05 at 17h 27m 37s.xml">
+      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="SaveAirportUseCaseTest - 2020.02.05 at 18h 17m 44s.xml">
+      <configuration name="SaveAirportUseCaseTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportDaoTest - 2020.02.05 at 18h 19m 17s.xml">
+      <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="SaveAirportUseCaseTest - 2020.02.05 at 18h 24m 09s.xml">
+      <configuration name="SaveAirportUseCaseTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="AirportDaoTest - 2020.02.05 at 18h 32m 47s.xml">
       <configuration name="AirportDaoTest" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
@@ -851,7 +979,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2160229" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21244635" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -860,13 +988,13 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.42165604" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.43821657" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" weight="0.5388535" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.37834394" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.34012738" />
       <window_info anchor="bottom" x="288" y="56" width="927" height="620" id="Terminal" order="5" type="WINDOWED" weight="0.39274612" />
-      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32953367" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.36942676" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32953367" />
@@ -938,297 +1066,7 @@
     <MESSAGE value="1. Tested login with the UI and it worked&#10;2. Also fixed some DI issues&#10;3. Implemented initial UI for login" />
     <option name="LAST_COMMIT_MESSAGE" value="1. Tested login with the UI and it worked&#10;2. Also fixed some DI issues&#10;3. Implemented initial UI for login" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/auth/AuthRemoteImpl.kt</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/auth/LoginUseCase.kt</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/executors/ISchedulersFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/rx/UiThread.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#29#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/d.kt" />
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/auth/TokenModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/BaseViewMapper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dependencies.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="154" column="31" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/states/Resource.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/states/State.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/utils/extensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="e#32#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/TokenViewMapper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/airport/AirportRemoteImpl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/build/tmp/kapt3/stubs/debug/com/mobigod/avin/di/components/AppComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/AvionApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/components/AppComponent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/AppModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/build/generated/source/buildConfig/debug/com/mobigod/avin/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/widget/MaterialLoadingButton.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/layout/activity_auth_layout.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="88" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="e#422#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/auth/AuthActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/SingleUseCase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/auth/AuthViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/TokenPrefEntity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/auth/LoginUseCase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/auth/IAuthRemote.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/ApiService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/auth/TokenEntity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/auth/Token.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/IPreferenceManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/PreferenceManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/user/IUserManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/auth/AuthRemoteImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1271,31 +1109,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/NetworkModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/token/AuthCacheImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/build/tmp/kapt3/stubs/debug/com/mobigod/cache/models/AirportDBEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1306,17 +1123,314 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt">
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/FlightScheduleUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.10/9d22e03b9f0a300edff23ccf219d406d12c3378f/rxjava-2.2.10-sources.jar!/io/reactivex/disposables/CompositeDisposable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="191" column="16" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/models/airport/AirportModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/BaseViewMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/TokenViewMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/airport/AirportServiceImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ViewModelFactoryModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/auth/AuthViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/mapper/AirportViewMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#33#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/AppModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/NetworkModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/RemoteModule.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/CacheModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/layout/material_loading_button.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/GetAirportsUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote/src/main/assets/airports.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4466">
+          <caret line="77683" column="19" selection-start-line="77683" selection-start-column="19" selection-end-line="77683" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/build/tmp/kapt3/stubs/debug/com/mobigod/cache/models/AirportDBEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/entities/airport/Airport.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/mapper/AirportMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/models/airport/AirportEntity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/models/AirportDBEntity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        <state relative-caret-position="257">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/mapper/AirportEntityMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/mapper/AirportEntityMapperTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote/src/main/assets/test_airport.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote/src/main/java/com/mobigod/remote/airport/AirportRemoteImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/IPreferenceManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/preference/PreferenceManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/di/modules/ActivityBuilder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/SplashActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/res/layout/activity_setup_layout.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="e#580#605#0" expanded="true" />
+            <element signature="e#1335#1360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/SingleUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/base/CompletableUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/usecases/airport/SaveAirportUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/kotlin/com/mobigod/domain/usecases/airport/SaveAirportUseCaseTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/mobigod/domain/repository/IAirportsRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/AirportsRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetupViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1043">
+          <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/main/java/com/mobigod/avin/ui/setup/SetUpActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/Dao/AirportDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/test/java/com/mobigod/cache/Dao/AirportDaoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/mobigod/data/repositories/airport/IAirportCache.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/src/main/java/com/mobigod/cache/AirportCacheImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>

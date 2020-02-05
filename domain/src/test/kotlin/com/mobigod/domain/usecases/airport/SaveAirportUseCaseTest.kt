@@ -6,6 +6,7 @@ import com.mobigod.domain.repository.IAirportsRepository
 import com.mobigod.domain.stubs.StubsGenerator
 import com.nhaarman.mockitokotlin2.any
 import io.reactivex.Completable
+import io.reactivex.Single
 import org.junit.Before
 
 import org.junit.Assert.*
