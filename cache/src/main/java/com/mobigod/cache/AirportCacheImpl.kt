@@ -33,7 +33,7 @@ class AirportCacheImpl @Inject constructor(private val database: AvionDatabase,
         throw UnsupportedOperationException("WHY WILL YOU Fu**ing need 77k+ airports :(")
     }
 
-    override fun saveAirport(airportEntity: AirportEntity?): Completable {
+    override fun saveAirport(airportEntity: AirportEntity?): Completable{
         checkNotNull(airportEntity){"Why do you want to save a null object?"}
         return database.airportDao().saveAirport(mapper.mapToDbEntity(airportEntity))
     }

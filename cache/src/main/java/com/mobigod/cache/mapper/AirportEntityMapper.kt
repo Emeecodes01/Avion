@@ -14,9 +14,9 @@ class AirportEntityMapper: CoreMapper<AirportDBEntity, AirportEntity> {
     }
 
     override fun mapToDbEntity(value: AirportEntity): AirportDBEntity {
-        return AirportDBEntity(value.code, value.carriers, value.city, value.country, value.directFlights,
-            value.elev, value.email, value.icao, value.lat, value.lon, value.name, value.phone, value.runwayLength,
-            value.state, value.type, value.tz, value.url, value.woeid)
+        return AirportDBEntity(value.carriers, value.city, value.code, value.country, value.directFlights, value.elev, value.email,
+            value.icao, value.lat, value.lon, value.name, value.phone, value.runwayLength, value.state, value.type, value.tz, value.url,
+            value.woeid)
     }
 
 }

@@ -19,9 +19,10 @@ class AuthInterceptor @Inject constructor(val authCache: IAuthCache): Intercepto
 
     override fun intercept(chain: Interceptor.Chain): Response {
 
-        if (!authCache.isUserAuthenticated()) {
+        if (!authCache.isUserAuthenticated() || !authCache.hasTokenExpired()) {
             return chain.proceed(chain.request())//sha, just proceed with the request
         }
+
 
         if (authCache.isUserAuthenticated() && authCache.hasTokenExpired()) {
             //You have to refresh token
@@ -51,12 +52,11 @@ class AuthInterceptor @Inject constructor(val authCache: IAuthCache): Intercepto
             val token: TokenEntity = Gson().fromJson(jsonString, TokenEntity::class.java)
 
             authCache.saveToken(token, System.currentTimeMillis())
-        }else {
-
         }
 
         val token = authCache.getToken()
         val newRequestChain = chain.request().newBuilder()
+            .addHeader("Content-Type", "application/x-www-form-urlencoded")
             .addHeader("Authorization", "Bearer ${token.accessToken}")
             .build()
 

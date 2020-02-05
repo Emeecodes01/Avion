@@ -3,4 +3,5 @@
     <string name="client_id">Client Id</string>
     <string name="client_secret">Client Secret</string>
     <string name="login">Login</string>
+    <string name="setting_up_your_device">Setting up your device</string>
 </resources>

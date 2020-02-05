@@ -3,6 +3,7 @@ package com.mobigod.avin.ui.auth
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import com.mobigod.avin.R
 import com.mobigod.avin.base.BaseActivity
@@ -14,6 +15,7 @@ import androidx.lifecycle.Observer
 import com.jakewharton.rxbinding3.view.clicks
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.states.State
+import com.mobigod.avin.ui.widget.MaterialLoadingButton
 import com.mobigod.avin.utils.toastWith
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
@@ -22,10 +24,10 @@ import io.reactivex.rxkotlin.plusAssign
 //on: 03, 2020-02-03
 //at: 04:37*/
 class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
+    override var TAG: String = AuthActivity::class.java.simpleName
 
     @Inject
     lateinit var viewmodelFactory: ViewModelProvider.Factory
-
 
 
     lateinit var authViewModel: AuthViewModel
@@ -51,13 +53,18 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
 
 
     private fun setUpListeners() {
-        subscriptions += binding.signInBtn.clicks().subscribe {
-            val clientId = binding.clientIdTv.text.toString()
-            val clientSecret = binding.clientSecretTv.text.toString()
+        binding.materialLoadingBtn.clickListener = object : MaterialLoadingButton.Clicklistener {
+            override fun onClicked() {
+                val clientId = binding.clientIdTv.text.toString()
+                val clientSecret = binding.clientSecretTv.text.toString()
 
-            if (validateInput(clientId, clientSecret)) return@subscribe
+                Log.d(TAG, "ON CLICKED CALLED")
 
-            authViewModel.loginUser(clientId, clientSecret)
+                if (validateInput(clientId, clientSecret)) return
+
+                authViewModel.loginUser(clientId, clientSecret)
+            }
+
         }
     }
 
@@ -77,8 +84,6 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
     }
 
 
-
-
     private fun subscribeToLiveData() {
         authViewModel.loginLiveData.observe(this, Observer {
                 loginLiveDataHandler(it)
@@ -90,11 +95,21 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
 
     private fun loginLiveDataHandler(resource: Resource<TokenModel>){
         when(resource.state) {
-            State.LOADING -> toastWith("Login Loading")
-            State.SUCCESS -> toastWith("Success: ${resource.data?.accessToken}")
-            State.ERROR -> toastWith("Error occured: ${resource.message}")
+            State.LOADING -> {
+                binding.materialLoadingBtn.setLoadingState = true
+            }
+            State.SUCCESS -> {
+                binding.materialLoadingBtn.setLoadingState = false
+                toastWith("Success: ${resource.data?.accessToken}")
+            }
+            State.ERROR -> {
+                binding.materialLoadingBtn.setLoadingState = false
+                toastWith("Error occured: ${resource.message}")
+            }
         }
     }
+
+
 
     companion object {
         fun start(context: Context) {

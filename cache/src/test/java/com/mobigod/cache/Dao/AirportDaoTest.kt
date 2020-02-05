@@ -31,15 +31,15 @@ class AirportDaoTest {
     lateinit var SUT: AvionDatabase
 
     val AIRPORTS: List<AirportDBEntity> = listOf(
-        AirportDBEntity("BNI","2", "Benin City", "Nigeria", "direct_flights",
+        AirportDBEntity("BNI","Benin City", "BNI", "Nigeria", "direct_flights",
             "258", "", "", "6.3161", "5.6", "Benin Airport", "", "7874",
             "Edo", "Airports", "Africa\\/Lagos", "", "12515060"),
 
-        AirportDBEntity("LOS","2", "Ikeja", "Nigeria", "42",
+        AirportDBEntity("LOS","Ikeja", "LOS", "Nigeria", "42",
             "258", "", "", "6.3161", "5.6", "Lagos Murtala Muhammed Airport", "", "7874",
             "Lagos", "Airports", "Africa\\/Lagos", "", "12515060"),
 
-        AirportDBEntity("ABV","37", "Gwagwa", "Nigeria", "direct_flights",
+        AirportDBEntity("ABV","Gwagwa", "ABV", "Nigeria", "direct_flights",
             "258", "", "", "6.3161", "5.6", "Abuja International Airport", "", "7874",
             "Abuja Capital Territory", "Airports", "Africa\\/Lagos", "", "12515060"))
 

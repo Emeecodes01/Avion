@@ -19,6 +19,7 @@ import com.mobigod.cache.user.IUserManager
 import com.mobigod.cache.user.UserManager
 import com.mobigod.data.models.airport.AirportEntity
 import com.mobigod.data.models.auth.TokenEntity
+import com.mobigod.data.repositories.airport.IAirportCache
 import com.mobigod.data.repositories.auth.IAuthCache
 import dagger.Module
 import dagger.Provides
@@ -66,7 +67,7 @@ class CacheModule {
 
     @Provides
     @ApplicationScope
-    fun provideAirportCache(database: AvionDatabase, mapper: AirportEntityMapper, preferenceManager: PreferenceManager)
+    fun provideAirportCache(database: AvionDatabase, mapper: CoreMapper<AirportDBEntity, AirportEntity>, preferenceManager: PreferenceManager): IAirportCache
      = AirportCacheImpl(database, preferenceManager, mapper)
 
 

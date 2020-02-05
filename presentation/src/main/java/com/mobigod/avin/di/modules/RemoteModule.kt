@@ -6,10 +6,14 @@ import com.mobigod.data.mapper.AirportMapper
 import com.mobigod.data.mapper.BaseMapper
 import com.mobigod.data.mapper.TokenMapper
 import com.mobigod.data.models.airport.AirportEntity
+import com.mobigod.data.repositories.airport.AirportsRepository
+import com.mobigod.data.repositories.airport.IAirportCache
+import com.mobigod.data.repositories.airport.IAirportRemote
 import com.mobigod.data.repositories.auth.AuthRepository
 import com.mobigod.data.repositories.auth.IAuthCache
 import com.mobigod.data.repositories.auth.IAuthRemote
 import com.mobigod.domain.entities.airport.Airport
+import com.mobigod.domain.repository.IAirportsRepository
 import com.mobigod.domain.repository.IAuthRepository
 import com.mobigod.remote.airport.AirportRemoteImpl
 import com.mobigod.remote.airport.AirportService
@@ -42,9 +46,13 @@ class RemoteModule {
 
     @Provides
     @ApplicationScope
-    fun provideAirportRemote(apiService: ApiService, airportService: AirportService, airportMapper: AirportMapper)
+    fun provideAirportRemote(apiService: ApiService, airportService: AirportService, airportMapper: AirportMapper):IAirportRemote
      = AirportRemoteImpl(apiService, airportService, airportMapper)
 
+    @Provides
+    @ApplicationScope
+    fun provideAirportRepository(remote: IAirportRemote, cache: IAirportCache, mapper: AirportMapper): IAirportsRepository
+    = AirportsRepository(remote, cache, mapper)
 
     @Provides
     @ApplicationScope
