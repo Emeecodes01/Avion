@@ -12,6 +12,8 @@ import dagger.android.support.DaggerAppCompatActivity
 abstract class BaseActivity<T: ViewDataBinding>: DaggerAppCompatActivity() {
     private lateinit var binding: T
 
+    open var TAG: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutRes())

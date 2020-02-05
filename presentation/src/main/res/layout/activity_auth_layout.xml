@@ -76,8 +76,8 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/sign_in_btn"
+        <com.mobigod.avin.ui.widget.MaterialLoadingButton
+            android:id="@+id/material_loading_btn"
             android:layout_width="0dp"
             android:layout_height="62dp"
             android:text="@string/login"
