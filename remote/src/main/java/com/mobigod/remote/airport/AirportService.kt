@@ -1,4 +1,4 @@
-package com.mobigod.remote
+package com.mobigod.remote.airport
 
 import com.mobigod.data.models.airport.AirportEntity
 

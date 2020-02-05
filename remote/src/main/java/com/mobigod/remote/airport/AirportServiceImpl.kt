@@ -1,22 +1,18 @@
-package com.mobigod.remote
+package com.mobigod.remote.airport
 
 import android.content.Context
-import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mobigod.data.models.airport.AirportEntity
-import java.io.BufferedReader
-import java.io.FileNotFoundException
 import java.io.IOException
-import java.io.InputStreamReader
-import java.lang.StringBuilder
 import java.nio.charset.Charset
 import javax.inject.Inject
 
 /**Created by: Emmanuel Ozibo
 //on: 01, 2020-02-01
 //at: 10:26*/
-class AirportServiceImpl @Inject constructor(private val context: Context): AirportService {
+class AirportServiceImpl @Inject constructor(private val context: Context):
+    AirportService {
 
     private val TAG = "AirPortServiceImpl"
 

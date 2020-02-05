@@ -1,23 +1,17 @@
 package com.mobigod.remote
 
 import android.app.Application
-import android.content.Context
 import android.os.Build
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.core.app.ApplicationProvider.*
+import com.mobigod.remote.airport.AirportServiceImpl
 import com.mobigod.remote.test.StubGenerator
-import com.nhaarman.mockitokotlin2.any
-import com.nhaarman.mockitokotlin2.whenever
-import org.hamcrest.CoreMatchers
 import org.hamcrest.CoreMatchers.*
-import org.junit.Assert
 import org.junit.Before
 
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 
 /**

@@ -15,7 +15,7 @@ import dagger.android.AndroidInjector
 
 @ApplicationScope
 @Component(modules = [AndroidInjectionModule::class, ActivityBuilder::class, AppModule::class,
-CacheModule::class, NetworkModule::class, RemoteModule::class])
+CacheModule::class, NetworkModule::class, RemoteModule::class, ViewModelModule::class])
 interface AppComponent: AndroidInjector<AvionApplication> {
 
     @Component.Builder

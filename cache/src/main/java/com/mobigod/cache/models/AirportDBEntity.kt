@@ -1,8 +1,6 @@
 package com.mobigod.cache.models
 
-import androidx.room.Entity
-import androidx.room.Index
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 /**Created by: Emmanuel Ozibo
 //on: 01, 2020-02-01
@@ -13,9 +11,13 @@ import androidx.room.PrimaryKey
  * index some columns that the user is likly to search for, in this case i choose [name, city, state],
  * as my index
  */
-@Entity(tableName = "airports",primaryKeys = ["code"],
+@Entity(tableName = "airports", primaryKeys = ["code"],
     indices = [Index("name", "city", "state")])
+//@Fts4
 data class AirportDBEntity(
+//    @PrimaryKey(autoGenerate = true)
+//    @ColumnInfo(name = "rowid")
+//    val rowId: Int,//decaring this to support full text search
     val code: String,
     var carriers: String,
     var city: String,

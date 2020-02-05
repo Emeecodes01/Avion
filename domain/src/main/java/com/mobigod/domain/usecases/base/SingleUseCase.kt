@@ -18,6 +18,8 @@ abstract class SingleUseCase<R, in Params> protected constructor(private val thr
 
     abstract fun buildUseCaseObservable(param: Params?): Single<R>
 
+
+
     fun execute(observableObserver: DisposableSingleObserver<R>, params: Params) {
         val observer =  buildUseCaseObservable(params)
             .subscribeOn(Schedulers.from(threadExecutor))

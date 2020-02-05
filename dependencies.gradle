@@ -31,6 +31,7 @@ ext {
     androidxTestVersion = '1.0.0'
     archTestingVersion = '2.1.0'
     androidJunit = '1.1.1'
+    materialBindingVersion = '3.1.0'
 
 
 
@@ -150,7 +151,8 @@ ext {
             retrofit_dep: "com.squareup.retrofit2:retrofit:${retrofit_version}",
             retrofit_gson_conv: "com.squareup.retrofit2:converter-gson:${retrofit_version}",
             okhttp_logger_dep: "com.squareup.okhttp3:logging-interceptor:${okhttp_logginterceptor}",
-            google_gson_dep: "com.google.code.gson:gson:${gson_version}"
+            google_gson_dep: "com.google.code.gson:gson:${gson_version}",
+            material_rx_binding: "com.jakewharton.rxbinding3:rxbinding-material:$materialBindingVersion"
     ]
 
 
