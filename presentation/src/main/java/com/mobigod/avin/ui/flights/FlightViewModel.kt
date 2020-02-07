@@ -12,6 +12,7 @@ import com.mobigod.domain.usecases.airport.SearchAirportUseCase
 import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
+import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
 
@@ -19,16 +20,22 @@ import javax.inject.Inject
 //on: 06, 2020-02-06
 //at: 11:25*/
 class FlightViewModel @Inject constructor(private val searchAirportUseCase: SearchAirportUseCase,
-                                          //private val flightScheduleUseCase: FlightScheduleUseCase,
                                           private val mapper: AirportViewMapper): ViewModel(){
 
     private val disposeables = CompositeDisposable()
 
     val airportsLiveData: MutableLiveData<Resource<List<AirportModel>>> = MutableLiveData()
-    val originTextSync: MutableLiveData<Resource<String>> = MutableLiveData()
-    val destinationTextSync: MutableLiveData<Resource<String>> = MutableLiveData()
+
+    val originTextSync: MutableLiveData<String> = MutableLiveData()
+    val destinationTextSync: MutableLiveData<String> = MutableLiveData()
+    val flightDateSyncLiveData: MutableLiveData<String> = MutableLiveData()
+    val originSyncLiveData: MutableLiveData<AirportModel> = MutableLiveData()
+    val destinationSyncLiveData: MutableLiveData<AirportModel> = MutableLiveData()
+
+
     private val textStatesManager: Stack<EditTextTypeState> = Stack()
     private val flightScheduleParam = FlightScheduleUseCase.Params()
+
 
 
     fun searchAirports(query: String) {
@@ -47,25 +54,38 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
 
 
 
-    fun updateFlightScheduleRequestParam(airport: AirportModel){
+    fun updateFlightScheduleRequestParam(airport: AirportModel) {
         when(textStatesManager.peek()){
             OriginState -> {
                 flightScheduleParam.origin = airport.code
-                originTextSync.value = Resource.Success(airport.name!!)
+                originTextSync.value = airport.name
+                originSyncLiveData.value = airport
             }
 
             DestinationState -> {
                 flightScheduleParam.destination = airport.code
-                destinationTextSync.value = Resource.Success(airport.name!!)
+                destinationTextSync.value = airport.name
+                destinationSyncLiveData.value = airport
             }
         }
     }
 
 
+    fun setFlightDate(year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        val calender = Calendar.getInstance().apply {
+            set(Calendar.YEAR, year)
+            set(Calendar.MONTH, monthOfYear)
+            set(Calendar.DAY_OF_MONTH, dayOfMonth)
+        }
+        val dateString = SimpleDateFormat("YYYY-MM-dd", Locale.ENGLISH).format(calender.time)
+        flightScheduleParam.dateOfDeparture = dateString
+        flightDateSyncLiveData.value = dateString
+    }
 
-    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>() {
+
+    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>(){
         override fun onSuccess(airports: List<Airport>) {
-            airportsLiveData.postValue(Resource.Success(airports.map { mapper.mapToViewModel(it) }))
+            airportsLiveData.postValue(Resource.Success(airports.map{mapper.mapToViewModel(it)}))
         }
 
         override fun onError(e: Throwable) {
@@ -74,6 +94,9 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     }
 
 
+    fun hasOriginAndDestinationParams() =
+        flightScheduleParam.origin.isNotEmpty() && flightScheduleParam.destination.isNotEmpty()
+
 
     override fun onCleared() {
         super.onCleared()
@@ -81,4 +104,8 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
         if (!disposeables.isDisposed)
             disposeables.clear()
     }
+
+
+
+
 }

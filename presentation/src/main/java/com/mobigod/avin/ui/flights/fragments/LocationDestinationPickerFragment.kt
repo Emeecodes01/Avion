@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputEditText
 import com.jakewharton.rxbinding3.view.focusChanges
 import com.jakewharton.rxbinding3.widget.afterTextChangeEvents
 import com.jakewharton.rxbinding3.widget.textChanges
@@ -25,14 +27,19 @@ import com.mobigod.avin.ui.flights.EditTextTypeState
 import com.mobigod.avin.ui.flights.EditTextTypeState.DestinationState
 import com.mobigod.avin.ui.flights.EditTextTypeState.OriginState
 import com.mobigod.avin.ui.flights.FlightViewModel
+import com.mobigod.avin.utils.isNotEmpty
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
+import java.text.SimpleDateFormat
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**Created by: Emmanuel Ozibo
 //on: 06, 2020-02-06
 //at: 12:15*/
 class LocationDestinationPickerFragment: Fragment() {
+
     private val TAG = LocationDestinationPickerFragment::class.java.simpleName
 
     lateinit var binding: LocDesInputBinding
@@ -81,12 +88,19 @@ class LocationDestinationPickerFragment: Fragment() {
     private fun setUpOtherListeners() {
         subscribtion += airportsAdapter.clickPublisher.subscribe {
             airport ->
-            val toast = Toast.makeText(context, "$airport", Toast.LENGTH_LONG)
+            /*val toast = Toast.makeText(context, "$airport", Toast.LENGTH_LONG)
             toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0)
-            toast.show()
-
+            toast.show()*/
             viewModel.updateFlightScheduleRequestParam(airport)
+            if (viewModel.hasOriginAndDestinationParams() && hasFilledTextInputs()){
+                val direction = LocationDestinationPickerFragmentDirections.actionLocDesFragmentToStartScheduleSearch()
+                findNavController().navigate(direction)
+            }
         }
+    }
+
+    private fun hasFilledTextInputs(): Boolean {
+        return binding.destinationEd.isNotEmpty() && binding.originEdtxt.isNotEmpty()
     }
 
 
@@ -159,7 +173,6 @@ class LocationDestinationPickerFragment: Fragment() {
     }
 
 
-
     override fun onDestroy() {
         super.onDestroy()
         if (!subscribtion.isDisposed)
@@ -179,16 +192,12 @@ class LocationDestinationPickerFragment: Fragment() {
 
 
         viewModel.originTextSync.observe(viewLifecycleOwner, Observer {
-            it?.let { resource ->
-                resource.data?.let { origin -> binding.originEdtxt.setText(origin) }
-            }
+            origin -> binding.originEdtxt.setText(origin)
         })
 
 
         viewModel.destinationTextSync.observe(viewLifecycleOwner, Observer {
-            it?.let { resource ->
-                resource.data?.let { destination -> binding.destinationEd.setText(destination) }
-            }
+            destination -> binding.destinationEd.setText(destination)
         })
     }
 

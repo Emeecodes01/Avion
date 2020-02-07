@@ -20,6 +20,10 @@
         android:id="@+id/loc_des_fragment"
         android:name="com.mobigod.avin.ui.flights.fragments.LocationDestinationPickerFragment"
         android:label="loc_des_input"
-        tools:layout="@layout/loc_des_input"/>
+        tools:layout="@layout/loc_des_input">
+        <action
+            android:id="@+id/action_loc_des_fragment_to_start_schedule_search"
+            app:destination="@id/start_schedule_search" />
+    </fragment>
 
 </navigation>

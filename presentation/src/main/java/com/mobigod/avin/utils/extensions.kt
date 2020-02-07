@@ -3,6 +3,7 @@ package com.mobigod.avin.utils
 import android.app.Activity
 import android.view.View
 import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
 
 /**Created by: Emmanuel Ozibo
 //on: 03, 2020-02-03
@@ -29,3 +30,7 @@ fun View.show() {
 
 
 fun View.isShowing() = visibility == View.VISIBLE
+
+fun TextInputEditText.isNotEmpty(): Boolean {
+    return this.text!!.isNotEmpty()
+}

@@ -33,10 +33,11 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="3d3d3d" />
-                            <entry key="opacityPercent" value="69" />
-                            <entry key="outputName" value="ic_local_airport_black_24dp" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../icons/flight (1).svg" />
+                            <entry key="opacityPercent" value="73" />
+                            <entry key="outputName" value="ic_arrow_right_fill" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../icons/arrow_right_fill.svg" />
                           </map>
                         </option>
                       </PersistentState>
