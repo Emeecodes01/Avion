@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${app_name}"
@@ -28,6 +29,10 @@
 
 
         <activity android:name=".ui.setup.SetUpActivity"
+            android:theme="@style/NoActionBar"/>
+
+
+        <activity android:name=".ui.flights.FlightSchedulesActivity"
             android:theme="@style/NoActionBar"/>
 
 

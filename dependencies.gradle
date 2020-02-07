@@ -11,7 +11,7 @@ ext {
     test_runner_version = '1.2.0'
     expresso_version = '3.2.0'
     work_version = '2.2.0'
-    material_app = '1.0.0'
+    material_app = '1.1.0-rc02'
     recyclerview_version = '1.0.0'
     time_date_version = '4.2.3'
     stetho_version = '1.5.1'
@@ -32,6 +32,7 @@ ext {
     archTestingVersion = '2.1.0'
     androidJunit = '1.1.1'
     materialBindingVersion = '3.1.0'
+    nav_version = '2.3.0-alpha01'
 
 
 
@@ -152,7 +153,9 @@ ext {
             retrofit_gson_conv: "com.squareup.retrofit2:converter-gson:${retrofit_version}",
             okhttp_logger_dep: "com.squareup.okhttp3:logging-interceptor:${okhttp_logginterceptor}",
             google_gson_dep: "com.google.code.gson:gson:${gson_version}",
-            material_rx_binding: "com.jakewharton.rxbinding3:rxbinding-material:$materialBindingVersion"
+            material_rx_binding: "com.jakewharton.rxbinding3:rxbinding-material:$materialBindingVersion",
+            navigation_dep: "androidx.navigation:navigation-fragment-ktx:$nav_version",
+            navigation_ui_dep: "androidx.navigation:navigation-ui-ktx:$nav_version"
     ]
 
 
@@ -167,7 +170,8 @@ ext {
 
     presenterAndroidTestDependencies = [
             android_junit: "androidx.test.ext:junit:$androidJunit",
-            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version"
+            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version",
+            navigation_test: "androidx.navigation:navigation-testing:$nav_version"
     ]
 
 

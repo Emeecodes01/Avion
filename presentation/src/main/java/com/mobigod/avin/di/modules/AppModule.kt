@@ -10,10 +10,10 @@ import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.avin.rx.AppSchedulers
 import com.mobigod.avin.rx.UiThread
 import com.mobigod.cache.db.AvionDatabase
+import com.mobigod.data.executors.JobExecutor
 import com.mobigod.domain.executors.ISchedulersFactory
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
-import com.raywenderlich.android.creatures.data.executor.JobExecutor
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named

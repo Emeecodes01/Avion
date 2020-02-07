@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flights_nav"
+    app:startDestination="@id/start_schedule_search">
+
+    <fragment
+        android:id="@+id/start_schedule_search"
+        android:name="com.mobigod.avin.ui.flights.fragments.StartFlightSchduleFragment"
+        tools:layout="@layout/start_flight_schedules_fragment"
+        android:label="start_flight_schedules_fragment">
+        <action
+            android:id="@+id/action_start_schedule_search_to_loc_des_fragment"
+            app:destination="@id/loc_des_fragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loc_des_fragment"
+        android:name="com.mobigod.avin.ui.flights.fragments.LocationDestinationPickerFragment"
+        android:label="loc_des_input"
+        tools:layout="@layout/loc_des_input"/>
+
+</navigation>

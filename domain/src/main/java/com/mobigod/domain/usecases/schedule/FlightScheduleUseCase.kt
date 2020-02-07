@@ -16,21 +16,20 @@ class FlightScheduleUseCase @Inject constructor(val repository: IFlightSchedules
 
 
 
-    override fun buildUseCaseObservable(param: Params?): Single<FlightSchedulesResponse> {
+    override fun buildUseCaseObservable(param: Params?): Single<FlightSchedulesResponse>{
         checkNotNull(param){"Flight schedule params cannot be null"}
         assert(param.origin.isNotEmpty() && param.destination.isNotEmpty() && param.dateOfDeparture.isNotEmpty()){
             "Some data field(s) is empty, please fill up"
         }
-
         return repository.getFlightSchedules(param)
     }
 
 
     data class Params(
-        @SerializedName("origin") val origin: String,
-        @SerializedName("destination") val destination: String,
-        @SerializedName("fromDateTime") val dateOfDeparture: String,
-        @SerializedName("limit") val limit: String = "15"
+        @SerializedName("origin") var origin: String ="",
+        @SerializedName("destination") var destination: String ="",
+        @SerializedName("fromDateTime") var dateOfDeparture: String ="",
+        @SerializedName("limit") var limit: String = "15"
     )
 
 

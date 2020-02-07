@@ -4,4 +4,6 @@
     <string name="client_secret">Client Secret</string>
     <string name="login">Login</string>
     <string name="setting_up_your_device">Setting up your device</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
 </resources>

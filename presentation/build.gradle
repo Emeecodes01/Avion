@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
 
 
 
@@ -109,7 +110,9 @@ dependencies {
             presentationDependencies.retrofit_gson_conv,
             presentationDependencies.okhttp_logger_dep,
             presentationDependencies.google_gson_dep,
-            presentationDependencies.material_rx_binding
+            presentationDependencies.material_rx_binding,
+            presentationDependencies.navigation_dep,
+            presentationDependencies.navigation_ui_dep
     )
 
 
@@ -123,7 +126,8 @@ dependencies {
 
     androidTestImplementation(
             presentationAndroidTest.android_junit,
-            presentationAndroidTest.expresso_test_dep
+            presentationAndroidTest.expresso_test_dep,
+            presentationAndroidTest.navigation_test
     )
 
 
