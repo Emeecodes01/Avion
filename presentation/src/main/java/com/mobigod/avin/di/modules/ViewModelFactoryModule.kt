@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.avin.ui.auth.AuthViewModel
+import com.mobigod.avin.ui.flights.FlightViewModel
 import com.mobigod.avin.ui.setup.SetupViewModel
 import dagger.Binds
 import dagger.MapKey
@@ -46,6 +47,12 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SetupViewModel::class)
     internal abstract fun setUpViewModel(viewModel: SetupViewModel): ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(FlightViewModel::class)
+    internal abstract fun flightsViewModel(viewModel: FlightViewModel): ViewModel
 
     //Add more ViewModels here
 }

@@ -8,11 +8,15 @@ import com.mobigod.domain.entities.airport.Airport
 //at: 15:17*/
 class AirportViewMapper: BaseViewMapper<AirportModel, Airport> {
     override fun mapFromViewModel(par: AirportModel): Airport {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return  Airport(par.carriers, par.city, par.code, par.country, par.directFlights,
+            par.elev, par.email, par.icao, par.lat, par.lon, par.name,
+            par.phone, par.runwayLength, par.state, par.type, par.tz, par.url, par.woeid)
     }
 
     override fun mapToViewModel(par: Airport): AirportModel {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return AirportModel(par.carriers, par.city, par.code, par.country, par.directFlights, par.elev, par.email,
+            par.icao, par.lat, par.lon, par.name, par.phone, par.runwayLength, par.state,
+            par.type, par.tz, par.url, par.woeid)
     }
 
 

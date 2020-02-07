@@ -3,6 +3,7 @@ package com.mobigod.avin.di.modules
 import com.mobigod.avin.SplashActivity
 import com.mobigod.avin.di.scopes.ActivityScope
 import com.mobigod.avin.ui.auth.AuthActivity
+import com.mobigod.avin.ui.flights.FlightSchedulesActivity
 import com.mobigod.avin.ui.setup.SetUpActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -32,5 +33,12 @@ abstract class ActivityBuilder {
     @ActivityScope
     @ContributesAndroidInjector
     abstract fun SplashActivityInjectorProvider(): SplashActivity
+
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract fun ActivityFlightSchedulesInjectorProvider(): FlightSchedulesActivity
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.raywenderlich.android.creatures.data.executor
+package com.mobigod.data.executors
 
 import com.mobigod.domain.executors.ThreadExecutor
 import java.util.concurrent.LinkedBlockingQueue

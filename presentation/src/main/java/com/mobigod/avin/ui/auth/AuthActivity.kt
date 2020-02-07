@@ -12,13 +12,12 @@ import com.mobigod.avin.models.auth.TokenModel
 import com.mobigod.avin.states.Resource
 import javax.inject.Inject
 import androidx.lifecycle.Observer
-import com.jakewharton.rxbinding3.view.clicks
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.states.State
+import com.mobigod.avin.ui.flights.FlightSchedulesActivity
 import com.mobigod.avin.ui.widget.MaterialLoadingButton
 import com.mobigod.avin.utils.toastWith
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.plusAssign
 
 /**Created by: Emmanuel Ozibo
 //on: 03, 2020-02-03
@@ -100,7 +99,8 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
             }
             State.SUCCESS -> {
                 binding.materialLoadingBtn.setLoadingState = false
-                toastWith("Success: ${resource.data?.accessToken}")
+                //toastWith("Success: ${resource.data?.accessToken}")
+                FlightSchedulesActivity.start(this)
             }
             State.ERROR -> {
                 binding.materialLoadingBtn.setLoadingState = false

@@ -138,6 +138,9 @@ class SetupViewModel @Inject constructor(private val getAirportsUseCase: GetAirp
         }
     }
 
+
+
+
     override fun onCleared() {
         super.onCleared()
 

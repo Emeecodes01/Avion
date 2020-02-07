@@ -2,6 +2,7 @@ package com.mobigod.avin.di.modules
 
 import android.content.Context
 import com.mobigod.avin.di.scopes.ApplicationScope
+import com.mobigod.avin.mapper.AirportViewMapper
 import com.mobigod.avin.mapper.TokenViewMapper
 import com.mobigod.cache.AirportCacheImpl
 import com.mobigod.cache.db.AvionDatabase
@@ -43,6 +44,11 @@ class CacheModule {
     @Provides
     @ApplicationScope
     fun provideTokenViewMapper() = TokenViewMapper()
+
+
+    @Provides
+    @ApplicationScope
+    fun provideAirportViewMapper() = AirportViewMapper()
 
 
     @Provides
