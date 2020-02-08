@@ -1,9 +1,13 @@
 package com.mobigod.avin.models.airport
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 /**Created by: Emmanuel Ozibo
 //on: 05, 2020-02-05
 //at: 15:14*/
 
+@Parcelize
 data class AirportModel(
     var carriers: String?,
     var city: String?,
@@ -23,4 +27,4 @@ data class AirportModel(
     var tz: String?,
     var url: String?,
     var woeid: String?
-)
+): Parcelable

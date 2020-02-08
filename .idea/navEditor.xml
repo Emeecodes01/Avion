@@ -8,13 +8,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="flightSchedulesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-3118" />
+                            <option name="y" value="-985" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="loc_des_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-2523" />
-                            <option name="y" value="-999" />
+                            <option name="x" value="-2905" />
+                            <option name="y" value="-1231" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -34,12 +46,17 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-2754" />
-                            <option name="y" value="-798" />
+                            <option name="x" value="-3372" />
+                            <option name="y" value="-1184" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_start_schedule_search_to_flightSchedulesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_start_schedule_search_to_loc_des_fragment">
                               <value>
                                 <LayoutPositions />

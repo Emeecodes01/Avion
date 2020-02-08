@@ -3,7 +3,7 @@ package com.mobigod.domain.usecases
 import com.mobigod.domain.entities.flight.FlightSchedulesResponse
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
-import com.mobigod.domain.repository.IFlightSchedules
+import com.mobigod.domain.repository.IFlightSchedulesRepository
 import com.mobigod.domain.stubs.StubsGenerator
 import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import com.nhaarman.mockitokotlin2.any
@@ -30,7 +30,7 @@ class FlightScheduleUseCaseTest {
     lateinit var SUT: FlightScheduleUseCase
 
     @Mock
-    lateinit var flightsRepository: IFlightSchedules
+    lateinit var flightsRepository: IFlightSchedulesRepository
 
 
     @Mock

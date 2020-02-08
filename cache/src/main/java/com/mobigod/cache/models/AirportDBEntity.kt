@@ -7,9 +7,9 @@ import androidx.room.*
 //at: 19:59*/
 
 /**
- * I am loading up all 77k+ airports into the database, to enhance search, i have to
- * index some columns that the user is likly to search for, in this case i choose [name, city, state],
- * as my index
+ * I am loading up all 4k+ airports into the database, to enhance search, i have to
+ * index some columns that the user is likely to search for, in this case i choose [name, city, state],
+ * as my index, running time should br logN
  */
 @Entity(tableName = "airports", primaryKeys = ["code"],
     indices = [Index("name", "city", "state")])

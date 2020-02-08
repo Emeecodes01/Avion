@@ -24,8 +24,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +39,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:alpha="0.9"
+            android:textSize="15sp"
             tools:text="Lagos Murtala Muhammed Airport"
             android:text="@{airport.name}"
             android:textColor="@android:color/primary_text_light"
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             tools:text="Ikeja Lagos, Nigeria"
-            android:textSize="12sp"
+            android:textSize="13sp"
             android:text='@{String.format("%s %s, %s", airport.city, airport.state, airport.country)}'
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/name"

@@ -43,4 +43,13 @@ class AirportsRepository @Inject constructor(val remote: IAirportRemote, val cac
             .map { airports -> airports.map { mapper.mapFromEntity(it) } }
     }
 
+
+    override fun getAirportsThatMatchesCodes(codes: List<String>): Single<List<Airport>> {
+        return cache.getAirportsThatMatchesCodes(codes)
+            .map {
+                airportEntities -> airportEntities.map { mapper.mapFromEntity(it) }
+            }
+    }
+
+
 }

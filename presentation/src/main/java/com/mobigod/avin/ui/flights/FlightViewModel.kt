@@ -2,16 +2,23 @@ package com.mobigod.avin.ui.flights
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import com.mobigod.avin.mapper.AirportViewMapper
+import com.mobigod.avin.mapper.FlightScheduleViewMapper
 import com.mobigod.avin.models.airport.AirportModel
+import com.mobigod.avin.models.schedule.ScheduleModel
 import com.mobigod.avin.states.Resource
 import com.mobigod.avin.ui.flights.EditTextTypeState.DestinationState
 import com.mobigod.avin.ui.flights.EditTextTypeState.OriginState
+import com.mobigod.avin.utils.network.ErrorHandler
 import com.mobigod.domain.entities.airport.Airport
+import com.mobigod.domain.entities.flight.Schedule
+import com.mobigod.domain.usecases.airport.GetAirportsWithCodesUseCase
 import com.mobigod.domain.usecases.airport.SearchAirportUseCase
 import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
+import retrofit2.HttpException
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
@@ -19,8 +26,16 @@ import javax.inject.Inject
 /**Created by: Emmanuel Ozibo
 //on: 06, 2020-02-06
 //at: 11:25*/
+
+/**
+ * Well this view model is shared by all fragments in the navigation graph, this makes data sharing and
+ * syncing easier
+ */
 class FlightViewModel @Inject constructor(private val searchAirportUseCase: SearchAirportUseCase,
-                                          private val mapper: AirportViewMapper): ViewModel(){
+                                          private val flightScheduleUseCase: FlightScheduleUseCase,
+                                          private val getAirportsWithCodesUseCase: GetAirportsWithCodesUseCase,
+                                          private val mapper: AirportViewMapper,
+                                          private val schedulesMapper: FlightScheduleViewMapper): ViewModel() {
 
     private val disposeables = CompositeDisposable()
 
@@ -31,6 +46,8 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     val flightDateSyncLiveData: MutableLiveData<String> = MutableLiveData()
     val originSyncLiveData: MutableLiveData<AirportModel> = MutableLiveData()
     val destinationSyncLiveData: MutableLiveData<AirportModel> = MutableLiveData()
+    val flightSchedulesLiveData: MutableLiveData<Resource<List<ScheduleModel>>> = MutableLiveData()
+    val airportsWithCodeLiveData: MutableLiveData<Resource<List<AirportModel>>> = MutableLiveData()
 
 
     private val textStatesManager: Stack<EditTextTypeState> = Stack()
@@ -42,6 +59,25 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
         val searchFor = "%$query%"
         val param = SearchAirportUseCase.Params(searchFor)
         searchAirportUseCase.execute(AirportsSingleObserver(), param)
+    }
+
+
+    fun getFlightSchedules() {
+        flightSchedulesLiveData.postValue(Resource.Loading())
+        val params = flightScheduleParam
+        //ensure you aren't getting shitty values
+        if (params.origin.isEmpty() || params.destination.isEmpty() || params.dateOfDeparture.isEmpty()){
+            //notify an error
+            flightSchedulesLiveData.postValue(Resource.Error("Your request data is not correct"))
+            return
+        }
+        flightScheduleUseCase.execute(FlightSchedulesObserver(), params)
+    }
+
+
+    fun getAirportsWithCodes(codes: List<String>) {
+        val param = GetAirportsWithCodesUseCase.Param(codes)
+        getAirportsWithCodesUseCase.execute(GetAirportsWithCodesObserver(), param)
     }
 
 
@@ -71,6 +107,7 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     }
 
 
+
     fun setFlightDate(year: Int, monthOfYear: Int, dayOfMonth: Int) {
         val calender = Calendar.getInstance().apply {
             set(Calendar.YEAR, year)
@@ -83,7 +120,14 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     }
 
 
-    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>(){
+
+    fun hasOriginAndDestinationParams() =
+        flightScheduleParam.origin.isNotEmpty() && flightScheduleParam.destination.isNotEmpty()
+
+
+
+    //================================================ OBSERVER CLASSES ===================================================//
+    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>() {
         override fun onSuccess(airports: List<Airport>) {
             airportsLiveData.postValue(Resource.Success(airports.map{mapper.mapToViewModel(it)}))
         }
@@ -94,9 +138,31 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     }
 
 
-    fun hasOriginAndDestinationParams() =
-        flightScheduleParam.origin.isNotEmpty() && flightScheduleParam.destination.isNotEmpty()
 
+    inner class FlightSchedulesObserver: DisposableSingleObserver<List<Schedule>>() {
+        override fun onSuccess(schedules: List<Schedule>) {
+            flightSchedulesLiveData.postValue(Resource.Success(schedules.map {
+                    schedule -> schedulesMapper.mapToViewModel(schedule)}))
+        }
+
+        override fun onError(e: Throwable) {
+            val errorMessage = ErrorHandler.getErrorMessage(e)
+            flightSchedulesLiveData.postValue(Resource.Error(errorMessage))
+        }
+    }
+
+
+    inner class GetAirportsWithCodesObserver: DisposableSingleObserver<List<Airport>>() {
+        override fun onSuccess(t: List<Airport>) {
+            airportsWithCodeLiveData.postValue(Resource.Success(t.map { mapper.mapToViewModel(it) }))
+        }
+
+        override fun onError(e: Throwable) {
+            val errMessage = ErrorHandler.getErrorMessage(e)
+            airportsWithCodeLiveData.postValue(Resource.Error(errMessage))
+        }
+    }
+    //================================================ OBSERVER CLASSES ===================================================//
 
     override fun onCleared() {
         super.onCleared()
@@ -104,8 +170,6 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
         if (!disposeables.isDisposed)
             disposeables.clear()
     }
-
-
 
 
 }

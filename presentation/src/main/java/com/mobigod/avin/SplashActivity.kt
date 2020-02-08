@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.mobigod.avin.ui.auth.AuthActivity
+import com.mobigod.avin.ui.flights.FlightSchedulesActivity
 import com.mobigod.avin.ui.setup.SetUpActivity
 import com.mobigod.cache.preference.IPreferenceManager
 import com.mobigod.cache.preference.PreferenceManager
@@ -25,8 +26,14 @@ class SplashActivity : AppCompatActivity() {
                 SetUpActivity.start(this)
                 finish()
             }else {
-                AuthActivity.start(this)
-                finish()
+                if (preferenceManager.userAuthenticated){
+                    FlightSchedulesActivity.start(this)
+                    finish()
+                }else {
+                    AuthActivity.start(this)
+                    finish()
+                }
+
             }
 
         }, 2000)

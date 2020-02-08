@@ -12,7 +12,12 @@
         android:label="start_flight_schedules_fragment">
         <action
             android:id="@+id/action_start_schedule_search_to_loc_des_fragment"
-            app:destination="@id/loc_des_fragment" />
+            app:destination="@id/loc_des_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_start_schedule_search_to_flightSchedulesFragment"
+            app:destination="@id/flightSchedulesFragment" />
     </fragment>
 
 
@@ -25,5 +30,10 @@
             android:id="@+id/action_loc_des_fragment_to_start_schedule_search"
             app:destination="@id/start_schedule_search" />
     </fragment>
+    <fragment
+        android:id="@+id/flightSchedulesFragment"
+        android:name="com.mobigod.avin.ui.flights.fragments.FlightSchedulesFragment"
+        android:label="FlightSchedulesFragment"
+        tools:layout="@layout/flight_schedules_layout"/>
 
 </navigation>
