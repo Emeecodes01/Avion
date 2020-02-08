@@ -64,6 +64,7 @@ class SetUpActivity: BaseActivity<ActivitySetupLayoutBinding>() {
                 State.SUCCESS -> {
                     viewModel.setUserSetUp()
 
+                    //check
                     AuthActivity.start(this)
                     finish()
                 }

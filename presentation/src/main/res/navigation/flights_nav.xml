@@ -17,9 +17,7 @@
             app:exitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_start_schedule_search_to_flightSchedulesFragment"
-            app:destination="@id/flightSchedulesFragment"
-            app:enterAnim="@anim/fragment_fast_out_extra_slow_in"
-            app:exitAnim="@anim/fragment_fast_out_extra_slow_in" />
+            app:destination="@id/flightSchedulesFragment" />
     </fragment>
 
 

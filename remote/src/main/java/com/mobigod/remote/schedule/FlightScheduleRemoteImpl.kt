@@ -16,7 +16,7 @@ class FlightScheduleRemoteImpl @Inject constructor(private val apiService: ApiSe
 
     override fun getFlightSchedules(origin: String, destination: String, departure: String): Single<List<ScheduleEntity>> {
         return apiService.getFlightSchedules(origin, destination, departure).map {
-            it.ScheduleEntity
+            it.scheduleResourceEntity.ScheduleEntity
         }
     }
 

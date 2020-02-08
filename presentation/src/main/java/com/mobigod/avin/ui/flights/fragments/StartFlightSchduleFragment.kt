@@ -88,8 +88,10 @@ class StartFlightSchduleFragment: Fragment(), DatePickerDialog.OnDateSetListener
         }
 
         subscriptions += binding.searchFlightsBtn.clicks().subscribe {
-
+            val directions = StartFlightSchduleFragmentDirections.actionStartScheduleSearchToFlightSchedulesFragment()
+            findNavController().navigate(directions)
         }
+
     }
 
 

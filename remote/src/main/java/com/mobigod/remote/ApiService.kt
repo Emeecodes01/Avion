@@ -2,6 +2,8 @@ package com.mobigod.remote
 
 //import com.mobigod.domain.entities.flight.ScheduleResourceEntity
 import com.mobigod.data.models.auth.TokenEntity
+import com.mobigod.data.models.schedules.FlightScheduleResponse
+import com.mobigod.data.models.schedules.ScheduleEntity
 import com.mobigod.data.models.schedules.ScheduleResourceEntity
 import io.reactivex.Single
 import retrofit2.Call
@@ -13,9 +15,9 @@ import retrofit2.http.*
 
 interface ApiService {
 
-    @GET("v1/operations/schedules/{origin}/{destination}/{fromDateTime}")
+    @GET("operations/schedules/{origin}/{destination}/{fromDateTime}")
     fun getFlightSchedules(@Path("origin") origin: String, @Path("destination") destination: String,
-                           @Path("fromDateTime") departureDate: String, @Query("directFlights") directFlights: Boolean = true): Single<ScheduleResourceEntity>
+                           @Path("fromDateTime") departureDate: String, @Query("directFlights") directFlights: Int = 1): Single<FlightScheduleResponse>
 
 
     @FormUrlEncoded

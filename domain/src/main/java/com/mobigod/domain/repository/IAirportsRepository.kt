@@ -14,4 +14,5 @@ interface IAirportsRepository {
     fun searchAirport(params: SearchAirportUseCase.Params?): Single<List<Airport>>
     fun getAirports(): Single<List<Airport>>
     fun saveAirport(airport: SaveAirportUseCase.Param?): Completable
+    fun getAirportsThatMatchesCodes(codes: List<String>): Single<List<Airport>>
 }

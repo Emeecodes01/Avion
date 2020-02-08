@@ -23,4 +23,8 @@ abstract class AirportDao {
 
     @Query("SELECT * FROM airports WHERE code = :code")
     abstract fun getAirportByCode(code: String): Single<AirportDBEntity>
+
+    @Query("SELECT * FROM airports WHERE code IN (:codes)")
+    abstract fun getAirportsWithCodes(codes: List<String>): Single<List<AirportDBEntity>>
+
 }

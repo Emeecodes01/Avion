@@ -15,11 +15,11 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps the flight data structure
      */
-    fun mapFromFlightEntity(entity: FlightModel): Flight {
+    protected fun mapFromFlightEntity(entity: FlightModel): Flight {
         return Flight(mapFromArrivalModel(entity.ArrivalModel), mapFromDepartureModel(entity.DepartureModel))
     }
 
-    fun mapToFlightEntity(flight: Flight): FlightModel {
+    protected fun mapToFlightEntity(flight: Flight): FlightModel {
         return FlightModel(mapToArrivalModel(flight.arrival), mapToDepartureModel(flight.departure))
     }
 
@@ -27,7 +27,7 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps the arrival DS
      */
-    fun mapFromArrivalModel(entity: ArrivalModel): Arrival {
+    private fun mapFromArrivalModel(entity: ArrivalModel): Arrival {
         return Arrival(entity.AirportCode, mapFromScheduledTimeLocalModel(entity.ScheduledTimeLocalModel), mapFromTerminalModel(entity.TerminalModel))
     }
 
@@ -39,22 +39,22 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps TerminalModel DS
      */
-    fun mapFromTerminalModel(entity: TerminalModel): Terminal {
+    private fun mapFromTerminalModel(entity: TerminalModel): Terminal {
         return Terminal(entity.Name)
     }
 
-    fun mapToTerminalModel(domain: Terminal): TerminalModel {
+    private fun mapToTerminalModel(domain: Terminal): TerminalModel {
         return TerminalModel(domain.name)
     }
 
     /**
      * Maps departure DS
      */
-    fun mapFromDepartureModel(entity: DepartureModel): Departure {
+    private fun mapFromDepartureModel(entity: DepartureModel): Departure {
         return Departure(entity.AirportCode, mapFromScheduledTimeLocalXModel(entity.scheduledTimeLocalModel))
     }
 
-    fun mapToDepartureModel(domain: Departure): DepartureModel {
+    private fun mapToDepartureModel(domain: Departure): DepartureModel {
         return DepartureModel(domain.airportCode, mapToScheduledTimeLocalXModel(domain.scheduledTimeLocal))
     }
 
@@ -62,11 +62,11 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps ScheduledTimeLocalModel DS
      */
-    fun mapFromScheduledTimeLocalModel(model: ScheduledTimeLocalModel): ScheduledTimeLocal {
+    private fun mapFromScheduledTimeLocalModel(model: ScheduledTimeLocalModel): ScheduledTimeLocal {
         return ScheduledTimeLocal(model.DateTime)
     }
 
-    fun mapToScheduledTimeLocalModel(domain: ScheduledTimeLocal): ScheduledTimeLocalModel {
+    private fun mapToScheduledTimeLocalModel(domain: ScheduledTimeLocal): ScheduledTimeLocalModel {
         return ScheduledTimeLocalModel(domain.dateTime)
     }
 
@@ -74,11 +74,11 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps ScheduledTimeLocalXModel DS
      */
-    fun mapFromScheduledTimeLocalXModel(model: ScheduledTimeLocalXModel): ScheduledTimeLocalX {
+    private fun mapFromScheduledTimeLocalXModel(model: ScheduledTimeLocalXModel): ScheduledTimeLocalX {
         return ScheduledTimeLocalX(model.DateTime)
     }
 
-    fun mapToScheduledTimeLocalXModel(domain: ScheduledTimeLocalX): ScheduledTimeLocalXModel {
+    private fun mapToScheduledTimeLocalXModel(domain: ScheduledTimeLocalX): ScheduledTimeLocalXModel {
         return ScheduledTimeLocalXModel(domain.dateTime)
     }
 
@@ -86,11 +86,11 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps TotalJourneyModel DS
      */
-    fun mapFromTotalJourneyModel(model: TotalJourneyModel): TotalJourney {
+    protected fun mapFromTotalJourneyModel(model: TotalJourneyModel): TotalJourney {
         return TotalJourney(model.Duration)
     }
 
-    fun mapToTotalJourneyModel(domain: TotalJourney): TotalJourneyModel {
+    protected fun mapToTotalJourneyModel(domain: TotalJourney): TotalJourneyModel {
         return TotalJourneyModel(domain.duration)
     }
 }

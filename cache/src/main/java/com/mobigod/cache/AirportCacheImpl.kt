@@ -18,6 +18,15 @@ class AirportCacheImpl @Inject constructor(private val database: AvionDatabase,
                                            private val preferenceMgr: IPreferenceManager,
                                            private val mapper: CoreMapper<AirportDBEntity, AirportEntity>): IAirportCache {
 
+
+    override fun getAirportsThatMatchesCodes(codes: List<String>): Single<List<AirportEntity>> {
+        return database.airportDao().getAirportsWithCodes(codes)
+            .map { dbAirports ->
+                dbAirports.map { mapper.mapFromDbEntity(it) } }
+    }
+
+
+
     override fun searchForAirportWith(query: String): Single<List<AirportEntity>> {
         assert(query.isNotEmpty()){"Can't work with an empty query"}
         assert(query.length >= 3){"Type in some more query to help the search"}

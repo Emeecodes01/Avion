@@ -118,4 +118,6 @@ class AuthActivity: BaseActivity<ActivityAuthLayoutBinding>() {
             }
         }
     }
+
+
 }
