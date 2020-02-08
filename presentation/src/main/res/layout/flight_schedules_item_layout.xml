@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeColor="@color/grey"
+        app:strokeWidth="1dp"
+        app:cardElevation="3dp"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingRight="@dimen/layout_compact_padding"
+            android:paddingLeft="@dimen/layout_compact_padding"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    tools:text="los"
+                    android:id="@+id/origin_airport_code"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/origin_departure_time"
+                    tools:text="18:10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/origin_departure_date"
+                    tools:text="Friday, Feb 7"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    tools:text="Lagos"
+                    android:id="@+id/origin_state"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <com.mobigod.avin.ui.widget.FlightDurationView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:gravity="end"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    tools:text="los"
+                    android:id="@+id/destination_airport_code"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/destination_departure_time"
+                    tools:text="18:10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/destination_departure_date"
+                    tools:text="Friday, Feb 7"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    tools:text="Lagos"
+                    android:id="@+id/destination_state"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

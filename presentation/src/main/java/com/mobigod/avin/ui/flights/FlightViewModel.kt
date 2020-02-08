@@ -20,7 +20,7 @@ import javax.inject.Inject
 //on: 06, 2020-02-06
 //at: 11:25*/
 class FlightViewModel @Inject constructor(private val searchAirportUseCase: SearchAirportUseCase,
-                                          private val mapper: AirportViewMapper): ViewModel(){
+                                          private val mapper: AirportViewMapper): ViewModel() {
 
     private val disposeables = CompositeDisposable()
 
@@ -83,7 +83,7 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
     }
 
 
-    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>(){
+    inner class AirportsSingleObserver : DisposableSingleObserver<List<Airport>>() {
         override fun onSuccess(airports: List<Airport>) {
             airportsLiveData.postValue(Resource.Success(airports.map{mapper.mapToViewModel(it)}))
         }

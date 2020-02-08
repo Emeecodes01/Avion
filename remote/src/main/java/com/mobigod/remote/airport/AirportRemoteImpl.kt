@@ -13,12 +13,6 @@ import javax.inject.Inject
 //at: 10:06*/
 class AirportRemoteImpl @Inject constructor(val apiService: ApiService, val airportService: AirportService, mapper: AirportMapper): IAirportRemote {
 
-
-    override fun getFlightSchedules(origin: String, destination: String, departure: String): Single<List<ScheduleEntity>> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-
     override fun getAirports(): List<AirportEntity> {
         return airportService.getAirports("airports.json")
     }
