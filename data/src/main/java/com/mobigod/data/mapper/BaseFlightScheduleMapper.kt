@@ -26,24 +26,13 @@ abstract class BaseFlightScheduleMapper: BaseMapper<ScheduleEntity, Schedule> {
      * Maps the arrival DS
      */
     fun mapFromArrivalEntity(entity: ArrivalEntity): Arrival {
-        return Arrival(entity.AirportCode, mapFromScheduledTimeLocalEntity(entity.ScheduledTimeLocalEntity), mapFromTerminalEntity(entity.TerminalEntity))
+        return Arrival(entity.AirportCode, mapFromScheduledTimeLocalEntity(entity.ScheduledTimeLocalEntity))
     }
 
     fun mapToArrivalEntity(arrival: Arrival): ArrivalEntity {
-        return ArrivalEntity(arrival.airportCode, mapToScheduledTimeLocalEntity(arrival.scheduledTimeLocal), mapToTerminalEntity(arrival.terminal))
+        return ArrivalEntity(arrival.airportCode, mapToScheduledTimeLocalEntity(arrival.scheduledTimeLocal))
     }
 
-
-    /**
-     * Maps Terminal DS
-     */
-    fun mapFromTerminalEntity(entity: TerminalEntity): Terminal {
-        return Terminal(entity.Name)
-    }
-
-    fun mapToTerminalEntity(domain: Terminal): TerminalEntity {
-        return TerminalEntity(domain.name)
-    }
 
     /**
      * Maps departure DS

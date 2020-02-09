@@ -33,6 +33,8 @@ ext {
     androidJunit = '1.1.1'
     materialBindingVersion = '3.1.0'
     nav_version = '2.3.0-alpha01'
+    googleMapVersion = '17.0.0'
+    googleMapsUtils = '0.5'
 
 
 
@@ -155,7 +157,9 @@ ext {
             google_gson_dep: "com.google.code.gson:gson:${gson_version}",
             material_rx_binding: "com.jakewharton.rxbinding3:rxbinding-material:$materialBindingVersion",
             navigation_dep: "androidx.navigation:navigation-fragment-ktx:$nav_version",
-            navigation_ui_dep: "androidx.navigation:navigation-ui-ktx:$nav_version"
+            navigation_ui_dep: "androidx.navigation:navigation-ui-ktx:$nav_version",
+            googleMaps: "com.google.android.gms:play-services-maps:$googleMapVersion",
+            googleMapsUtility: "com.google.maps.android:android-maps-utils:$googleMapsUtils"
     ]
 
 

@@ -47,7 +47,7 @@ class LocationDestinationPickerFragment: Fragment() {
 
 
     private val subscribtion = CompositeDisposable()
-    private val airportsAdapter = AirportsAdapter()
+    private lateinit var airportsAdapter: AirportsAdapter
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
@@ -68,6 +68,8 @@ class LocationDestinationPickerFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        airportsAdapter = AirportsAdapter()
+
         binding.airportsRv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
@@ -86,17 +88,20 @@ class LocationDestinationPickerFragment: Fragment() {
      * Receives item click event from airport adapter
      */
     private fun setUpOtherListeners() {
+
+        binding.navToolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+
         subscribtion += airportsAdapter.clickPublisher.subscribe {
             airport ->
-            /*val toast = Toast.makeText(context, "$airport", Toast.LENGTH_LONG)
-            toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0)
-            toast.show()*/
             viewModel.updateFlightScheduleRequestParam(airport)
             if (viewModel.hasOriginAndDestinationParams() && hasFilledTextInputs()){
-                val direction = LocationDestinationPickerFragmentDirections.actionLocDesFragmentToStartScheduleSearch()
-                findNavController().navigate(direction)
+                findNavController().popBackStack()
             }
         }
+
+
     }
 
     private fun hasFilledTextInputs(): Boolean {

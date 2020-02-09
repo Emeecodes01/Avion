@@ -66,7 +66,10 @@ class FlightSchedulesAdapter: RecyclerView.Adapter<FlightSchedulesAdapter.Flight
     }
 
 
-    fun addSchedules(schedules: List<ScheduleModel> = listOf()){
+    fun addSchedules(schedules: List<ScheduleModel> = listOf()) {
+        if (flightSchedules.isNotEmpty())
+            flightSchedules.clear()
+
         flightSchedules.addAll(schedules)
         notifyDataSetChanged()
     }

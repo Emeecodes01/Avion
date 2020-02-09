@@ -6,7 +6,5 @@ data class ArrivalEntity(
     @SerializedName("AirportCode")
     var AirportCode: String,
     @SerializedName("ScheduledTimeLocal")
-    var ScheduledTimeLocalEntity: ScheduledTimeLocalEntity,
-    @SerializedName("Terminal")
-    var TerminalEntity: TerminalEntity
+    var ScheduledTimeLocalEntity: ScheduledTimeLocalEntity
 )

@@ -4,12 +4,13 @@
     <string name="client_secret">Client Secret</string>
     <string name="login">Login</string>
     <string name="setting_up_your_device">Setting up your device</string>
-    <string name="origin">Origin</string>
-    <string name="destination">Destination</string>
+    <string name="origin">From</string>
+    <string name="destination">To</string>
     <string name="know_your_flight_schedules_here">Know your flight schedules here</string>
     <string name="search_flights">Search Flights</string>
     <string name="departure_date">Departure date</string>
     <string name="avi_n">Avión</string>
     <string name="searching_for_flight_schedules">Searching for flight schedules...</string>
     <string name="there_was_an_error_getting_flight_schedules">There was an error getting flight schedules</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
