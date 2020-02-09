@@ -6,7 +6,10 @@ import com.google.gson.GsonBuilder
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.avin.utils.network.AuthInterceptor
+import com.mobigod.data.models.schedules.ScheduleResourceEntity
 import com.mobigod.data.repositories.auth.IAuthCache
+import com.mobigod.data.utils.ScheduleTypeAdapter
+import com.mobigod.data.utils.ScheduleTypeAdapter2
 import com.mobigod.remote.airport.AirportServiceImpl
 import com.mobigod.remote.ApiService
 import dagger.Module
@@ -35,8 +38,14 @@ class NetworkModule {
 
     @Provides
     @ApplicationScope
-    fun provideGson(): Gson {
+    fun provideScheduleTypeAdapter() = ScheduleTypeAdapter2()
+
+
+    @Provides
+    @ApplicationScope
+    fun provideGson(scheduleTypeAdapter: ScheduleTypeAdapter2): Gson {
         return  GsonBuilder()
+            .registerTypeAdapter(ScheduleResourceEntity::class.java, scheduleTypeAdapter)
             .create()
     }
 
@@ -78,7 +87,7 @@ class NetworkModule {
         val builder = Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
 
         return builder.build()

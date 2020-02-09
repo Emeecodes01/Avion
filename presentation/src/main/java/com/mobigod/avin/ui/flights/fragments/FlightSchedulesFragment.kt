@@ -47,7 +47,7 @@ class FlightSchedulesFragment: Fragment() {
          */
         Handler().postDelayed({
             viewmodel.getFlightSchedules()
-        }, 500)
+        }, 200)
 
     }
 

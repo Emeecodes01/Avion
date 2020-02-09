@@ -148,6 +148,7 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
         }
 
         override fun onError(e: Throwable) {
+            e.printStackTrace()
             val errorMessage = ErrorHandler.getErrorMessage(e)
             flightSchedulesLiveData.postValue(Resource.Error(errorMessage))
         }

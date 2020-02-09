@@ -36,9 +36,8 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     lateinit var viewmodel: FlightViewModel
 
     private val args: MapFragmentArgs by navArgs()
-    private val polylineOptions = PolylineOptions()
+    lateinit var polylineOptions: PolylineOptions
     private var cameraLatLngBounds = LatLngBounds.builder()
-    private val latLngs: MutableList<LatLng> = mutableListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +46,6 @@ class MapFragment: Fragment(), OnMapReadyCallback{
         viewmodel = activity?.run {
             ViewModelProvider(this)[FlightViewModel::class.java]
         } ?: throw Exception("Invalid activity, it doesn't contain viewmodel of this type")
-
 
     }
 
@@ -99,6 +97,8 @@ class MapFragment: Fragment(), OnMapReadyCallback{
         super.onViewCreated(view, savedInstanceState)
 
         binding.mapView.getMapAsync(this)
+        polylineOptions = PolylineOptions()
+
         subscribeToLiveData()
         setUpListeners()
     }
