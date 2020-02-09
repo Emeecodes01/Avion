@@ -28,24 +28,13 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
      * Maps the arrival DS
      */
     private fun mapFromArrivalModel(entity: ArrivalModel): Arrival {
-        return Arrival(entity.AirportCode, mapFromScheduledTimeLocalModel(entity.ScheduledTimeLocalModel), mapFromTerminalModel(entity.TerminalModel))
+        return Arrival(entity.AirportCode, mapFromScheduledTimeLocalModel(entity.ScheduledTimeLocalModel))
     }
 
     fun mapToArrivalModel(arrival: Arrival): ArrivalModel {
-        return ArrivalModel(arrival.airportCode, mapToScheduledTimeLocalModel(arrival.scheduledTimeLocal), mapToTerminalModel(arrival.terminal))
+        return ArrivalModel(arrival.airportCode, mapToScheduledTimeLocalModel(arrival.scheduledTimeLocal))
     }
 
-
-    /**
-     * Maps TerminalModel DS
-     */
-    private fun mapFromTerminalModel(entity: TerminalModel): Terminal {
-        return Terminal(entity.Name)
-    }
-
-    private fun mapToTerminalModel(domain: Terminal): TerminalModel {
-        return TerminalModel(domain.name)
-    }
 
     /**
      * Maps departure DS

@@ -64,15 +64,17 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
 
     fun getFlightSchedules() {
         flightSchedulesLiveData.postValue(Resource.Loading())
-        val params = flightScheduleParam
-        //ensure you aren't getting shitty values
-        if (params.origin.isEmpty() || params.destination.isEmpty() || params.dateOfDeparture.isEmpty()){
-            //notify an error
-            flightSchedulesLiveData.postValue(Resource.Error("Your request data is not correct"))
-            return
-        }
-        flightScheduleUseCase.execute(FlightSchedulesObserver(), params)
+
+        flightScheduleUseCase.execute(FlightSchedulesObserver(), flightScheduleParam)
     }
+
+
+    /**
+     * ensure you aren't getting shitty values
+     */
+    fun searchFlightScheduleHasIncompleteData() =
+        flightScheduleParam.origin.isEmpty() || flightScheduleParam.destination.isEmpty()
+                || flightScheduleParam.dateOfDeparture.isEmpty()
 
 
     fun getAirportsWithCodes(codes: List<String>) {

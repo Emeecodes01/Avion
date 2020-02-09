@@ -4,14 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.jakewharton.rxbinding3.view.clicks
 import com.mobigod.avin.databinding.StartFlightSchedulesFragmentBinding
 import com.mobigod.avin.ui.flights.FlightViewModel
+import com.mobigod.avin.utils.showSnackMessage
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
@@ -88,8 +91,14 @@ class StartFlightSchduleFragment: Fragment(), DatePickerDialog.OnDateSetListener
         }
 
         subscriptions += binding.searchFlightsBtn.clicks().subscribe {
-            val directions = StartFlightSchduleFragmentDirections.actionStartScheduleSearchToFlightSchedulesFragment()
-            findNavController().navigate(directions)
+            //validate inputs
+            if (!viewModel.searchFlightScheduleHasIncompleteData()) {
+                val directions = StartFlightSchduleFragmentDirections.actionStartScheduleSearchToFlightSchedulesFragment()
+                findNavController().navigate(directions)
+            }else {
+                showSnackMessage("Oops, seems you forgot to input some values, check and retry")
+            }
+
         }
 
     }
@@ -98,16 +107,19 @@ class StartFlightSchduleFragment: Fragment(), DatePickerDialog.OnDateSetListener
 
     private fun showDataPickerDialog() {
         val now = Calendar.getInstance()
-        val dpd = DatePickerDialog.newInstance(this,
+        DatePickerDialog.newInstance(this,
             now.get(Calendar.YEAR),
             now.get(Calendar.MONTH),
             now.get(Calendar.DAY_OF_MONTH)
-        )
-        dpd.version = DatePickerDialog.Version.VERSION_2
-        dpd.minDate = now
-        dpd.setOkText("Okay")
-        dpd.setCancelText("Dismiss")
-        dpd.show(activity!!.supportFragmentManager, "Datepickerdialog")
+        ).apply {
+            version = DatePickerDialog.Version.VERSION_2
+            minDate = now
+            setOkText("Okay")
+            setOkColor("#ffffff")
+            setCancelColor("#ffffff")
+        }.also {
+            it.show(activity!!.supportFragmentManager, "Datepickerdialog")
+        }
     }
 
 

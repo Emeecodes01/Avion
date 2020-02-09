@@ -13,9 +13,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-3118" />
-                            <option name="y" value="-985" />
+                            <option name="x" value="-134" />
+                            <option name="y" value="400" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_flightSchedulesFragment_to_mapFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -25,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-2905" />
-                            <option name="y" value="-1231" />
+                            <option name="x" value="-108" />
+                            <option name="y" value="-73" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -41,13 +50,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="mapFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="166" />
+                            <option name="y" value="142" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="start_schedule_search">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-3372" />
-                            <option name="y" value="-1184" />
+                            <option name="x" value="-413" />
+                            <option name="y" value="99" />
                           </Point>
                         </option>
                         <option name="myPositions">

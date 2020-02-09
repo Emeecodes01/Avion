@@ -1,6 +1,7 @@
 package com.mobigod.avin.ui.flights.fragments
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobigod.avin.databinding.FlightSchedulesLayoutBinding
 import com.mobigod.avin.models.airport.AirportModel
@@ -19,6 +21,7 @@ import com.mobigod.avin.utils.hide
 import com.mobigod.avin.utils.show
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
+import kotlinx.coroutines.delay
 
 /**Created by: Emmanuel Ozibo
 //on: 07, 2020-02-07
@@ -30,7 +33,7 @@ class FlightSchedulesFragment: Fragment() {
 
     private val disposable = CompositeDisposable()
 
-    private val scheduleAdapter = FlightSchedulesAdapter()
+    private lateinit var scheduleAdapter: FlightSchedulesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,13 @@ class FlightSchedulesFragment: Fragment() {
         viewmodel = activity?.run {
             ViewModelProvider(this)[FlightViewModel::class.java]
         } ?: throw Exception("Invalid activity, it doesn't contain viewmodel of this type")
+
+        /**
+         * Just to wait for the fragment creation process to finish
+         */
+        Handler().postDelayed({
+            viewmodel.getFlightSchedules()
+        }, 500)
 
     }
 
@@ -51,6 +61,8 @@ class FlightSchedulesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        scheduleAdapter = FlightSchedulesAdapter()
+
         binding.schedulesRv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
@@ -62,7 +74,6 @@ class FlightSchedulesFragment: Fragment() {
         setUpLiveDataObservers()
         setUpRxObservers()
 
-        viewmodel.getFlightSchedules()
     }
 
 
@@ -71,8 +82,15 @@ class FlightSchedulesFragment: Fragment() {
             flightModel ->
             val departureAirportCode = flightModel.DepartureModel.AirportCode
             val arrivalAirportCode = flightModel.ArrivalModel.AirportCode
-            Toast.makeText(context, "$departureAirportCode - $arrivalAirportCode", Toast.LENGTH_LONG).show()
-            viewmodel.getAirportsWithCodes(listOf(departureAirportCode, arrivalAirportCode))
+
+            /**
+             * I decided to pass just the code rather than the entire object,
+             * Just for optimization
+             */
+            val direction = FlightSchedulesFragmentDirections
+                .actionFlightSchedulesFragmentToMapFragment(departureAirportCode, arrivalAirportCode)
+
+            findNavController().navigate(direction)
         }
     }
 
@@ -100,37 +118,7 @@ class FlightSchedulesFragment: Fragment() {
             }
             }
         })
-
-        viewmodel.airportsWithCodeLiveData.observe(viewLifecycleOwner, Observer {
-            it?.let {
-                resources -> when(resources.state) {
-                State.LOADING -> loadingState()
-                State.ERROR -> errorState(resources.message)
-                State.SUCCESS -> lunchMapFragment(resources.data)
-            }
-            }
-        })
     }
-
-
-    /**
-     * Lunch our maps fragment
-     */
-    private fun lunchMapFragment(data: List<AirportModel>?) {
-        data?.run {
-
-            data.forEach {
-                airport -> Toast.makeText(context,
-                "Latitude: ${airport.lat}, Longitude: ${airport.lon}", Toast.LENGTH_LONG).show()
-            }
-
-            val arrayList = arrayListOf<AirportModel>()
-                .apply {addAll(data)  }
-
-            val bundle = Bundle().apply { putParcelableArrayList("", arrayList) }
-        }
-    }
-
 
     private fun successState(data: List<ScheduleModel>?) {
         binding.progressBar.hide()
@@ -160,8 +148,18 @@ class FlightSchedulesFragment: Fragment() {
 
 
     private fun setUpListeners() {
-
+        binding.schedulesToolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        if (!disposable.isDisposed)
+            disposable.clear()
+    }
 
 }

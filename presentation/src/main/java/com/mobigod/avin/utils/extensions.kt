@@ -3,6 +3,9 @@ package com.mobigod.avin.utils
 import android.app.Activity
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 /**Created by: Emmanuel Ozibo
@@ -33,4 +36,10 @@ fun View.isShowing() = visibility == View.VISIBLE
 
 fun TextInputEditText.isNotEmpty(): Boolean {
     return this.text!!.isNotEmpty()
+}
+
+fun Fragment.showSnackMessage(message: String){
+    Snackbar.make(this.view!!, message, Snackbar.LENGTH_LONG)
+        .setTextColor(ContextCompat.getColor(this.context!!, android.R.color.white))
+        .show()
 }

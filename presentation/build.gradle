@@ -5,7 +5,6 @@ apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
 
 
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -68,6 +67,11 @@ android {
 //            signingConfig signingConfigs.debug
 //        }
 
+        tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
 
     }
 }
@@ -86,7 +90,6 @@ dependencies {
     implementation project(':data')
     implementation project(':remote')
     implementation project(':cache')
-
 
 
     implementation(
@@ -115,6 +118,10 @@ dependencies {
             presentationDependencies.navigation_ui_dep
     )
 
+
+    implementation presentationDependencies.googleMaps
+    implementation presentationDependencies.googleMapsUtility
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 
 
     testImplementation(
