@@ -16,7 +16,7 @@ import javax.inject.Inject
 //on: 01, 2020-02-01
 //at: 06:26*/
 
-class SaveAirportUseCase @Inject constructor(
+open class SaveAirportUseCase @Inject constructor(
     private val repository: IAirportsRepository,
     private val threadExecutor: ThreadExecutor,
     private val postExecutionThread: PostExecutionThread): CompletableUseCase<SaveAirportUseCase.Param>(threadExecutor, postExecutionThread) {

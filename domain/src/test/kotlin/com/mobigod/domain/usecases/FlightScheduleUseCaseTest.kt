@@ -1,6 +1,7 @@
 package com.mobigod.domain.usecases
 
 import com.mobigod.domain.entities.flight.FlightSchedulesResponse
+import com.mobigod.domain.entities.flight.Schedule
 import com.mobigod.domain.executors.PostExecutionThread
 import com.mobigod.domain.executors.ThreadExecutor
 import com.mobigod.domain.repository.IFlightSchedulesRepository
@@ -56,7 +57,8 @@ class FlightScheduleUseCaseTest {
     @Test
     fun `getFlightSchedules returns data when valid input is passed`() {
         //Arrange
-        val fakeResponse: FlightSchedulesResponse =  StubsGenerator.createFlightScheduleResponse()
+        val fakeResponse: List<Schedule> =  StubsGenerator.createSchduleStubs()
+
         setUpFakeResponse(Single.just(fakeResponse))
         val fakeParams =  StubsGenerator.createFlightScheduleParams()
 
@@ -71,7 +73,7 @@ class FlightScheduleUseCaseTest {
     @Test(expected = Exception::class)
     fun `getFlightSchedules throws an exception when a null value is passed in`() {
         //Arrange
-        val fakeResponse: FlightSchedulesResponse =  StubsGenerator.createFlightScheduleResponse()
+        val fakeResponse: List<Schedule> =  StubsGenerator.createSchduleStubs()
         setUpFakeResponse(Single.just(fakeResponse))
         val fakeParams =  null
 
@@ -86,7 +88,7 @@ class FlightScheduleUseCaseTest {
     @Test(expected = AssertionError::class)
     fun `getFlightSchedules throws an exception when any of the field(s) is empty`() {
         //Arrange
-        val fakeResponse: FlightSchedulesResponse =  StubsGenerator.createFlightScheduleResponse()
+        val fakeResponse: List<Schedule> =  StubsGenerator.createSchduleStubs()
         setUpFakeResponse(Single.just(fakeResponse))
         val fakeParams =  FlightScheduleUseCase.Params("LOS", "BNI", "")
 
@@ -99,7 +101,7 @@ class FlightScheduleUseCaseTest {
 
 
 
-    private fun setUpFakeResponse(schedulesResponse: Single<FlightSchedulesResponse>) {
+    private fun setUpFakeResponse(schedulesResponse: Single<List<Schedule>>) {
         `when`(flightsRepository.getFlightSchedules(any()))
             .thenReturn(schedulesResponse)
     }

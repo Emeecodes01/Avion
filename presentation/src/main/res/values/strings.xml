@@ -13,4 +13,5 @@
     <string name="searching_for_flight_schedules">Searching for flight schedules...</string>
     <string name="there_was_an_error_getting_flight_schedules">There was an error getting flight schedules</string>
     <string name="title_activity_maps">Map</string>
+    <string name="destination_title">Destination</string>
 </resources>

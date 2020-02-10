@@ -94,6 +94,25 @@ class AirportsRepositoryTest {
     }
 
 
+    @Test
+    fun `getAirportsThatMatchesCodes returns a list of airport`() {
+        val params = StubGenerator.generateListOfStrings(10)
+        val stubResultData = StubGenerator.generateListOfAirportEntity(5)
+        stubAirportThatMatchesCodeResult(stubResultData)
+
+        val testObserver = SUT.getAirportsThatMatchesCodes(params).test()
+        testObserver.assertValue(stubResultData.map { mapper.mapFromEntity(it) })
+    }
+
+
+
+
+
+
+    private fun stubAirportThatMatchesCodeResult(stubResultData: List<AirportEntity>) {
+        Mockito.`when`(cache.getAirportsThatMatchesCodes(any()))
+            .thenReturn(Single.just(stubResultData))
+    }
 
     private fun setUpSearchAirportStubResponse(airportList: List<AirportEntity>) {
         Mockito.`when`(cache.searchForAirportWith(any()))

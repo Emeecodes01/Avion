@@ -97,7 +97,8 @@ ext {
             kotlinJUnit:    "org.jetbrains.kotlin:kotlin-test-junit:${kotlinTestVersion}",
             mockito:        "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
             roboelectric:   "org.robolectric:robolectric:${roboelectricVersion}",
-            androidx_test: "androidx.test:core:${androidxTestVersion}"
+            androidx_test: "androidx.test:core:${androidxTestVersion}",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}"
     ]
 
     //----------------------------------------------------------------------------------------------------------------//
@@ -127,7 +128,7 @@ ext {
             androidx_test: "androidx.test:core:${androidxTestVersion}",
             konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
             room_test_helper: "androidx.room:room-testing:$room_version",
-            arch_test: "android.arch.core:core-testing:${archTestingVersion}"
+            arch_test: "androidx.arch.core:core-testing:${archTestingVersion}"
     ]
     //---------------------------------------------------------------------------------------------------------------//
 
@@ -168,7 +169,11 @@ ext {
             junit_dep: "junit:junit:${junitVersion}",
             mockito: "org.mockito:mockito-core:${mockitoVersion}",
             test_runner_dep: "androidx.test:runner:$test_runner_version",
-            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version"
+            expresso_test_dep: "androidx.test.espresso:espresso-core:$expresso_version",
+            mockitokt:        "com.nhaarman.mockitokotlin2:mockito-kotlin:${kotlinMockito}",
+            konveyor: "com.github.vacxe:konveyor:${konveyor_version}",
+            arch_test: "androidx.arch.core:core-testing:${archTestingVersion}"
+
     ]
 
 

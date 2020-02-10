@@ -22,7 +22,6 @@ class FlightDurationView @JvmOverloads constructor(context: Context, attributeSe
         }
 
 
-
     init {
         addView(binding.root)
     }

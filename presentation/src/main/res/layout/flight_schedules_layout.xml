@@ -81,7 +81,7 @@
                 android:layout_height="10dp"/>
 
             <TextView
-                android:id="@+id/departure_date"
+                android:id="@+id/departure_date_tv"
                 android:text="@{departureDate}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

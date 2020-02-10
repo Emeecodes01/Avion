@@ -1,6 +1,7 @@
 package com.mobigod.avin.ui.map
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,8 +37,9 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     lateinit var viewmodel: FlightViewModel
 
     private val args: MapFragmentArgs by navArgs()
-    lateinit var polylineOptions: PolylineOptions
-    private var cameraLatLngBounds = LatLngBounds.builder()
+
+    private  var latLngBound: LatLngBounds.Builder? = null
+    private var polylineOptions: PolylineOptions? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,11 +51,31 @@ class MapFragment: Fragment(), OnMapReadyCallback{
 
     }
 
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = MapsFragmentLayoutBinding.inflate(inflater, container, false)
         binding.mapView.onCreate(savedInstanceState)
         return binding.root
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.mapView.getMapAsync(this)
+
+        polylineOptions = PolylineOptions()
+            .apply {
+                pattern(listOf(Dot()))
+                width(7f)
+            }
+
+        latLngBound = LatLngBounds.builder()
+
+        subscribeToLiveData()
+        setUpListeners()
+    }
+
 
     override fun onStart() {
         super.onStart()
@@ -79,6 +101,7 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     override fun onDestroy() {
         super.onDestroy()
         binding.mapView.onDestroy()
+        clearResources()
     }
 
 
@@ -93,23 +116,31 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.mapView.getMapAsync(this)
-        polylineOptions = PolylineOptions()
-
-        subscribeToLiveData()
-        setUpListeners()
-    }
-
-
     private fun setUpListeners() {
         binding.mapToolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
     }
 
+
+    override fun onMapReady(p0: GoogleMap?) {
+        googleMap = p0
+
+        prepareAndStartMapDrawing()
+    }
+
+
+    private fun prepareAndStartMapDrawing() {
+        val codesHolder = args.airportCodes
+        for (codeHolder in codesHolder) {
+            viewmodel.getAirportsWithCodes(
+                listOf(
+                    codeHolder.departureAirportCode,
+                    codeHolder.arrivalAirportCode
+                )
+            )
+        }
+    }
 
     private fun subscribeToLiveData() {
         viewmodel.airportsWithCodeLiveData.observe(viewLifecycleOwner, Observer {
@@ -124,55 +155,37 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     }
 
 
+
     private fun successState(data: List<AirportModel>?) {
         binding.progressBar.hide()
+
         data?.run {
             forEach {
                 airport ->
                 val longitude = airport.lon!!.toDouble()
                 val latitude = airport.lat!!.toDouble()
                 val makerDescription = "${airport.code}, ${airport.city}"
+
+                polylineOptions?.add(LatLng(latitude, longitude))
+                //generate all maps utils here
                 addMakerToGoogleMap(longitude, latitude, makerDescription)
-                addPositionToPloylineOption(latitude, longitude)
-                includeCoordinateInBoundsOfCamera(latitude, longitude)
             }
 
+            googleMap?.addPolyline(polylineOptions)
+            val camUpdate = CameraUpdateFactory.newLatLngBounds(latLngBound?.build(), 70)
+            googleMap?.animateCamera(camUpdate)
 
-            //After the loop
-            polylineOptions.also {
-                pOptions ->
-                styleMap(pOptions)
-                googleMap?.addPolyline(pOptions)
-            }
-
-            updateLatLngZoomOfGoogleMap()
         }
-    }
-
-    private fun styleMap(pOptions: PolylineOptions){
-        pOptions.pattern(listOf(Dot()))
-        pOptions.width(10f)
-        pOptions.startCap(ButtCap())
-        pOptions.endCap(RoundCap())
-    }
-
-    private fun includeCoordinateInBoundsOfCamera(latitude: Double, longitude: Double) {
-        cameraLatLngBounds.include(LatLng(latitude, longitude))
-    }
-
-    private fun updateLatLngZoomOfGoogleMap(){
-        googleMap?.moveCamera(CameraUpdateFactory.newLatLngBounds(cameraLatLngBounds.build(), 100))
-    }
-
-    private fun addPositionToPloylineOption(latitude: Double, longitude: Double) {
-        polylineOptions.add(LatLng(latitude, longitude))
 
     }
 
 
     private fun addMakerToGoogleMap(longitude: Double, latitude: Double, description: String) {
+        val latLng = LatLng(latitude, longitude)
+        latLngBound?.include(latLng)
+
         MarkerOptions().apply {
-            position(LatLng(latitude, longitude))
+            position(latLng)
             title(description)
         }.also {
             googleMap?.addMarker(it)
@@ -193,14 +206,8 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     }
 
 
-    override fun onMapReady(p0: GoogleMap?) {
-        googleMap = p0
-
-        val departureAirportCode = args.originAirportCode
-        val arrivalAirportCode = args.destinationAirportCode
-
-        viewmodel.getAirportsWithCodes(listOf(departureAirportCode, arrivalAirportCode))
+    private fun clearResources() {
+        latLngBound = null
+        polylineOptions = null
     }
-
-
 }

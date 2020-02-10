@@ -19,12 +19,18 @@ class AirportCacheImpl @Inject constructor(private val database: AvionDatabase,
                                            private val mapper: CoreMapper<AirportDBEntity, AirportEntity>): IAirportCache {
 
 
+
+    override fun getAirportWithCode(code: String): Single<AirportEntity> {
+        return database.airportDao().getAirportByCode(code)
+            .map { mapper.mapFromDbEntity(it) }
+    }
+
+
     override fun getAirportsThatMatchesCodes(codes: List<String>): Single<List<AirportEntity>> {
         return database.airportDao().getAirportsWithCodes(codes)
             .map { dbAirports ->
                 dbAirports.map { mapper.mapFromDbEntity(it) } }
     }
-
 
 
     override fun searchForAirportWith(query: String): Single<List<AirportEntity>> {

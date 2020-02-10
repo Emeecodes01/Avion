@@ -13,4 +13,5 @@ interface IAirportCache {
     fun searchForAirportWith(query: String): Single<List<AirportEntity>>
     fun getAllAirports(): Single<List<AirportEntity>>
     fun getAirportsThatMatchesCodes(codes: List<String>): Single<List<AirportEntity>>
+    fun getAirportWithCode(code: String): Single<AirportEntity>
 }

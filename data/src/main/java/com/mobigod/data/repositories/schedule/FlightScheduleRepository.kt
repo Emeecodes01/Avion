@@ -15,6 +15,8 @@ class FlightScheduleRepository @Inject constructor(val remote: IFlightScheduleRe
 
     override fun getFlightSchedules(params: FlightScheduleUseCase.Params?): Single<List<Schedule>> {
         checkNotNull(params){"You can't pass a null params"}
+//        check(params.origin.isEmpty() && params.origin.isEmpty() && params.dateOfDeparture.isEmpty())
+        //{"Your field parameters are not correct"}
         return remote.getFlightSchedules(params.origin, params.destination, params.dateOfDeparture)
             .map {
                 it.map {
@@ -22,6 +24,5 @@ class FlightScheduleRepository @Inject constructor(val remote: IFlightScheduleRe
                 }
             }
     }
-
 
 }

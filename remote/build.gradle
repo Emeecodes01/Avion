@@ -75,7 +75,8 @@ dependencies {
             reomteTestDep.kotlinJUnit,
             reomteTestDep.mockito,
             reomteTestDep.roboelectric,
-            reomteTestDep.androidx_test
+            reomteTestDep.androidx_test,
+            reomteTestDep.konveyor
     )
 
 

@@ -15,12 +15,18 @@ abstract class BaseFlightScheduleViewMapper: BaseViewMapper<ScheduleModel, Sched
     /**
      * Maps the flight data structure
      */
-    protected fun mapFromFlightEntity(entity: FlightModel): Flight {
-        return Flight(mapFromArrivalModel(entity.ArrivalModel), mapFromDepartureModel(entity.DepartureModel))
+    protected fun mapFromFlightEntity(entity: List<FlightModel>): List<Flight> {
+        return entity.map {
+            flightModel ->
+            Flight(mapFromArrivalModel(flightModel.ArrivalModel), mapFromDepartureModel(flightModel.DepartureModel))
+        }
     }
 
-    protected fun mapToFlightEntity(flight: Flight): FlightModel {
-        return FlightModel(mapToArrivalModel(flight.arrival), mapToDepartureModel(flight.departure))
+    protected fun mapToFlightEntity(flight: List<Flight>): List<FlightModel> {
+        return flight.map {
+            domainFlight ->
+            FlightModel(mapToArrivalModel(domainFlight.arrival), mapToDepartureModel(domainFlight.departure))
+        }
     }
 
 

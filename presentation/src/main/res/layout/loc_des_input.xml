@@ -27,13 +27,13 @@
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/nav_toolbar"
-                app:title="Set destination"
+                app:title="@string/destination_title"
                 app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <LinearLayout
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/size_10dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

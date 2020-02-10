@@ -6,22 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobigod.avin.databinding.FlightSchedulesLayoutBinding
+import com.mobigod.avin.models.airport.AirportCodesHolder
 import com.mobigod.avin.models.airport.AirportModel
+import com.mobigod.avin.models.schedule.FlightModel
 import com.mobigod.avin.models.schedule.ScheduleModel
 import com.mobigod.avin.states.State
 import com.mobigod.avin.ui.adapters.FlightSchedulesAdapter
 import com.mobigod.avin.ui.flights.FlightViewModel
 import com.mobigod.avin.utils.hide
 import com.mobigod.avin.utils.show
+import com.mobigod.domain.entities.flight.Flight
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 import kotlinx.coroutines.delay
+import java.util.*
 
 /**Created by: Emmanuel Ozibo
 //on: 07, 2020-02-07
@@ -79,25 +84,33 @@ class FlightSchedulesFragment: Fragment() {
 
     private fun setUpRxObservers() {
         disposable += scheduleAdapter.clickPublisher.subscribe {
-            flightModel ->
-            val departureAirportCode = flightModel.DepartureModel.AirportCode
-            val arrivalAirportCode = flightModel.ArrivalModel.AirportCode
+            flightModels ->
+
+            val codeHolders: MutableList<AirportCodesHolder> = mutableListOf()
+
+            for (flightModel in flightModels) {
+                codeHolders.add(AirportCodesHolder(flightModel.DepartureModel.AirportCode, flightModel.ArrivalModel.AirportCode))
+            }
 
             /**
              * I decided to pass just the code rather than the entire object,
              * Just for optimization
              */
             val direction = FlightSchedulesFragmentDirections
-                .actionFlightSchedulesFragmentToMapFragment(departureAirportCode, arrivalAirportCode)
+                .actionFlightSchedulesFragmentToMapFragment(codeHolders.toTypedArray())
 
             findNavController().navigate(direction)
+
+            val airportCodes: MutableList<AirportCodesHolder> = mutableListOf()
+            flightModels.forEach { airportCodes.add(AirportCodesHolder(it.DepartureModel.AirportCode, it.ArrivalModel.AirportCode)) }
+
         }
     }
 
 
     private fun setUpLiveDataObservers() {
         viewmodel.flightDateSyncLiveData.observe(viewLifecycleOwner, Observer {
-            binding.setDepartureDate(it)
+            binding.departureDate = it
         })
 
         viewmodel.originSyncLiveData.observe(viewLifecycleOwner, Observer {origin->

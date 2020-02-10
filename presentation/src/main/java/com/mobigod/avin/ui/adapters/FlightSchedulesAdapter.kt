@@ -24,7 +24,7 @@ class FlightSchedulesAdapter: RecyclerView.Adapter<FlightSchedulesAdapter.Flight
      * in the fragment class subscribe to this observable,
      * clicks will be handled in the layout
      */
-    var clickPublisher = PublishSubject.create<FlightModel>()
+    var clickPublisher = PublishSubject.create<List<FlightModel>>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlightSchedulesViewHolder {
@@ -37,32 +37,16 @@ class FlightSchedulesAdapter: RecyclerView.Adapter<FlightSchedulesAdapter.Flight
 
 
     override fun onBindViewHolder(holder: FlightSchedulesViewHolder, position: Int) {
-        holder.setIsRecyclable(false)//the list is expected to be small, so no need for recycling
-        val flightModel = flightSchedules[position].FlightModel
-        binding.flight = flightModel
-        bindToData(flightModel, flightSchedules[position].TotalJourneyModel)
+        holder.setIsRecyclable(false)
+        val flightModels = flightSchedules[position].FlightModel
+
+        binding.flightDurationTv.setFlightDuration = Tools.getFlightDuration(flightSchedules[position].TotalJourneyModel.Duration)
+
+        binding.flightItineraryLayout.setFlightData(flightModels)
+
 
         binding.clickPublisher = clickPublisher
-    }
-
-
-    private fun bindToData(flightModel: FlightModel, totalJourneyModel: TotalJourneyModel) {
-        val departureDtString = flightModel.DepartureModel.scheduledTimeLocalModel.DateTime
-        val arrivalDtString = flightModel.ArrivalModel.ScheduledTimeLocalModel.DateTime
-
-        val readableDepartureDate = Tools.getDataFromString(departureDtString)
-        val readableArrivalDate = Tools.getDataFromString(arrivalDtString)
-
-        val readableDepartureTime = Tools.getTimeFromString(departureDtString)
-        val readableArrivalTime = Tools.getTimeFromString(arrivalDtString)
-
-        binding.flightDurationTv.setFlightDuration = Tools.getFlightDuration(totalJourneyModel.Duration)
-
-        binding.departureDate = readableDepartureDate
-        binding.departureTime = readableDepartureTime
-
-        binding.arrivalDate = readableArrivalDate
-        binding.arrivalTime = readableArrivalTime
+        binding.flights = flightModels
     }
 
 
