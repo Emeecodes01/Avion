@@ -9,9 +9,9 @@ import com.mobigod.domain.usecases.base.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
 
-open class FlightScheduleUseCase @Inject constructor(private val repository: IFlightSchedulesRepository,
-                                                private val threadExecutor: ThreadExecutor,
-                                                private val postExecutionThread: PostExecutionThread):
+open class FlightScheduleUseCase @Inject constructor( val repository: IFlightSchedulesRepository,
+                                                 val threadExecutor: ThreadExecutor,
+                                                      val postExecutionThread: PostExecutionThread):
     SingleUseCase<List<Schedule>, FlightScheduleUseCase.Params>(threadExecutor, postExecutionThread){
 
 

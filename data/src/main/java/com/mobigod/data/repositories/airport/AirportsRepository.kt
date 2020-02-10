@@ -15,6 +15,13 @@ import javax.inject.Inject
 //at: 05:29*/
 class AirportsRepository @Inject constructor(val remote: IAirportRemote, val cache: IAirportCache, val mapper: AirportMapper): IAirportsRepository {
 
+
+
+    override fun getAirportWithCode(code: String): Single<Airport> {
+        return cache.getAirportWithCode(code).map { mapper.mapFromEntity(it) }
+    }
+
+
     override fun getAirports(): Single<List<Airport>> {
         return Single.just(remote.getAirports()
             .map {

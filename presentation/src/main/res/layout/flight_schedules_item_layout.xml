@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_flight_up"
+                    android:src="@drawable/ic_airplane_takeoff"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
 
@@ -59,7 +59,7 @@
 
 
                 <ImageView
-                    android:src="@drawable/ic_flight_down"
+                    android:src="@drawable/ic_airplane_landing"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
 

@@ -12,9 +12,10 @@ import javax.inject.Inject
 //on: 01, 2020-02-01
 //at: 06:25*/
 
-open class GetAirportsUseCase @Inject constructor(private val repository: IAirportsRepository,
-                                             private val threadExecutor: ThreadExecutor,
-                                             private val postExecutionThread: PostExecutionThread): SingleUseCase<List<Airport>, Unit>(threadExecutor, postExecutionThread){
+open class GetAirportsUseCase @Inject constructor(val repository: IAirportsRepository,
+                                                  val threadExecutor: ThreadExecutor,
+                                              val postExecutionThread: PostExecutionThread):
+    SingleUseCase<List<Airport>, Unit>(threadExecutor, postExecutionThread){
 
 
     override fun buildUseCaseObservable(param: Unit?): Single<List<Airport>> {

@@ -16,7 +16,7 @@ object ErrorHandler {
             val responseBody = error.response()?.errorBody()?.string()
             val gson = Gson()
             val apiErr: ApiErrorResponse = gson.fromJson(responseBody, ApiErrorResponse::class.java)
-            message = apiErr.ProcessingErrors.ProcessingError.Description
+            message = apiErr?.ProcessingErrors?.ProcessingError?.Description
         }
 
         return message

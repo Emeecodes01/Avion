@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.mobigod.avin.mapper.AirportViewMapper
 import com.mobigod.avin.mapper.FlightScheduleViewMapper
+import com.mobigod.avin.models.airport.AirportCodesHolder
 import com.mobigod.avin.models.airport.AirportModel
 import com.mobigod.avin.models.schedule.ScheduleModel
 import com.mobigod.avin.states.Resource
@@ -18,6 +19,8 @@ import com.mobigod.domain.usecases.airport.SearchAirportUseCase
 import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
+import io.reactivex.rxkotlin.plusAssign
+import io.reactivex.rxkotlin.toObservable
 import retrofit2.HttpException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -31,11 +34,11 @@ import javax.inject.Inject
  * Well this view model is shared by all fragments in the navigation graph, this makes data sharing and
  * syncing easier
  */
-class FlightViewModel @Inject constructor(private val searchAirportUseCase: SearchAirportUseCase,
-                                          private val flightScheduleUseCase: FlightScheduleUseCase,
-                                          private val getAirportsWithCodesUseCase: GetAirportsWithCodesUseCase,
-                                          private val mapper: AirportViewMapper,
-                                          private val schedulesMapper: FlightScheduleViewMapper): ViewModel() {
+class FlightViewModel @Inject constructor(val searchAirportUseCase: SearchAirportUseCase,
+                                          val flightScheduleUseCase: FlightScheduleUseCase,
+                                          val getAirportsWithCodesUseCase: GetAirportsWithCodesUseCase,
+                                          val mapper: AirportViewMapper,
+                                          val schedulesMapper: FlightScheduleViewMapper): ViewModel() {
 
     private val disposeables = CompositeDisposable()
 
@@ -125,7 +128,6 @@ class FlightViewModel @Inject constructor(private val searchAirportUseCase: Sear
 
     fun hasOriginAndDestinationParams() =
         flightScheduleParam.origin.isNotEmpty() && flightScheduleParam.destination.isNotEmpty()
-
 
 
     //================================================ OBSERVER CLASSES ===================================================//

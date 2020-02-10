@@ -5,33 +5,26 @@ import com.mobigod.avin.mapper.AirportViewMapper
 import com.mobigod.avin.mapper.FlightScheduleViewMapper
 import com.mobigod.avin.test.PStubGenerator
 import com.mobigod.domain.entities.airport.Airport
-import com.mobigod.domain.executors.PostExecutionThread
-import com.mobigod.domain.executors.ThreadExecutor
-import com.mobigod.domain.repository.IAirportsRepository
 import com.mobigod.domain.usecases.airport.GetAirportsWithCodesUseCase
 import com.mobigod.domain.usecases.airport.SearchAirportUseCase
 import com.mobigod.domain.usecases.schedule.FlightScheduleUseCase
 import com.nhaarman.mockitokotlin2.*
 import io.reactivex.Single
 import io.reactivex.observers.DisposableSingleObserver
-import io.reactivex.subscribers.DisposableSubscriber
 import org.junit.Before
-
-import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import org.mockito.*
-import org.mockito.junit.MockitoJUnit
-import org.mockito.runners.MockitoJUnitRunner
+import org.mockito.junit.MockitoJUnitRunner
 
 /**
  * Created by: Emmanuel Ozibo
  * //on: 08, 2020-02-08
  * //at: 03:35
  */
-@RunWith(org.mockito.junit.MockitoJUnitRunner::class)
+@RunWith(MockitoJUnitRunner::class)
 class FlightViewModelTest {
 
     @get:Rule
@@ -41,15 +34,6 @@ class FlightViewModelTest {
 
 
     @Mock
-    lateinit var postExecutionThread: PostExecutionThread
-
-    @Mock
-    lateinit var threadExecutor: ThreadExecutor
-
-    @Mock
-    lateinit var repository: IAirportsRepository
-
-
     lateinit var searchAirportUseCase: SearchAirportUseCase
 
     @Mock
@@ -62,19 +46,11 @@ class FlightViewModelTest {
 
     private val schedulesMapper = FlightScheduleViewMapper()
 
-    @Captor
-    private lateinit var captor: ArgumentCaptor<DisposableSingleObserver<List<Airport>>>
     private val TEST_QUERY = "Lago"
 
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-//        searchAirportUseCase = mock()
-//        flightSearchAirportUseCase = mock()
-//        getAirportsWithCodesUseCase = mock()
-        //captor = argumentCaptor()
-
-        searchAirportUseCase = SearchAirportUseCase(repository, threadExecutor, postExecutionThread)
 
         val airports = PStubGenerator.getListOfAirports(10)
         setUpSearchAirportUseCase(airports)
@@ -83,19 +59,23 @@ class FlightViewModelTest {
             getAirportsWithCodesUseCase, mapper, schedulesMapper)
     }
 
+
     @Test
     fun `searchAirports verify that execute is called`() {
+        val airports = PStubGenerator.getListOfAirports(5)
+        setUpSearchAirportUseCase(airports)
 
         SUT.searchAirports(TEST_QUERY)
 
+
         verify(searchAirportUseCase, times(1))
-            .execute(captor.capture(), eq(SearchAirportUseCase.Params(TEST_QUERY)))
+            .execute(any(), any())
     }
 
 
 
     private fun setUpSearchAirportUseCase(airports: List<Airport>) {
-        Mockito.`when`(searchAirportUseCase.buildUseCaseObservable(any()))
+        Mockito.`when`(searchAirportUseCase.buildUseCaseObservable(eq(null)))
             .thenReturn(Single.just(airports))
     }
 
