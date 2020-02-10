@@ -41,11 +41,8 @@
         android:label="MapFragment"
         tools:layout="@layout/maps_fragment_layout">
         <argument
-            android:name="origin_airport_code"
-            app:argType="string" />
-        <argument
-            android:name="destination_airport_code"
-            app:argType="string" />
+            android:name="AirportCodes"
+            app:argType="com.mobigod.avin.models.airport.AirportCodesHolder[]" />
     </fragment>
 
 </navigation>

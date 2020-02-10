@@ -12,7 +12,7 @@ import javax.inject.Inject
 //on: 01, 2020-02-01
 //at: 06:25*/
 
-class GetAirportsUseCase @Inject constructor(private val repository: IAirportsRepository,
+open class GetAirportsUseCase @Inject constructor(private val repository: IAirportsRepository,
                                              private val threadExecutor: ThreadExecutor,
                                              private val postExecutionThread: PostExecutionThread): SingleUseCase<List<Airport>, Unit>(threadExecutor, postExecutionThread){
 

@@ -128,7 +128,10 @@ dependencies {
             presentationTest.junit_dep,
             presentationTest.mockito,
             presentationTest.test_runner_dep,
-            presentationTest.expresso_test_dep
+            presentationTest.expresso_test_dep,
+            presentationTest.mockitokt,
+            presentationTest.konveyor,
+            presentationTest.arch_test
     )
 
     androidTestImplementation(

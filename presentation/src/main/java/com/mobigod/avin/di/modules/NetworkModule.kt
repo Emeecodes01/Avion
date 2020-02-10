@@ -6,9 +6,11 @@ import com.google.gson.GsonBuilder
 import com.mobigod.avin.BuildConfig
 import com.mobigod.avin.di.scopes.ApplicationScope
 import com.mobigod.avin.utils.network.AuthInterceptor
+import com.mobigod.data.models.schedules.FlightEntity
+import com.mobigod.data.models.schedules.ScheduleEntity
 import com.mobigod.data.models.schedules.ScheduleResourceEntity
 import com.mobigod.data.repositories.auth.IAuthCache
-import com.mobigod.data.utils.ScheduleTypeAdapter
+import com.mobigod.data.utils.FlightTypeAdapter
 import com.mobigod.data.utils.ScheduleTypeAdapter2
 import com.mobigod.remote.airport.AirportServiceImpl
 import com.mobigod.remote.ApiService
@@ -43,9 +45,15 @@ class NetworkModule {
 
     @Provides
     @ApplicationScope
-    fun provideGson(scheduleTypeAdapter: ScheduleTypeAdapter2): Gson {
+    fun provideFlightTypeAdapter() = FlightTypeAdapter()
+
+
+    @Provides
+    @ApplicationScope
+    fun provideGson(scheduleTypeAdapter: ScheduleTypeAdapter2, flightTypeAdapter: FlightTypeAdapter): Gson {
         return  GsonBuilder()
             .registerTypeAdapter(ScheduleResourceEntity::class.java, scheduleTypeAdapter)
+            .registerTypeAdapter(ScheduleEntity::class.java, flightTypeAdapter)
             .create()
     }
 

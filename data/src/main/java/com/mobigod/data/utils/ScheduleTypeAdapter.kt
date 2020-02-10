@@ -16,6 +16,7 @@ import javax.inject.Inject
 //at: 11:25*/
 
 
+@Deprecated("For some reason this doesn't work well", level = DeprecationLevel.ERROR)
 class ScheduleTypeAdapter @Inject constructor(): TypeAdapter<ScheduleResourceEntity>() {
     private val gson = Gson()// so we don't have to write all our deserializers
 
@@ -62,8 +63,8 @@ class ScheduleTypeAdapter2 @Inject constructor(): JsonDeserializer<ScheduleResou
         json?.run {
             val schedules = this.asJsonObject.get("Schedule")
             if (schedules.isJsonArray) {
-                val airportListType = object : TypeToken<List<ScheduleEntity>>() {}.type
-                scheduleResourceEntity = ScheduleResourceEntity(context!!.deserialize(schedules, airportListType))
+                val scheduleListType = object : TypeToken<List<ScheduleEntity>>() {}.type
+                scheduleResourceEntity = ScheduleResourceEntity(context!!.deserialize(schedules, scheduleListType))
             }else if (schedules.isJsonObject){
                 val scheduleType = object : TypeToken<ScheduleEntity>() {}.type
                 val scheduleEntities: List<ScheduleEntity> = listOf(context!!.deserialize(schedules, scheduleType))
@@ -74,5 +75,5 @@ class ScheduleTypeAdapter2 @Inject constructor(): JsonDeserializer<ScheduleResou
         }
         return scheduleResourceEntity!!
     }
-
 }
+

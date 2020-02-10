@@ -148,9 +148,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="3d3d3d" />
-                            <entry key="opacityPercent" value="73" />
-                            <entry key="outputName" value="ic_plane_splash_icon" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../icons/plane_splash_icon.svg" />
+                            <entry key="outputName" value="ic_airplane_landing" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../icons/airplane_landing.svg" />
                           </map>
                         </option>
                       </PersistentState>

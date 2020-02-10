@@ -1,6 +1,6 @@
 package com.mobigod.avin.models.schedule
 
 data class ScheduleModel(
-    var FlightModel: FlightModel,
+    var FlightModel: List<FlightModel>,
     var TotalJourneyModel: TotalJourneyModel
 )

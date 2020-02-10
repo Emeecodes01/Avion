@@ -99,6 +99,14 @@ class AirportDaoTest {
     }
 
 
+    @Test
+    fun `getAirportsWithCodes returns list of airports from DB`() {
+        setUpDbInsert()
+        val testObserver = SUT.airportDao().getAirportsWithCodes(listOf("BNI", "LOS")).test()
+        testObserver.assertValue{
+            result -> result.isNotEmpty()
+        }
+    }
 
     private fun setUpDbInsert() {
         SUT.airportDao().saveAirport(AIRPORTS[0]).test().assertComplete()

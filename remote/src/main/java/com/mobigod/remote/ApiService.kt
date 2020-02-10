@@ -17,7 +17,7 @@ interface ApiService {
 
     @GET("operations/schedules/{origin}/{destination}/{fromDateTime}")
     fun getFlightSchedules(@Path("origin") origin: String, @Path("destination") destination: String,
-                           @Path("fromDateTime") departureDate: String, @Query("directFlights") directFlights: Int = 1): Single<FlightScheduleResponse>
+                           @Path("fromDateTime") departureDate: String, @Query("directFlights") directFlights: Int = 0): Single<FlightScheduleResponse>
 
 
     @FormUrlEncoded

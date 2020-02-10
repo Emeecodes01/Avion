@@ -1,6 +1,7 @@
 package com.mobigod.avin.ui.map
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,8 @@ class MapFragment: Fragment(), OnMapReadyCallback{
 
     private val args: MapFragmentArgs by navArgs()
     lateinit var polylineOptions: PolylineOptions
-    private var cameraLatLngBounds = LatLngBounds.builder()
+    lateinit var cameraLatLngBounds: LatLngBounds.Builder
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,11 +51,27 @@ class MapFragment: Fragment(), OnMapReadyCallback{
 
     }
 
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = MapsFragmentLayoutBinding.inflate(inflater, container, false)
         binding.mapView.onCreate(savedInstanceState)
         return binding.root
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.mapView.getMapAsync(this)
+
+        polylineOptions = PolylineOptions()
+        cameraLatLngBounds = LatLngBounds.builder()
+
+        subscribeToLiveData()
+        setUpListeners()
+    }
+
 
     override fun onStart() {
         super.onStart()
@@ -90,17 +108,6 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     override fun onLowMemory() {
         super.onLowMemory()
         binding.mapView.onLowMemory()
-    }
-
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.mapView.getMapAsync(this)
-        polylineOptions = PolylineOptions()
-
-        subscribeToLiveData()
-        setUpListeners()
     }
 
 
@@ -196,11 +203,21 @@ class MapFragment: Fragment(), OnMapReadyCallback{
     override fun onMapReady(p0: GoogleMap?) {
         googleMap = p0
 
-        val departureAirportCode = args.originAirportCode
-        val arrivalAirportCode = args.destinationAirportCode
-
-        viewmodel.getAirportsWithCodes(listOf(departureAirportCode, arrivalAirportCode))
+        prepareAndStartMapDrawing()
     }
 
 
+    private fun prepareAndStartMapDrawing() {
+        val codesHolder = args.airportCodes
+        for (codeHolder in codesHolder) {
+            Handler().postDelayed({
+                viewmodel.getAirportsWithCodes(
+                    listOf(
+                        codeHolder.departureAirportCode,
+                        codeHolder.arrivalAirportCode
+                    )
+                )
+            }, 200)
+        }
+    }
 }

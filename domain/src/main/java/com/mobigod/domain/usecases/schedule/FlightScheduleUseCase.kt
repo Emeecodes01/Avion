@@ -9,14 +9,14 @@ import com.mobigod.domain.usecases.base.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
 
-class FlightScheduleUseCase @Inject constructor(private val repository: IFlightSchedulesRepository,
+open class FlightScheduleUseCase @Inject constructor(private val repository: IFlightSchedulesRepository,
                                                 private val threadExecutor: ThreadExecutor,
                                                 private val postExecutionThread: PostExecutionThread):
     SingleUseCase<List<Schedule>, FlightScheduleUseCase.Params>(threadExecutor, postExecutionThread){
 
 
 
-    override fun buildUseCaseObservable(param: Params?): Single<List<Schedule>>{
+    override fun buildUseCaseObservable(param: Params?): Single<List<Schedule>> {
         checkNotNull(param){"Flight schedule params cannot be null"}
         assert(param.origin.isNotEmpty() && param.destination.isNotEmpty() && param.dateOfDeparture.isNotEmpty()){
             "Some data field(s) is empty, please fill up"
@@ -26,10 +26,10 @@ class FlightScheduleUseCase @Inject constructor(private val repository: IFlightS
 
 
     data class Params(
-        @SerializedName("origin") var origin: String ="",
-        @SerializedName("destination") var destination: String ="",
-        @SerializedName("fromDateTime") var dateOfDeparture: String ="",
-        @SerializedName("directFlights") var directFlight: Boolean = true
+        var origin: String ="",
+        var destination: String ="",
+        var dateOfDeparture: String ="",
+        var directFlight: Boolean = true
     )
 
 

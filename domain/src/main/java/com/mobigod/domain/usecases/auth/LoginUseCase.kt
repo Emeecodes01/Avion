@@ -12,7 +12,7 @@ import javax.inject.Inject
 //on: 04, 2020-02-04
 //at: 08:29*/
 
-class LoginUseCase @Inject constructor(internal val authRepository: IAuthRepository,
+open class LoginUseCase @Inject constructor(internal val authRepository: IAuthRepository,
     internal val executor: ThreadExecutor, internal val postExecutionThread: PostExecutionThread):
     SingleUseCase<Token, LoginUseCase.Params>(executor, postExecutionThread) {
 

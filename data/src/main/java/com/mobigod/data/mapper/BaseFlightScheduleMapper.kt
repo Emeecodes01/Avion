@@ -9,27 +9,31 @@ import com.mobigod.domain.entities.flight.*
 
 abstract class BaseFlightScheduleMapper: BaseMapper<ScheduleEntity, Schedule> {
 
-
     /**
      * Maps the flight data structure
      */
-    fun mapFromFlightEntity(entity: FlightEntity): Flight {
-        return Flight(mapFromArrivalEntity(entity.ArrivalEntity), mapFromDepartureEntity(entity.DepartureEntity))
+    fun mapFromFlightEntity(entity: List<FlightEntity>): List<Flight> {
+        return entity.map {
+            flightEntity ->
+            Flight(mapFromArrivalEntity(flightEntity.ArrivalEntity), mapFromDepartureEntity(flightEntity.DepartureEntity))
+        }
     }
 
-    fun mapToFlightEntity(flight: Flight): FlightEntity {
-        return FlightEntity(mapToArrivalEntity(flight.arrival), mapToDepartureEntity(flight.departure))
+    fun mapToFlightEntity(flight: List<Flight>): List<FlightEntity> {
+        return flight.map {
+            flightDomain -> FlightEntity(mapToArrivalEntity(flightDomain.arrival), mapToDepartureEntity(flightDomain.departure))
+        }
     }
 
 
     /**
      * Maps the arrival DS
      */
-    fun mapFromArrivalEntity(entity: ArrivalEntity): Arrival {
+    private fun mapFromArrivalEntity(entity: ArrivalEntity): Arrival {
         return Arrival(entity.AirportCode, mapFromScheduledTimeLocalEntity(entity.ScheduledTimeLocalEntity))
     }
 
-    fun mapToArrivalEntity(arrival: Arrival): ArrivalEntity {
+    private fun mapToArrivalEntity(arrival: Arrival): ArrivalEntity {
         return ArrivalEntity(arrival.airportCode, mapToScheduledTimeLocalEntity(arrival.scheduledTimeLocal))
     }
 
@@ -37,11 +41,11 @@ abstract class BaseFlightScheduleMapper: BaseMapper<ScheduleEntity, Schedule> {
     /**
      * Maps departure DS
      */
-    fun mapFromDepartureEntity(entity: DepartureEntity): Departure {
+    private fun mapFromDepartureEntity(entity: DepartureEntity): Departure {
         return Departure(entity.AirportCode, mapFromScheduledTimeLocalXEntity(entity.scheduledTimeLocalEntity))
     }
 
-    fun mapToDepartureEntity(domain: Departure): DepartureEntity {
+    private fun mapToDepartureEntity(domain: Departure): DepartureEntity {
         return DepartureEntity(domain.airportCode, mapToScheduledTimeLocalXEntity(domain.scheduledTimeLocal))
     }
 
@@ -49,11 +53,11 @@ abstract class BaseFlightScheduleMapper: BaseMapper<ScheduleEntity, Schedule> {
     /**
      * Maps ScheduledTimeLocal DS
      */
-    fun mapFromScheduledTimeLocalEntity(entity: ScheduledTimeLocalEntity): ScheduledTimeLocal {
+    private fun mapFromScheduledTimeLocalEntity(entity: ScheduledTimeLocalEntity): ScheduledTimeLocal {
         return ScheduledTimeLocal(entity.DateTime)
     }
 
-    fun mapToScheduledTimeLocalEntity(domain: ScheduledTimeLocal): ScheduledTimeLocalEntity {
+    private fun mapToScheduledTimeLocalEntity(domain: ScheduledTimeLocal): ScheduledTimeLocalEntity {
         return ScheduledTimeLocalEntity(domain.dateTime)
     }
 
@@ -61,11 +65,11 @@ abstract class BaseFlightScheduleMapper: BaseMapper<ScheduleEntity, Schedule> {
     /**
      * Maps ScheduledTimeLocalX DS
      */
-    fun mapFromScheduledTimeLocalXEntity(entity: ScheduledTimeLocalXEntity): ScheduledTimeLocalX {
+    private fun mapFromScheduledTimeLocalXEntity(entity: ScheduledTimeLocalXEntity): ScheduledTimeLocalX {
         return ScheduledTimeLocalX(entity.DateTime)
     }
 
-    fun mapToScheduledTimeLocalXEntity(domain: ScheduledTimeLocalX): ScheduledTimeLocalXEntity {
+    private fun mapToScheduledTimeLocalXEntity(domain: ScheduledTimeLocalX): ScheduledTimeLocalXEntity {
         return ScheduledTimeLocalXEntity(domain.dateTime)
     }
 

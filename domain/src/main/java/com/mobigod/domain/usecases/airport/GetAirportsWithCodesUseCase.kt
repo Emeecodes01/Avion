@@ -11,7 +11,7 @@ import javax.inject.Inject
 /**Created by: Emmanuel Ozibo
 //on: 08, 2020-02-08
 //at: 17:46*/
-class GetAirportsWithCodesUseCase @Inject constructor(private val repository: IAirportsRepository,
+open class GetAirportsWithCodesUseCase @Inject constructor(private val repository: IAirportsRepository,
                                                       private val threadExecutor: ThreadExecutor,
                                                       private val postExecutionThread: PostExecutionThread):
 
@@ -21,6 +21,8 @@ class GetAirportsWithCodesUseCase @Inject constructor(private val repository: IA
 
     override fun buildUseCaseObservable(param: Param?): Single<List<Airport>> {
         checkNotNull(param){"Input a value"}
+        assert(param.codes.isNotEmpty())
+
         assert(param.codes.isNotEmpty()){"You have entered an incorrect params"}
         return repository.getAirportsThatMatchesCodes(param.codes)
     }
