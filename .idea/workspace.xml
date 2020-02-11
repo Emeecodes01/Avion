@@ -17,19 +17,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8346cdce-4d8b-4959-92fa-40c436af20b9" name="Default Changelist" comment="1. Wrote tests for auth viewmodel&#10;2. MVP DONE!!!">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="8346cdce-4d8b-4959-92fa-40c436af20b9" name="Default Changelist" comment="Fixed images not displaying, in my README">
+      <change afterPath="$PROJECT_DIR$/screen/archimage1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screen/archimage2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/archimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen/archimage.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,12 +95,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="666">
-                <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+              <first_editor relative-caret-position="515">
+                <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -116,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+              <caret line="22" column="103" selection-start-line="22" selection-start-column="89" selection-end-line="22" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -236,8 +229,8 @@
         <option value="$PROJECT_DIR$/presentation/src/test/java/com/mobigod/avin/test/PStubGenerator.kt" />
         <option value="$PROJECT_DIR$/presentation/src/test/java/com/mobigod/avin/ui/flights/FlightViewModelTest.kt" />
         <option value="$PROJECT_DIR$/presentation/build.gradle" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -248,7 +241,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -295,28 +288,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
-              <item name="presentation" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
-              <item name="presentation" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Avión" type="1abcf292:AndroidViewProjectNode" />
-              <item name="presentation" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -749,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581373299934</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Wrote the README for this project">
+      <created>1581402563316</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1581402563318</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -798,7 +777,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.5375796" visible="true" weight="0.13471779" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5375796" visible="true" weight="0.13471779" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" sideWeight="0.46242037" side_tool="true" weight="0.22603719" />
       <window_info id="Image Layers" order="4" />
@@ -811,10 +790,10 @@
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.37197453" />
-      <window_info anchor="bottom" x="288" y="56" width="927" height="620" id="Terminal" order="5" type="WINDOWED" weight="0.39274612" />
+      <window_info active="true" anchor="bottom" x="288" y="56" width="927" height="620" id="Terminal" order="5" type="WINDOWED" visible="true" weight="0.39274612" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
-      <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.35854924" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.35854924" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.6207254" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.34120172" />
@@ -862,7 +841,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Added some more use cases in domain layer" />
     <MESSAGE value="1. Wrote tests for saveAirport domain" />
     <MESSAGE value="1. Wrote test for getAirport usecase" />
     <MESSAGE value="1. Wrote the data layer and some remote layer implementation&#10;2. wrote test for remote layer&#10;3. created a cache module" />
@@ -887,7 +865,8 @@
     <MESSAGE value="1. wrote more test in domain, data, cache, and remote layers&#10;2. Implemented multiple flight" />
     <MESSAGE value="1. Wrote tests for auth viewmodel&#10;2. fixed bug in multiple flight feature" />
     <MESSAGE value="1. Wrote tests for auth viewmodel&#10;2. MVP DONE!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Wrote tests for auth viewmodel&#10;2. MVP DONE!!!" />
+    <MESSAGE value="Wrote the README for this project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote the README for this project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1191,6 +1170,13 @@
     <entry file="file://$PROJECT_DIR$/screen/device12.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="103" selection-start-line="22" selection-start-column="89" selection-end-line="22" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1199,19 +1185,12 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="666">
-            <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <first_editor relative-caret-position="515">
+            <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/src/debug/res/values/google_maps_api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
         </state>
       </provider>
     </entry>

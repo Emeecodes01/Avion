@@ -2,12 +2,12 @@
 Android app that gets a list of airline schedules and display their origin and destination airports on a map,
 it uses uncle bob's clean architecture
 
-<img scr="screen/device10.png"/>
+<img src="screen/device10.png" width="200"/>
 
-|                                  |                                  |                                 |
-|:---------------------------------|:---------------------------------|:--------------------------------|
-| <img scr="screen/device11.png"/> | <img scr="screen/device12.png"/> | <img scr="screen/device6.png"/> |
-| <img scr="screen/device9.png"/>  | <img scr="screen/device7.png"/>  | <img scr="screen/device8.png"/> |
+|                                              |                                              |                                             |
+|:---------------------------------------------|:---------------------------------------------|:--------------------------------------------|
+| <img src="screen/device11.png" width="200"/> | <img src="screen/device12.png" width="200"/> | <img src="screen/device6.png" width="200"/> |
+| <img src="screen/device9.png" width="200"/>             | <img src="screen/device7.png" width="200"/>  | <img src="screen/device8.png" width="200"/> |
 
 ## Set up
 Inside the app-level build.gradle file, replace **CLIENT_ID** and **CLIENT_SECRET** with the values
@@ -31,8 +31,16 @@ it became easier for me to sync data in all screens when any operation happens i
 
 Navigating between screens is done by using **jetpack navigation component**
 
-### Architecture diagram
-<img scr="screen/archimage.png"/>
+### Architecture diagrams
+
+#### Overall Architecture
+<img src="screen/archimage.png"/>
+
+#### Data Module Architecture
+<img src="screen/archimage1.png"/>
+
+#### Domain Module Architecture
+<img src="screen/archimage2.png"/>
 
 
 ## Challenges and Approach
